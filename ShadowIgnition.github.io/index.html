@@ -76,6 +76,34 @@
 <div class = "columns-split">
     <p class = "intro-columns"></p>
 	<h2>ABOUT ME</h2>
+	<div class="toggle">
+<button id="switch" onclick="toggleTheme()">Switch</button>
+  <script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
+</div>
 	Hi, My name is Dylan, 
 	<p>I'm a Passionate Game Developer specializing in Programming and Design, when I'm not working you can often find me experimenting with side projects, playing and analyzing video games or occasionally doing some 2D & 3D Art.</p>
 	<p>With an interest in systematic game design and mechanics, my dream game would be a Turn-Based Tactics game similar to the Final Fantasy Tactics or Tactics Orge Series with a heavy focus on Systematic Gameplay and mechanics.</p>
@@ -87,12 +115,18 @@
 			<h4><i class="fa fa-suitcase" aria-hidden="true"></i> Title</h4>
 			<p>Game Developer / Programmer</p>
 			<h4><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact</h4>
-			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+			<p>Twitter</p>
+			<h4><i class="fa fa-code" aria-hidden="true"></i> Languages</h4>
+			<p><b>C#</b> (Unity): 2 Years</p>
+			<p><b>C++</b> (Arduino): 1 Year</p>
+			<p><b>GML</b> (Game Maker): 1 Year</p>
+			<p><b>Python</b>: 1 Year</p>	
+			<h6><b>Misc</b>: 1 Year (Game Modding, WebDev, etc)</h6><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
 		</div>
 		<div class="column">
 			<h3>Skills</h3>
 			<h4>Programming</h4>
-			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+			<p>I've been programming for around 6 Years from Game Maker to Python to even Arduino, now days C# is my prefered langauge</p><!--July 28th 2014-->
 			<h4>Design</h4>
 			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
 			<h4>Art</h4>
@@ -125,13 +159,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -154,13 +190,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -182,13 +220,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -210,13 +250,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -239,13 +281,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -266,13 +310,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -293,13 +339,15 @@
 						<a href="https://shadowignition.itch.io/"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="column">
-					<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-					<ul>
-					  <li>Rerum sit libero possimus amet excepturi</li>
-					  <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-					  <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-					</ul>
+				<div class="trim">
+					<div class="column">
+						<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+						<ul>
+						<li>Rerum sit libero possimus amet excepturi</li>
+						<li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+						<li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+						</ul>
+					</div>
 				</div>
 				<div class="thrubutton">
 					<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
