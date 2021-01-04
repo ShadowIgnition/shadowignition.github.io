@@ -1,14 +1,4 @@
-﻿@font-face {
-    font-family: 'abelregular';
-    src: url('abel-regular-webfont.eot');
-    src: url('abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('abel-regular-webfont.woff') format('woff'),
-         url('abel-regular-webfont.ttf') format('truetype'),
-         url('abel-regular-webfont.svg#abelregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
+﻿
 ::-webkit-scrollbar {width: 16px;}
 ::-webkit-scrollbar-track {background: #000;}/*#f1f1f1*/
 ::-webkit-scrollbar-thumb {background: var(--primaryPageTint);}
@@ -16,9 +6,8 @@
 
 ::selection { background-color: #FF0045;}
 :root {
-	--headerFont: abelregular;
-	--bodyFont: abelregular;
-	
+	--headerFont: 'Abel', sans-serif;
+	--bodyFont: 'Montserrat', sans-serif;
 	--secondaryColor:#FF0045;
 	--tertiaryColor:#505050;
 	--fontColor: #fff;
@@ -45,17 +34,33 @@
 body {
 	background-color: #131417;	
 	text-align:center;
-	font-family: var(--headerFont);
+	font-family: var(--bodyFont);
     height: 100%;
     margin: 0;
 	color: var(--altFontColor);
 }
+
+h1,h2{
+	font-family: var(--headerFont);
+}
+
+h1 {
+	letter-spacing: .2rem;
+}
+h3,h4,h5,h6 {
+	font-family: var(--bodyFont);
+	text-transform: uppercase;
+
+}
+h4 {
+	color:#888888;
+}
+
 a {
 	color: var(--secondaryColor);
 }
 #intro{
 	background-color: var(--primaryPageTint);
-	background-image: url("../ShadowIgnition.github.io_files/images/PreludeBackdrop.png");
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -79,6 +84,10 @@ a {
     position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.subtext{
+	margin-top: 35%;
 }
 
 
@@ -116,7 +125,7 @@ a {
 }
 .intro-content h1 {
 	font-family: var(--headerFont);
-	font-size:2em;
+	
     line-height: 1.565;
 	margin-bottom: .6rem;
 	margin-top: 0;
@@ -131,10 +140,12 @@ a {
 	margin-top: 0;
 }
 
-.col-twelve, .col-full {
+.columns-split, .columns-full {
     width: 100%;
-    margin-bottom: 0;
-	margin-top: 0;
+    max-width: 700px;
+    margin-left: auto;
+	line-height: 1.8;
+    margin-right: auto;
 }
 
 .intro-columns span::after,span:first-child::before {
@@ -266,10 +277,16 @@ a {
 	position: relative;
 }
 
-.column {
+.timeline .column{
   flex: 50%;
   padding: 5px;
   margin-left: 10%;
+}
+
+.column{
+  flex: 50%;
+  padding: 5px;
+  text-align:left;
 }
 
 .row {
@@ -407,8 +424,9 @@ hr {
 
 .Monospace{
     letter-spacing: .2rem;
-    font-family: var(--headerFont);
+	font-family: var(--headerFont);
 }
+
 .Abel{
     font-family: var(--headerFont);
 }
@@ -433,10 +451,6 @@ hr {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Container for flexboxes */
@@ -554,23 +568,28 @@ date {
     display: block;
     transition-duration: .4s;
 }
-/*
+
 @media screen and (max-width: 767px), screen and (max-height: 450px)
-.background_video {
+#introVideo {
     display: none;
 }
-.background_video {
-    width: 100%;
-    height: 95%;
-    -o-object-fit: cover;
-    object-fit: cover;
+
+#introVideo {
+	width: auto;
+    -o-object-fit: contain;
+    object-fit: none;
     -o-object-position: center center;
     object-position: center center;
+	
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 }
-
-
-video {
-    object-fit: contain;
-}
-*/
 
