@@ -13,9 +13,13 @@ function toggleTheme() {
 }
 // Immediately invoked function to set the theme on initial load
 (function () {
+		console.log("f");
    if (localStorage.getItem('theme') === 'theme-dark') {
        setTheme('theme-dark');
    } else {
-       setTheme('theme-light');
+	   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('theme-dark');
+	} else {
+		setTheme('theme-light');
    }
 })();

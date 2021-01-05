@@ -1,4 +1,10 @@
-﻿
+﻿/*Font Awesome Fonts*/
+@font-face {
+    font-family: 'FontAwesome';
+    //in url add your folder path of FontAwsome Fonts
+    src: url('font-awesome/fontawesome-webfont.ttf') format('truetype');
+}
+
 ::-webkit-scrollbar {width: 16px;}
 ::-webkit-scrollbar-track {background: #000;}/*#f1f1f1*/
 ::-webkit-scrollbar-thumb {background: var(--primaryPageTint);}
@@ -13,10 +19,13 @@
 	--fontColor: #fff;
 	--altFontColor: #000;
 	
-	
+	--overlayPanelColor:#0003;
 	--primaryPageTint:#F5F5F5;
 	--secondaryPageTint:#131417;
 	--tertiaryPageTint:#ebebeb;
+	--inversion: invert(0);
+	--darkModeIcon: "\f186";
+
 }
 .theme-dark {
 	--secondaryColor:#FF0045;
@@ -24,10 +33,12 @@
 	--fontColor: #000;
 	--altFontColor: #fff;
 	
-	
+	--overlayPanelColor:#0006;
 	--primaryPageTint:#131417;
 	--secondaryPageTint:#F5F5F5;
 	--tertiaryPageTint:#0e0e0e;
+	--inversion: invert(1);
+	--darkModeIcon: "\f185";
 }
 @media (prefers-color-scheme: dark) { 
   ... some style for dark mode
@@ -65,6 +76,23 @@ h4 {
 a {
 	color: var(--secondaryColor);
 }
+header {
+    width: 25%;
+    min-height: 66px;
+    z-index: 600;
+	display: block;
+    background: var(--overlayPanelColor);
+    min-width: 350px;
+    min-height: 66px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+	border-radius: 0 0 3em 0;
+}
+mark{
+	background-color: red;
+	color: var(--fontColor);
+}
 #intro{
 	background-color: var(--primaryPageTint);
 	background-repeat: no-repeat;
@@ -84,7 +112,7 @@ a {
 }
 
 .text{
-    background-color: #0003;
+    background-color: var(--overlayPanelColor);
     width: 100%;
     height: auto;
     position: relative;
@@ -107,6 +135,7 @@ a {
     width: 2.5em;
     top:0.75em;
     vertical-align: middle;
+	filter: var(--inversion);
 }
 /* 1em for main link icons */
 .intro-content {
@@ -612,43 +641,20 @@ date {
 	}
 }
 input[type=checkbox]{
-  height: 0;
-  width: 0;
-  visibility: hidden;
+	height: 0;
+	width: 0;
+	visibility: hidden;
 }
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 52px;
-  height: 27px;
-  background: grey;
-  float: right;
-  border-radius: 100px;
-  position: relative;
+#darkModeToggleSwitch {
+	background:none;
+	border:none;
 }
-
-label::after{
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 90px;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background-color: var(--color-headings);
-}
-
-input:checked + label::after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 45px;
+#darkModeToggleSwitch:after {
+   font-family: FontAwesome;
+   content: var(--darkModeIcon);
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-size: 2rem;
+   	color: var(--altFontColor);
 }

@@ -14,7 +14,64 @@
 <style>
 	#intro{background-image: url("./ShadowIgnition.github.io_files/images/PreludeBackdrop.png");}
 </style>
-
+<header>
+<div class="row">
+	<div class="column">
+		<span class="fa-stack">
+		<i class="fa fa-gear fa-stack-1x"></i>
+		</span>Adv. Settings
+	</div>
+	<div class="column">
+		<span class="fa-stack">
+		<i class="fa fa-video-camera fa-stack-1x"></i>
+		<!--<i class="fa fa-times fa-stack-2x"></i>-->
+		</span>Disable Videos
+	</div>
+	<div class="column">
+		<div class="toggle">
+			<button id="darkModeToggleSwitch" onclick="toggleTheme()"></button>
+			<script>
+				function setTheme(themeName) {
+					localStorage.setItem('theme', themeName);
+					document.documentElement.className = themeName;
+				}
+				function toggleTheme() {
+					if (localStorage.getItem('theme') === 'theme-dark') {
+						setTheme('theme-light');
+					} else {
+						setTheme('theme-dark');
+					}
+				}
+				(function () {
+				//console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+					if (localStorage.getItem('theme') === 'theme-dark') {
+						setTheme('theme-dark');
+					} else {
+						if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+							setTheme('theme-dark');
+						} else {
+							setTheme('theme-light');
+						}
+					}
+				})();
+			</script>
+			Dark Mode
+		</div>
+	</div>
+	<div class="column">
+		<span class="fa-stack">
+		<i class="fa fa-lightbulb-o fa-stack-2x"></i>
+		</span><mark>Highlight Interactables<mark>
+	</div>
+	<div class="column">
+		<span class="fa-stack">
+		<i class="fa fa-eye fa-stack-2x"></i>
+		</span><mark>High Contrast<mark>
+	</div>
+	
+	
+</div>
+</header>
 <html><body>
 <section id = "intro">
 <div class = "intro-content">
@@ -61,49 +118,11 @@
 </ul>
 </div>
 </div> 
-<header>
-<!--
-<svg width="100%" height="180">
-  <rect x="20" y="20" rx="4" ry="4" width="99%" height="100%" style="fill:#1E1F26;" />
-  <text fill="#ffffff" font-size="2em" font-family="Abel" x="36" y="80">Dylan Imrei</text>
-  <text fill="#ffffff" font-size="1.5em" font-family="Abel" x="36" y="120">Programmer / Developer</text>
-</svg>
--->
-
-</header>
 </section>
 <section id = "about">
 <div class = "columns-split">
     <p class = "intro-columns"></p>
 	<h2>ABOUT ME</h2>
-	<div class="toggle">
-<button id="switch" onclick="toggleTheme()">Switch</button>
-  <script>
-        // function to set a given theme/color-scheme
-        function setTheme(themeName) {
-            localStorage.setItem('theme', themeName);
-            document.documentElement.className = themeName;
-        }
-
-        // function to toggle between light and dark theme
-        function toggleTheme() {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                setTheme('theme-light');
-            } else {
-                setTheme('theme-dark');
-            }
-        }
-
-        // Immediately invoked function to set the theme on initial load
-        (function () {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                setTheme('theme-dark');
-            } else {
-                setTheme('theme-light');
-            }
-        })();
-    </script>
-</div>
 	Hi, My name is Dylan, 
 	<p>I'm a Passionate Game Developer specializing in Programming and Design, when I'm not working you can often find me experimenting with side projects, playing and analyzing video games or occasionally doing some 2D & 3D Art.</p>
 	<p>With an interest in systematic game design and mechanics, my dream game would be a Turn-Based Tactics game similar to the Final Fantasy Tactics or Tactics Orge Series with a heavy focus on Systematic Gameplay and mechanics.</p>
