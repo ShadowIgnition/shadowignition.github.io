@@ -16,6 +16,7 @@
 </style>
 <header>
 <div class="row">
+<!--
 	<div class="column">
 		<span class="fa-stack">
 		<i class="fa fa-gear fa-stack-1x"></i>
@@ -25,11 +26,11 @@
 		<span class="fa-stack">
 		<i class="fa fa-video-camera fa-stack-1x"></i>
 		<!--<i class="fa fa-times fa-stack-2x"></i>-->
-		</span>Disable Videos
+		<!--</span>Disable Videos -->
 	</div>
 	<div class="column">
 		<div class="toggle">
-			<button id="darkModeToggleSwitch" onclick="toggleTheme()"></button>
+			<button id="darkModeToggleSwitch" onclick="toggleTheme()"> Dark Mode</button>
 			<script>
 				function setTheme(themeName) {
 					localStorage.setItem('theme', themeName);
@@ -55,9 +56,10 @@
 					}
 				})();
 			</script>
-			Dark Mode
+			
 		</div>
 	</div>
+	<!--
 	<div class="column">
 		<span class="fa-stack">
 		<i class="fa fa-lightbulb-o fa-stack-2x"></i>
@@ -68,6 +70,7 @@
 		<i class="fa fa-eye fa-stack-2x"></i>
 		</span><mark>High Contrast<mark>
 	</div>
+	-->
 	
 	
 </div>
@@ -133,8 +136,6 @@
 			<p> Melbourne, Australia</p>
 			<h4><i class="fa fa-suitcase" aria-hidden="true"></i> Title</h4>
 			<p>Game Developer / Programmer</p>
-			<h4><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact</h4>
-			<p>Twitter</p>
 			<h4><i class="fa fa-code" aria-hidden="true"></i> Languages</h4>
 			<p><b>C#</b> (Unity): 2 Years</p>
 			<p><b>C++</b> (Arduino): 1 Year</p>
