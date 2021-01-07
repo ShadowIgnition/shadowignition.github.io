@@ -280,7 +280,7 @@ mark{
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: var(--tertiaryColor);
+
   top: 50%;
   border-radius: 50%;
   left: 50%;
@@ -291,7 +291,7 @@ mark{
 .smolContainer {
     padding: 10px 10px;
     position: relative;
-    background-color: inherit;
+
     width: 100%;
     text-align:left;
 }
@@ -310,6 +310,10 @@ mark{
   z-index: 1;
 }
 
+.content:nth-child(even){
+	background-color: var(--primaryPageTint);
+}
+
 .desc{
 	float:right;
 	padding: 20px 30px;
@@ -322,8 +326,7 @@ mark{
 }
 
 .timeline .column{
-  flex: 50%;
-  padding: 5px;
+  flex: 65%;
   margin-left: 10%;
 }
 
@@ -332,9 +335,20 @@ mark{
   padding: 5px;
   text-align:left;
 }
+.trim{
+    /* padding: 5px; */
+    margin-left: 5%;
+    width: 85%;
+}
 
 .row {
   display: flex;
+}
+
+li{
+	line-height: 1.5;
+	font-weight: normal;
+    padding-bottom: 1em;
 }
 
 
@@ -506,14 +520,14 @@ date {
 
 /* Portfolio Gallery */
 .porfolio {
-	max-width: 1024px;
+	//max-width: 1024px;
 	margin: 2em auto;
 }
 
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1rem -1rem;
+	//margin: -1rem -1rem;
 }
 
 .gallery-item {
@@ -522,16 +536,16 @@ date {
 	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
 	margin: .1em;
 	overflow: hidden;
-	width: 512px;
-	height: 512px;
-    /*display:block;*/
+	//max-width: 512px;
+	//max-height: 512px;
+	//display:contents;
     position:relative;
 }
 
 .gallery-image {
 	display: block;
 	width: 100%;
-	height: 100%;
+	//height: 100%;
 	object-fit: cover;
 	transition: transform 400ms ease-out, filter 400ms ease-out;
 }
@@ -571,7 +585,7 @@ date {
 
 .gallery-item:hover span {
     color:white;
-    display: block;
+    display: inline-block;
     transition-duration: .4s;
 }
 
@@ -598,6 +612,8 @@ date {
 	top: 50%;
 	left: 50%;
 }
+
+
 
 /* Media queries - Responsive timeline on screens less than 1024px wide */
 @media screen and (max-width: 1024px) {
@@ -671,4 +687,67 @@ input[type=checkbox]{
 	content: var(--darkModeIcon);
 	display: inline-block;
 	color: var(--altFontColor);
+}
+//MASONRY GRID https://w3bits.com/css-masonry/
+.masonry { /* Masonry container */
+  column-count: 2;
+  column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+.masonry {
+  margin: 0em auto;
+  max-width: 45%;
+  column-gap: 0;
+
+}
+
+/* The Masonry Brick */
+.gallery-item {
+  background: #fff;
+  //padding: 1em;
+  margin: 0 0 1.5em;
+  margin-bottom: 0;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 2;
+	max-width: 75%;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
+	max-width: 75%;
+  }
 }
