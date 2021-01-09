@@ -31,7 +31,8 @@
 	--tertiaryPageTint:#ebebeb;
 	--inversion: invert(0);
 	--darkModeIcon: "\f186";
-
+	--mainPagePhoto: url("./images/PreludeBackdrop.png");
+	--containerBorder: url(border-dark.png) 30 round;
 }
 .theme-dark {
 	--fontColor: #000;
@@ -50,6 +51,9 @@
 	--tertiaryPageTint:#0e0e0e;
 	--inversion: invert(1);
 	--darkModeIcon: "\f185";
+	
+	--mainPagePhoto: url("./images/OhShroomBackdrop.png");
+	--containerBorder: url(border-light.png) 30 round;
 }
 @media (prefers-color-scheme: dark) { 
   ... some style for dark mode
@@ -106,6 +110,7 @@ mark{
 }
 #intro{
 	background-color: var(--primaryPageTint);
+	background-image: var(--mainPagePhoto);
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -148,7 +153,7 @@ mark{
     vertical-align: middle;
 	filter: var(--inversion);
 }
-/* 1em for main link icons */
+/* 1em for main link icons var(--fontColor);*/
 .intro-content {
     display: table-cell;
     vertical-align: middle;
@@ -156,7 +161,7 @@ mark{
     -webkit-transform: translateY(-2.1rem);
     -ms-transform: translateY(-2.1rem);
     transform: translateY(-2.1rem);
-	color: var(--fontColor);
+	color: #fff;
 	letter-spacing: .2rem;
 	text-shadow: 0 0 6px rgba(0, 0, 0, .75);
 }    
@@ -219,11 +224,7 @@ mark{
     padding: 0;
 }
 
-.row {
-    width: 94%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
+
 #about{
 	background-color: var(--primaryPageTint);
     width: 100%;
@@ -276,16 +277,16 @@ mark{
 
 /* The circles on the timeline */
 .container::after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-
-  top: 50%;
-  border-radius: 50%;
-  left: 50%;
-  margin-left: -15px;/*this is radius/2-border*/
-  z-index: 1;
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: var(--tertiaryColor);
+	top: 50%;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -15px;/*this is radius/2-border*/
+	z-index: 1;
 }
 /* Container around content */
 .smolContainer {
@@ -298,20 +299,20 @@ mark{
 
 /* The circles on the timeline */
 .smolContainer::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: var(--tertiaryColor);
-  top: 50%;
-  border-radius: 50%;
-  left: 50%;
-  margin-left: -10px;/*this is radius/2-border*/
-  z-index: 1;
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: var(--tertiaryColor);
+	top: 50%;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -10px;/*this is radius/2-border*/
+	z-index: 1;
 }
 
 .content:nth-child(even){
-	background-color: var(--primaryPageTint);
+	//background-color: var(--primaryPageTint);
 }
 
 .desc{
@@ -327,7 +328,7 @@ mark{
 
 .timeline .column{
   flex: 65%;
-  margin-left: 10%;
+
 }
 
 .column{
@@ -335,14 +336,31 @@ mark{
   padding: 5px;
   text-align:left;
 }
-.trim{
+
+.timeline .column:nth-child(1){
+    /* padding: 5px; */
+    margin-left: 5%;
+    width: 85%;
+	vertical-align:middle;
+}
+
+.timeline .column:nth-child(2){
     /* padding: 5px; */
     margin-left: 5%;
     width: 85%;
 }
 
+.timeline .row{
+	max-width: 50%;
+	background-color: var(--primaryPageTint);
+		border: 10px solid transparent;
+	border-image: var(--containerBorder);
+}
+
 .row {
-  display: flex;
+	max-width: 80%;
+	margin: 0 auto;
+	display: flex;
 }
 
 li{
@@ -618,10 +636,11 @@ date {
 /* Media queries - Responsive timeline on screens less than 1024px wide */
 @media screen and (max-width: 1024px) {
 	::-webkit-scrollbar {width: 8px;}
-	.trim, .timeline::after, .left::after, .right::after,.container::after,.smolContainer::after {
+	.timeline .column:nth-child(2), .timeline::after, .left::after, .right::after,.container::after,.smolContainer::after {
+		
 		display:none;
 	}
-		
+	
 	/* Full-width containers */
 	.container {
 		width: 100%;
