@@ -5,13 +5,12 @@
 	<meta name = "description" content="">
 	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/style.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src ="./ShadowIgnition.github.io_files/Javascript/hexColor.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/randomQuote.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <!-- SET BACKGROUND -->
-
 <header>
 <div class="row">
 <!--
@@ -28,7 +27,7 @@
 	</div>
 	<div class="column">
 		<div class="toggle">
-			<button id="darkModeToggleSwitch" onclick="toggleTheme()"> Dark Mode</button>
+			<button id="darkModeToggleSwitch" onclick="toggleTheme(),notifyDarkmode()"> Dark Mode</button>
 			<script>
 				function setTheme(themeName) {
 					localStorage.setItem('theme', themeName);
@@ -72,14 +71,17 @@
 	
 	
 </div>
+
+
 </header>
 <html><body>
+<body onload="InitializeQuote()">
 <section id = "intro">
 <div class = "intro-content">
 <div class = "intro text">
 <div class = "row">
 <div class = columns-split>
-    <p class = "intro-columns"></p>
+    <p class = "intro-columns" id = "quotes">> </p>
     <h1 style="font-size:84px;">Dylan Imrei</h1>
 	<p class = "intro-columns">
 	<span>Programmer</span>

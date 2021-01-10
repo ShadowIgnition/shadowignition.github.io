@@ -74,6 +74,7 @@ body {
 
 h1,h2{
 	font-family: var(--headerFont);
+	border: 10px solid transparent;
 }
 
 h1 {
@@ -90,6 +91,16 @@ h4 {
 
 a {
 	color: var(--secondaryColor);
+}
+
+#quotes{
+	display: inline;
+	font: var(--bodyFont);
+	font-weight: bold;
+	//color:var(--secondaryColor);
+		max-width: 50%;
+	border: 10px solid transparent;
+	border-image: var(--containerBorder);
 }
 header {
     width: 25%;
@@ -353,7 +364,7 @@ mark{
 .timeline .row{
 	max-width: 50%;
 	background-color: var(--primaryPageTint);
-		border: 10px solid transparent;
+	border: 10px solid transparent;
 	border-image: var(--containerBorder);
 }
 
