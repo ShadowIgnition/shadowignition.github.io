@@ -1,9 +1,9 @@
 var quotationArray = [
-	'Hello World',
 	'Welcome'
 ]
 //'Dark Mode is active'
 /*
+'Hello World',
 	'Hold The Future', 
 	'Cyber Talking',
 	'Virtual Visions',
@@ -29,14 +29,16 @@ var quotationArrayRan = quotationArray.slice(numerator, denominator);
 var rng = Math.floor(Math.random()* quotationArrayRan.length);
 
 var textQuote = quotationArrayRan[rng];
-var themeNotificaiton = "Dark mode active";
+var themeNotificaiton = "Dark Mode Active";
+var interactablesNotificaiton = "Highlighting Interactable Elements";
 var selectedText = "";
+var welcomeBackText = "Welcome back friend";
 
 var i = 0;
 var speedQuote = 50;
 
 var beforeQuote = "> ";
-var afterQuote = "_";
+var afterQuote = "";
 
 var quoteTimeout;
 var notifyTimeout;
@@ -44,6 +46,15 @@ var notifyTimeout;
 
 function InitializeQuote() {
 	document.getElementById("quotes").innerHTML = "";
+	if (localStorage.getItem("returnVisit") == "true") {//if is return visit
+		textQuote = welcomeBackText;
+		//console.log(x + " @a");
+	}
+	else
+	{
+		//console.log(x + " @b");
+		localStorage.setItem("returnVisit", "true");
+	}
 	selectedText = beforeQuote + textQuote + afterQuote;
 	typeQuote();
 }
@@ -56,38 +67,30 @@ function typeQuote() {
   }
 }
 
-/* DEBUG CODE 
-document.getElementById("blockquote").innerHTML = numerator + " / " + denominator + " = " + (numerator/denominator) + " | RNG = " + (rng+1) + " | " + (rng+1) + " + " + numerator + " = Line "+ (numerator+(rng+1));
-*/
-
-/* NEXT QUOTE */
-function nextQuote(){ 
-	clearTimeout(quoteTimeout);
-	if (textQuote.length > quotationArray[rng++]) {
-		textQuote = quotationArray[rng++];
-	} else {
-		textQuote = quotationArray[rng];
-	}
-	document.getElementById("quotes").innerHTML = "";
-	i = 0;
-	typeQuote();
-}
-
 function notifyDarkmode(){
-	clearTimeout(quoteTimeout);
-	clearTimeout(notifyTimeout);
-	i = 0;
+	clearTimeouts();
 	selectedText = beforeQuote + themeNotificaiton + afterQuote;
-	document.getElementById("quotes").innerHTML = "";
 	typeQuote();
 	notifyTimeout = setTimeout(notifyVanillaText, 2500);
-	
+}
+
+function notifyInteractables(){
+	clearTimeouts();
+	selectedText = beforeQuote + interactablesNotificaiton + afterQuote;
+	typeQuote();
+	notifyTimeout = setTimeout(notifyVanillaText, 3250);
 }
 
 function notifyVanillaText(){ 
-	clearTimeout(quoteTimeout);
-	i = 0;
+	clearTimeouts();
 	selectedText = beforeQuote + textQuote + afterQuote;
-	document.getElementById("quotes").innerHTML = "";
 	typeQuote();
+}
+
+function clearTimeouts(){ 
+	i = 0;
+	clearTimeout(quoteTimeout);
+	clearTimeout(notifyTimeout);
+	clearTimeout(notifyInteractables);
+	document.getElementById("quotes").innerHTML = "";
 }

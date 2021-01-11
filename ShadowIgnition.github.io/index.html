@@ -1,11 +1,11 @@
-
 <head> <!--Setup -->
 	<link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
 	<title>Porfolio - Dylan - Game Developer</title> 
 	<meta name = "description" content="">
 	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/style.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src ="./ShadowIgnition.github.io_files/Javascript/randomQuote.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/commandLine.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/darkMode.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
@@ -27,33 +27,14 @@
 	</div>
 	<div class="column">
 		<div class="toggle">
-			<button id="darkModeToggleSwitch" onclick="toggleTheme(),notifyDarkmode()"> Dark Mode</button>
-			<script>
-				function setTheme(themeName) {
-					localStorage.setItem('theme', themeName);
-					document.documentElement.className = themeName;
-				}
-				function toggleTheme() {
-					if (localStorage.getItem('theme') === 'theme-dark') {
-						setTheme('theme-light');
-					} else {
-						setTheme('theme-dark');
-					}
-				}
-				(function () {
-				//console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-					if (localStorage.getItem('theme') === 'theme-dark') {
-						setTheme('theme-dark');
-					} else {
-						if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-							setTheme('theme-dark');
-						} else {
-							setTheme('theme-light');
-						}
-					}
-				})();
-			</script>
-			
+			<button id="darkModeToggleSwitch" onclick="toggleTheme(),notifyDarkmode()">
+				Dark Mode
+			</button>
+		</div>
+		<div class="toggle">
+			<button id="toggleSwitch" onclick="notifyInteractables()">
+				<i class="fa fa-hand-pointer-o" title="Toggle Highlight Interactables?"></i></i> Highlight Interactables
+			</button>
 		</div>
 	</div>
 	<!--

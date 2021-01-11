@@ -102,6 +102,20 @@ a {
 	border: 10px solid transparent;
 	border-image: var(--containerBorder);
 }
+
+#quotes::after{
+	content: "_";
+	animation-name: terminalCursor;
+	animation-duration: 1060ms;
+	animation-iteration-count: infinite;
+}
+
+@keyframes terminalCursor {
+  0% {color: #0000;text-shadow: 0 0 6px rgba(0, 0, 0, 0);}
+  40% {color: #ffff;text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
+  60% {color: #ffff;text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
+  100% {color: #0000;text-shadow: 0 0 6px rgba(0, 0, 0, 0);}
+}
 header {
     width: 25%;
     min-height: 66px;
@@ -706,6 +720,13 @@ input[type=checkbox]{
 	visibility: hidden;
 }
 #darkModeToggleSwitch {
+	background:none;
+	border:none;
+	font-family: var(--bodyFont);
+	color: var(--altFontColor);
+	font-size: 1rem;
+}
+#toggleSwitch {
 	background:none;
 	border:none;
 	font-family: var(--bodyFont);
