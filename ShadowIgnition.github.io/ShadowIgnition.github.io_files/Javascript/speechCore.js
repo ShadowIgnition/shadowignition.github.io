@@ -29,7 +29,7 @@ var quotationArrayRan = quotationArray.slice(numerator, denominator);
 var rng = Math.floor(Math.random()* quotationArrayRan.length);
 
 var textQuote = quotationArrayRan[rng];
-var themeNotificaiton = "Dark Mode Active";
+var themeNotificaiton = "Toggled Dark Mode";
 var interactablesNotificaiton = "Highlighting Interactable Elements";
 var selectedText = "";
 var welcomeBackText = "Welcome back friend";
@@ -69,7 +69,11 @@ function typeQuote() {
 
 function notifyDarkmode(){
 	clearTimeouts();
-	selectedText = beforeQuote + themeNotificaiton + afterQuote;
+	if (localStorage.getItem('theme') === 'theme-dark') {
+		selectedText = beforeQuote + "Dark Mode Activated" + afterQuote;
+	} else {
+		selectedText = beforeQuote + "Dark Mode Deactivated" + afterQuote;
+	}
 	typeQuote();
 	notifyTimeout = setTimeout(notifyVanillaText, 2500);
 }

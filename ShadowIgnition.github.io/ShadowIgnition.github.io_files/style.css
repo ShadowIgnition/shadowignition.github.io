@@ -32,7 +32,13 @@
 	--inversion: invert(0);
 	--darkModeIcon: "\f186";
 	--mainPagePhoto: url("./images/PreludeBackdrop.png");
-	--containerBorder: url(border-dark.png) 30 round;
+	--containerBorderImg: url(border-dark.png) 30 round;
+	
+	--interactiveBorder: 0px solid transparent;
+	--interactiveBorderImg: none;
+	
+	--interBorderTupple: 10px solid transparent;
+	--interBorderTuppleImg: url(border-interactive.png)30 round;
 }
 .theme-dark {
 	--fontColor: #000;
@@ -53,7 +59,14 @@
 	--darkModeIcon: "\f185";
 	
 	--mainPagePhoto: url("./images/OhShroomBackdrop.png");
-	--containerBorder: url(border-light.png) 30 round;
+	--containerBorderImg: url(border-light.png) 30 round;
+	
+	--interactiveBorder: 0px solid transparent;
+	--interactiveBorderImg: none;
+}
+.isInteractive {
+	--interactiveBorder: 10px solid transparent;
+	--interactiveBorderImg: url(border-interactive.png)30 round;
 }
 @media (prefers-color-scheme: dark) { 
   ... some style for dark mode
@@ -92,7 +105,16 @@ h4 {
 a {
 	color: var(--secondaryColor);
 }
-
+c {
+	color: #888888;
+    text-transform: uppercase;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 #quotes{
 	display: inline;
 	font: var(--bodyFont);
@@ -100,7 +122,7 @@ a {
 	//color:var(--secondaryColor);
 		max-width: 50%;
 	border: 10px solid transparent;
-	border-image: var(--containerBorder);
+	border-image: var(--containerBorderImg);
 }
 
 #quotes::after{
@@ -117,17 +139,10 @@ a {
   100% {color: #0000;text-shadow: 0 0 6px rgba(0, 0, 0, 0);}
 }
 header {
-    width: 25%;
-    min-height: 66px;
     z-index: 600;
-	display: block;
-    background: var(--overlayPanelColor);
-    min-width: 350px;
-    min-height: 66px;
     position: fixed;
-    left: 0px;
-    top: 0px;
-	border-radius: 0 0 3em 0;
+    left: 1em;
+    top: 1em;
 }
 mark{
 	background-color: red;
@@ -244,7 +259,7 @@ mark{
 }
 
 .intro-links li {
-    display: inline-block;
+    display: inline-flex;
     margin: 0 20px;
     padding: 0;
 }
@@ -379,7 +394,7 @@ mark{
 	max-width: 50%;
 	background-color: var(--primaryPageTint);
 	border: 10px solid transparent;
-	border-image: var(--containerBorder);
+	border-image: var(--containerBorderImg);
 }
 
 .row {
@@ -437,14 +452,22 @@ li{
   transform: translate(-50%, -50%);
   color: white;
 }
-
 .button a{
-	color: var(--fontColor);
-	cursor: pointer;
-	padding:8px 8px 8px 8px;
+	color: #fff;
+    cursor: pointer;
+    /* padding: 0; */
+    border: 10px solid transparent;
+    width: 100px;
+    height: 100px;
+    border-image: var(--interactiveBorderImg);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
 }
+
 .button a:hover {
-  color: var(--secondaryColor);
+		color: var(--secondaryColor);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -711,7 +734,7 @@ date {
 }
 .toggle {
 	text-align:center;
-    margin-top: .75rem;
+    //margin-top: .75rem;
 	vertical-align:middle;
 }
 input[type=checkbox]{
@@ -719,26 +742,37 @@ input[type=checkbox]{
 	width: 0;
 	visibility: hidden;
 }
-#darkModeToggleSwitch {
-	background:none;
-	border:none;
-	font-family: var(--bodyFont);
-	color: var(--altFontColor);
-	font-size: 1rem;
-}
 #toggleSwitch {
-	background:none;
-	border:none;
-	font-family: var(--bodyFont);
-	color: var(--altFontColor);
-	font-size: 1rem;
+    background: none;
+    border: none;
+    font-family: var(--bodyFont);
+    color: var(--fontColor);
+    font-size: 1rem;
+    height: 2em;
+    width: 2em;
+    background-color: var(--altFontColor);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+	position:relative;
+	cursor: pointer;
 }
-#darkModeToggleSwitch:before {
-	font-family: FontAwesome;
+
+#toggleSwitch.darkMode::before {
+    font: normal normal normal 14px/1 FontAwesome;
 	content: var(--darkModeIcon);
-	display: inline-block;
-	color: var(--altFontColor);
 }
+
+#toggleSwitch:hover{
+	background-color: var(--secondaryColor);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 //MASONRY GRID https://w3bits.com/css-masonry/
 .masonry { /* Masonry container */
   column-count: 2;

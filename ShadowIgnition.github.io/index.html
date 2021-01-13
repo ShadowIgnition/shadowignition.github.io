@@ -4,8 +4,8 @@
 	<meta name = "description" content="">
 	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/style.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src ="./ShadowIgnition.github.io_files/Javascript/commandLine.js"></script>
-	<script src ="./ShadowIgnition.github.io_files/Javascript/darkMode.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
@@ -27,16 +27,15 @@
 	</div>
 	<div class="column">
 		<div class="toggle">
-			<button id="darkModeToggleSwitch" onclick="toggleTheme(),notifyDarkmode()">
-				Dark Mode
+			<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()">
 			</button>
-		</div>
+		</div><!--
 		<div class="toggle">
-			<button id="toggleSwitch" onclick="notifyInteractables()">
-				<i class="fa fa-hand-pointer-o" title="Toggle Highlight Interactables?"></i></i> Highlight Interactables
+			<button id="toggleSwitch" onclick="toggleInteractive(),notifyInteractables()">
+				<i class="fa fa-hand-pointer-o" title="Toggle Highlight Interactables?"></i></i>
 			</button>
 		</div>
-	</div>
+	</div>-->
 	<!--
 	<div class="column">
 		<span class="fa-stack">
@@ -93,6 +92,7 @@
 	<a href="https://shadowignition.itch.io/">
 		<i class="fa fa-gamepad" aria-hidden="true"></i>
 	</a>
+</li>
 <li>
 	<a href="https://sketchfab.com/ShadowIgnition">
 		<i class="fa fa-cube" aria-hidden="true"></i>
@@ -108,8 +108,8 @@
     <p class = "intro-columns"></p>
 	<h2>ABOUT ME</h2>
 	Hi, My name is Dylan, 
-	<p>I'm a Passionate Game Developer specializing in Programming and Design, when I'm not working you can often find me experimenting with side projects, playing and analyzing video games or occasionally doing some 2D & 3D Art.</p>
-	<p>With an interest in systematic game design and mechanics, my dream game would be a Turn-Based Tactics game similar to the Final Fantasy Tactics or Tactics Orge Series with a heavy focus on Systematic Gameplay and mechanics.</p>
+	<p>I'm a Passionate Game Developer specializing in Programming and Mechanic Design, when I'm not working you can often find me experimenting with smaller projects, playing or studying games or occasionally doing some 2D & 3D Art.</p>
+	<p>With an interest in systematic game design and mechanics, my dream game would be a Turn-Based Tactics game similar to the Final Fantasy Tactics or Tactics Orge Series with a heavier focus on Systematic Gameplay and mechanics.</p>
 	<div class="row">
 		<div class="column">
 			<h3>Additional Info</h3>
@@ -118,20 +118,20 @@
 			<h4><i class="fa fa-suitcase" aria-hidden="true"></i> Title</h4>
 			<p>Game Developer / Programmer</p>
 			<h4><i class="fa fa-code" aria-hidden="true"></i> Languages</h4>
-			<p><b>C#</b> (Unity): 2 Years</p>
-			<p><b>C++</b> (Arduino): 1 Year</p>
-			<p><b>GML</b> (Game Maker): 1 Year</p>
-			<p><b>Python</b>: 1 Year</p>	
-			<h6><b>Misc</b>: 1 Year (Game Modding, WebDev, etc)</h6><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
+				<p>C# <c>(Unity - 2 Years)</c></p><!--2 Years-->
+				<p>C++ <c>(Arduino - 1 Year)</c></p><!--1 Year -->
+				<p>GML <c>(Game Maker - 1 Year)</c></p>
+				<p>Python <c>(1 Year)</c></p>
+				<h6><b>Misc</b>: 1 Year (Game Modding, WebDev, etc)</h6><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
 		</div>
 		<div class="column">
 			<h3>Skills</h3>
 			<h4>Programming</h4>
-			<p>I've been programming for around 6 Years from Game Maker to Python to even Arduino, now days C# is my prefered langauge</p><!--July 28th 2014-->
+			<p>I've been programming for around six years, while mostly in the game development field, I also have some experience with Python and Arduino (C++).</p><!--July 28th 2014-->
 			<h4>Design</h4>
-			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-			<h4>Art</h4>
-			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+			<p>As someone who often finds myself playing games with systematic elements or mechanics, It would only make sense to be interested in the development of systematically connected gameplay mechanics.</p>
+			<!--<h4>Art</h4>
+			<p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>-->
 		</div>
 	</div>
 </div>
@@ -145,7 +145,7 @@
 
 <section id = "timeline">
 <h1>DEVELOPMENT EXPERIENCE</h1>
-<h5>Major Projects</h5>
+<h5>A Timeline of Previous Projects and Development Opportunities</h5>
 <div class="timeline">
 <!-- PRELUDE GARDEN -->
 	<div class="content">
@@ -351,8 +351,8 @@
 </section>
 <!-- PORTFOLIO -->
 <section id = "porfolio">
-<h1>DEVELOPMENT PORTFOLIO</h1>
-<h5>Major Projects</h5>
+<h1>ASSET GALLERY</h1>
+<h5>A Showcase of previous work</h5>
 <div class="porfolio">
 	<div class="gallery">
 		<div class="masonry">
