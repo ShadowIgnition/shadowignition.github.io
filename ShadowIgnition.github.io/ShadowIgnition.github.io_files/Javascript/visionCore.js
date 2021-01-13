@@ -10,7 +10,7 @@ function toggleTheme() {
 	}
 }
 (function () {
-//console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+	//console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 	if (localStorage.getItem('theme') === 'theme-dark') {
 		setTheme('theme-dark');
 	} else {

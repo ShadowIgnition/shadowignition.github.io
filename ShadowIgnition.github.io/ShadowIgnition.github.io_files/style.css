@@ -11,6 +11,7 @@
 ::-webkit-scrollbar-thumb:hover {background: var(--secondaryColor);}	
 
 ::selection { background-color: #FF0045;}
+
 :root {
 	--headerFont: 'Abel', sans-serif;
 	--bodyFont: 'Montserrat', sans-serif;
@@ -40,6 +41,7 @@
 	--interBorderTupple: 10px solid transparent;
 	--interBorderTuppleImg: url(border-interactive.png)30 round;
 }
+
 .theme-dark {
 	--fontColor: #000;
 	--altFontColor: #fff;
@@ -64,16 +66,44 @@
 	--interactiveBorder: 0px solid transparent;
 	--interactiveBorderImg: none;
 }
+
 .isInteractive {
 	--interactiveBorder: 10px solid transparent;
-	--interactiveBorderImg: url(border-interactive.png)30 round;
+	--interactiveBorderImg: url(border-interactive.png) 30 round;
 }
+
 @media (prefers-color-scheme: dark) { 
   ... some style for dark mode
 }
 
 @media (prefers-color-scheme: light) {
   ... some style for light mode
+}
+
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 120px;
+	height: 120px;
+	margin: -76px 0 0 -76px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+#page{
+	display:none;
+}
+.no-js #loader{
+	display:none;
+}
+
+.no-js #page{
+	display:block;
 }
 
 body {
@@ -115,6 +145,15 @@ c {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
+#about ul {
+	margin-left: -.5em;
+}
+#about li {
+    line-height: 1.8;
+    padding-bottom: 0em;
+}
+
 #quotes{
 	display: inline;
 	font: var(--bodyFont);
@@ -772,6 +811,7 @@ input[type=checkbox]{
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 
 //MASONRY GRID https://w3bits.com/css-masonry/
 .masonry { /* Masonry container */

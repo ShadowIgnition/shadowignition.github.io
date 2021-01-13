@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src ="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
 	<script src ="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
@@ -48,59 +49,68 @@
 		</span><mark>High Contrast<mark>
 	</div>
 	-->
+	</div>
+	<script>
+	$(document).ready(function(){
+		$("#loader").delay(250).fadeOut('slow');
+		$("#page").delay(500).fadeIn('slow');
+		setTimeout(InitializeQuote, 750);
+		})
+	</script>
 	
-	
-</div>
-
 
 </header>
 <html><body>
-<body onload="InitializeQuote()">
+
+<div id="loader"></div>
+<div id="page">
+
+<!--<body onload="InitializeQuote()">-->
+
 <section id = "intro">
 <div class = "intro-content">
-<div class = "intro text">
-<div class = "row">
-<div class = columns-split>
-    <p class = "intro-columns" id = "quotes">> </p>
-    <h1 style="font-size:84px;">Dylan Imrei</h1>
-	<p class = "intro-columns">
-	<span>Programmer</span>
-	<span>Game Developer</span>
-	<span>Designer</span>
-	</p>
+	<div class = "intro text">
+		<div class = "row">
+			<div class = "columns-split">
+				<p class = "intro-columns" id = "quotes"></p>
+				<h1 style="font-size:84px;">Dylan Imrei</h1>
+				<p class = "intro-columns">
+					<span>Programmer</span>
+					<span>Game Developer</span>
+					<span>Designer</span>
+				</p>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
-<ul class = "intro-links">
-<div class = "button">
-<li>
-	<a href="https://twitter.com/ShadowIgnition">
-		<i class="fa fa-twitter" aria-hidden="true"></i>
-	</a>
-</li>
-<li>
-	<a href="https://gitlab.com/ShadowIgnition">
-		<i class="fa fa-gitlab" aria-hidden="true"></i>
-	</a>
-</li>
-<li>
-	<a href="https://github.com/ShadowIgnition">
-		<i class="fa fa-github" aria-hidden="true"></i>
-	</a>
-</li>
-<li>
-	<a href="https://shadowignition.itch.io/">
-		<i class="fa fa-gamepad" aria-hidden="true"></i>
-	</a>
-</li>
-<li>
-	<a href="https://sketchfab.com/ShadowIgnition">
-		<i class="fa fa-cube" aria-hidden="true"></i>
-	</a>
-</li>
-
-</ul>
-</div>
+	<ul class = "intro-links">
+		<div class = "button">
+			<li>
+				<a href="https://twitter.com/ShadowIgnition">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://gitlab.com/ShadowIgnition">
+					<i class="fa fa-gitlab" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/ShadowIgnition">
+					<i class="fa fa-github" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://shadowignition.itch.io/">
+					<i class="fa fa-gamepad" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://sketchfab.com/ShadowIgnition">
+					<i class="fa fa-cube" aria-hidden="true"></i>
+				</a>
+			</li>	
+		</div>
+	</ul>
 </div> 
 </section>
 <section id = "about">
@@ -118,11 +128,13 @@
 			<h4><i class="fa fa-suitcase" aria-hidden="true"></i> Title</h4>
 			<p>Game Developer / Programmer</p>
 			<h4><i class="fa fa-code" aria-hidden="true"></i> Languages</h4>
-				<p>C# <c>(Unity - 2 Years)</c></p><!--2 Years-->
-				<p>C++ <c>(Arduino - 1 Year)</c></p><!--1 Year -->
-				<p>GML <c>(Game Maker - 1 Year)</c></p>
-				<p>Python <c>(1 Year)</c></p>
-				<h6><b>Misc</b>: 1 Year (Game Modding, WebDev, etc)</h6><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
+			<ul>
+				<li><p>C# <c>(Unity - 2 Years)</c></p><!--2 Years--></li>
+				<li><p>C++ <c>(Arduino - 1 Year)</c></p><!--1 Year --></li>
+				<li><p>GML <c>(Game Maker - 1 Year)</c></p></li>
+				<li><p>Python <c>(1 Year)</c></p></li>
+			</ul>
+			<p><c>Misc: 1 Year (Game Modding, WebDev, etc)</c></p><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
 		</div>
 		<div class="column">
 			<h3>Skills</h3>
@@ -323,7 +335,7 @@
 		<div class="smolContainer">
 			<div class="row">
 				<div class="column">
-				<h3>Fish Bowl ( <i class="fa fa-windows" aria-hidden="true"></i> / <i class="fa fa-html5" aria-hidden="true"></i> )</h3>
+				<h3>Fishy Business ( <i class="fa fa-windows" aria-hidden="true"></i> / <i class="fa fa-html5" aria-hidden="true"></i> )</h3>
 				<date>21st Oct. 2019 (World Skills Regional Competition - Victoria )</date>
 				<p>Developer, Lead Programmer</p>
 					<div class = "projectButton">
@@ -333,7 +345,7 @@
 					</div>
 				</div>
 				<div class="column">
-					<p><b>While working on Fish Bowl in an 6 hour Game-Jam, My responsibilities included:</b></p>
+					<p><b>While working on Fishy Business in an 6 hour Game-Jam, My responsibilities included:</b></p>
 					<ul>
 					<li>Programming player controls and environmental hazards</li>
 					<li>Programming win/lose states and scoring systems</li>
@@ -384,6 +396,7 @@
 <section id = "contact">
 
 <h1>Get in touch</h1>
+</div>
 </section>
 </body>
 
