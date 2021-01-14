@@ -50,22 +50,25 @@
 	</div>
 	-->
 	</div>
-	<script>
+	<!--<script>//IN CASE PRELOADER IS NEEDED
 	$(document).ready(function(){
 		$("#loader").delay(250).fadeOut('slow');
 		$("#page").delay(500).fadeIn('slow');
 		setTimeout(InitializeQuote, 750);
 		})
-	</script>
+	</script>-->
 	
 
 </header>
 <html><body>
+<!--
+<div id="loader">
+	<div class="circleA"></div>
+	<div class="circleB"></div>
+</div>
+<div id="page">-->
 
-<div id="loader"></div>
-<div id="page">
-
-<!--<body onload="InitializeQuote()">-->
+<body onload="InitializeQuote()">
 
 <section id = "intro">
 <div class = "intro-content">
@@ -396,7 +399,7 @@
 <section id = "contact">
 
 <h1>Get in touch</h1>
-</div>
+<!--</div>-->
 </section>
 </body>
 

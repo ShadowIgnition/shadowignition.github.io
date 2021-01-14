@@ -87,12 +87,6 @@
 	z-index: 1;
 	width: 120px;
 	height: 120px;
-	margin: -76px 0 0 -76px;
-	border: 16px solid #f3f3f3;
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite;
 }
 
 #page{
@@ -719,7 +713,6 @@ date {
 }
 
 
-
 /* Media queries - Responsive timeline on screens less than 1024px wide */
 @media screen and (max-width: 1024px) {
 	::-webkit-scrollbar {width: 8px;}
@@ -840,10 +833,10 @@ html {
 
 /* The Masonry Container */
 .masonry {
-  margin: 0em auto;
-  max-width: 45%;
-  column-gap: 0;
-
+	margin: 0em auto;
+	max-width: 45%;
+	column-gap: 0;
+	column-count: 2;
 }
 
 /* The Masonry Brick */
@@ -854,25 +847,79 @@ html {
   margin-bottom: 0;
 }
 
-/* Masonry on large screens */
-@media only screen and (min-width: 1024px) {
-  .masonry {
-    column-count: 2;
-  }
+@media screen and (max-width: 1366px) {/* regular screens */
+	.timeline .row{
+		max-width: 80%;
+	}
+	.columns-split{
+		max-width: 65%;
+	}
+	.masonry{
+		max-width: 80%;
+		column-count: 2;
+	}
+	.intro-links{
+		font-size: 2.3rem;
+	}
+	.intro-links li {
+    margin: 0 0px;
+	}
+	.intro-content .intro-columns{
+		font-size: 1rem;
+	}
+	#quotes{
+		font-size: 1rem;
+	}
 }
 
-/* Masonry on medium-sized screens */
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .masonry {
-    column-count: 2;
-	max-width: 75%;
-  }
+@media screen and (max-width: 1920px) {/* large screens */
+	.timeline .row{
+		max-width: 65%;
+	}
+	.columns-split{
+		max-width: 50%;
+	}
+	.masonry{
+		max-width: 50%;
+		column-count: 2;
+	}
+	.intro-links{
+		font-size: 3.3rem;
+	}
+	.intro-links li {
+    margin: 0 10px;
+	}
+}
+///*WAAAAAAAAAAAA*/
+.circleA, .circleB {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: circleAnim 2.0s infinite ease-in-out;
+  animation: circleAnim 2.0s infinite ease-in-out;
 }
 
-/* Masonry on small screens */
-@media only screen and (max-width: 767px) and (min-width: 540px) {
-  .masonry {
-    column-count: 2;
-	max-width: 75%;
+.circleB {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes circleAnim {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes circleAnim {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
   }
 }
