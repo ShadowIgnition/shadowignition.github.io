@@ -461,12 +461,50 @@ li{
 }
 
 #contact{
-	background-color: #131417;
+	background-color: var(--tertiaryPageTint);
     width: 100%;
     display: table;
     position: relative;
     text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+	height:inherit;
 }
+.contact-form{
+    width: 45%;
+    margin-left: auto;
+    line-height: 1.8;
+    margin-right: auto;
+	background-color:var(--primaryPageTint);
+	border-radius: 30px;
+	box-shadow: 0 30px 30px -30px rgba(0,0,0,.5);
+}
+
+#contact .row {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+	border-radius: 30px;
+	height: 575px;
+}
+#contact .column.left {
+    flex: 35%;
+	border-radius: 30px;
+    background-color: var(--tertiaryColor);
+    color: #fff;
+	padding: 1rem 3rem 3rem 3rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .25)), url("../ShadowIgnition.github.io_files/images/preview.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+	margin:0.5rem;
+}
+#contact .column.right {
+    flex: 50%;
+	background-color: right;
+	border-radius: 0 30px 30px 0;
+	padding: 1rem 3rem 3rem 3rem;
+}
+
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)), url("../ShadowIgnition.github.io_files/images/Prelude_Garden-Screenshot (2).png");
