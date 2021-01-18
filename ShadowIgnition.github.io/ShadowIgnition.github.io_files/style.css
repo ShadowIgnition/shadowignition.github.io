@@ -10,7 +10,7 @@
 ::-webkit-scrollbar-thumb {background: var(--scrollBarThumb);}
 ::-webkit-scrollbar-thumb:hover {background: var(--secondaryColor);}	
 
-::selection { background-color: #FF0045;}
+::selection { background-color: var(--secondaryColor);}
 
 :root {
 	--headerFont: 'Abel', sans-serif;
@@ -500,11 +500,21 @@ li{
 }
 #contact .column.right {
     flex: 50%;
-	background-color: right;
 	border-radius: 0 30px 30px 0;
 	padding: 1rem 3rem 3rem 3rem;
 }
 
+.linkToButton{
+	border: none;
+	display: inline-block;
+	cursor: pointer;
+	color:#000;
+	padding: 18px 32px;
+	font-size: 1rem;
+	border-radius: 9px;
+	background-color: var(--secondaryColor);
+	box-shadow: 0px 18px 40px -18px var(--secondaryColor);
+}
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)), url("../ShadowIgnition.github.io_files/images/Prelude_Garden-Screenshot (2).png");
