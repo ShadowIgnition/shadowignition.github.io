@@ -340,7 +340,7 @@ mark{
 }
 
 /* Container around content */
-.container {
+#timeline .container{
     padding: 10px 10px;
     position: relative;
     background-color: inherit;
@@ -349,7 +349,7 @@ mark{
 }
 
 /* The circles on the timeline */
-.container::after {
+#timeline .container::after {
 	content: '';
 	position: absolute;
 	width: 30px;
@@ -371,7 +371,7 @@ mark{
 }
 
 /* The circles on the timeline */
-.smolContainer::after {
+#timeline .smolContainer::after {
 	content: '';
 	position: absolute;
 	width: 20px;
