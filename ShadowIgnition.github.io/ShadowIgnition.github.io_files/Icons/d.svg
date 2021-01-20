@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="56.381809"
+   height="56.385601"
+   viewBox="0 0 14.917683 14.918686"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="d.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:label="SketchfabIcon">
+  <style
+     id="style917"></style>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.03441122"
+     inkscape:cx="-1867.4242"
+     inkscape:cy="446.75286"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg8"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px" />
+  <path
+     d="M 0,0 -429.486,-247.98 V 268.138 L 0,500.2 Z M -510.439,388.289 -1020.478,658.667 -510.439,953.204 -0.32,658.667 Z M -587.233,-247.9 -1018.318,0.96 V 503 l 431.085,-232.862 z m 86.873,1595.072 c -552.276,0 -999.92,-447.724 -999.92,-1000 0,-552.276 447.644,-1000 999.92,-1000 552.276,0 999.92,447.724 999.92,1000 0.08,552.276 -447.564,1000 -999.92,1000"
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     id="path857"
+     inkscape:label="SketchfabIcon" />
+  <metadata
+     id="metadata919">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

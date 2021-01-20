@@ -32,7 +32,7 @@ var textQuote = quotationArrayRan[rng];
 var themeNotificaiton = "Toggled Dark Mode";
 var interactablesNotificaiton = "Highlighting Interactable Elements";
 var selectedText = "";
-var welcomeBackText = "Welcome back friend";
+var welcomeBackText = "Welcome back, friend";
 
 var i = 0;
 var speedQuote = 50;

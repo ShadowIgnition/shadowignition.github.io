@@ -226,6 +226,25 @@ mark{
     vertical-align: middle;
 	filter: var(--inversion);
 }
+.icons.svg {
+	width:1em;
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, .75));
+	  vertical-align: middle;
+    position: absolute;
+    top: 1.025em;
+	fill:#fff;
+}
+.svg:hover {
+		color: var(--secondaryColor);
+		fill: var(--secondaryColor);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
 /* 1em for main link icons var(--fontColor);*/
 .intro-content {
     display: table-cell;
@@ -289,9 +308,33 @@ mark{
     font-size: 3.3rem;
     margin: 0;
     padding: 0;
+	
 }
 
 .intro-links li {
+    display: inline-flex;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.footer-links {
+    display: block;
+    /* position: absolute; */
+    width: 100%;
+    /* left: 0; */
+    /* bottom: 7.2rem; */
+    font-size: 1.5rem;
+    margin-top: 6rem;
+    padding: 0;
+    margin-bottom: 6rem;
+    text-align: right;
+}
+
+.footer-links a{
+	color:blue;
+}
+
+.footer-links li {
     display: inline-flex;
     margin: 0 20px;
     padding: 0;
@@ -503,7 +546,9 @@ li{
 	border-radius: 0 30px 30px 0;
 	padding: 1rem 3rem 3rem 3rem;
 }
-
+.fa {
+  vertical-align: middle;
+}
 .linkToButton{
 	border: none;
 	display: inline-block;
@@ -512,8 +557,19 @@ li{
 	padding: 18px 32px;
 	font-size: 1rem;
 	border-radius: 9px;
-	background-color: var(--secondaryColor);
+	background-image: linear-gradient(to right,#FF512F, var(--secondaryColor));
 	box-shadow: 0px 18px 40px -18px var(--secondaryColor);
+	width: 224px;
+	background-size: 200% auto;
+    margin: 1rem;
+	transition: background-position 0.5s ease-out;
+	background-position: right center;
+}
+
+.linkToButton:hover{
+	padding: 16px 32px;
+	border: 2px solid var(--altFontColor);
+	background-position: left center;
 }
 
 .hero-image {
@@ -533,7 +589,7 @@ li{
   transform: translate(-50%, -50%);
   color: white;
 }
-.button a{
+.intro-links a{
 	color: #fff;
     cursor: pointer;
     /* padding: 0; */
@@ -547,8 +603,9 @@ li{
     align-items: center;
 }
 
-.button a:hover {
+.intro-links a:hover {
 		color: var(--secondaryColor);
+		fill: red;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
