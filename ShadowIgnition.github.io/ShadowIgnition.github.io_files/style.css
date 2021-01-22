@@ -447,24 +447,30 @@ mark{
   text-align:left;
 }
 
-.timeline .column:nth-child(1){
-    /* padding: 5px; */
-    margin-left: 5%;
+.timeline .column:nth-child(1) {
+    padding-left: 5%;
+    /* margin-left: 5%; */
     width: 85%;
-	vertical-align:middle;
+    vertical-align: middle;
+    border: 1px solid var(--scrollBarThumb);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
 }
 
-.timeline .column:nth-child(2){
-    /* padding: 5px; */
-    margin-left: 5%;
+.timeline .column:nth-child(2) {
+    padding-left: 5%;
+    /* margin-left: 5%; */
     width: 85%;
+    border: 1px solid var(--scrollBarThumb);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    border-left: none;
 }
 
 .timeline .row{
-	max-width: 50%;
-	background-color: var(--primaryPageTint);
-	border: 10px solid transparent;
-	border-image: var(--containerBorderImg);
+    max-width: 50%;
+    background-color: var(--primaryPageTint);
+    margin: auto;
 }
 
 .row {
@@ -624,23 +630,34 @@ li{
     transition: all 0.3s ease-in-out;
 }
 .thrubutton {
-    margin: auto;
+    width: 5%;
+	margin: 0px -3.5% 0px 0;
+	border: 1px solid var(--scrollBarThumb);
+    border-left: none;
+    border-radius: 0 3px 3px 0;
 }
 .thrubutton a {
-	color: var(--tertiaryColor);
-	cursor: pointer;
-	padding:8px 8px 8px 8px;
-    width: 5%;
-    font-size:3.3rem;
-    margin-top:5%;
+    color: var(--altFontColor);
+    cursor: pointer;
+    font-size: 3.3rem;
+    background-color: var(--scrollBarThumb);
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+	text-decoration: none;
+
+    transition: background-position 0.5s ease-out;
+    background-position: right center;
 }
 .thrubutton a:hover {
-  color: var(--secondaryColor);
+	/*color: var(--secondaryColor);*/
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+	background-color: var(--secondaryColor);
 }
 
 hr {
@@ -976,7 +993,7 @@ html {
 
 @media screen and (max-width: 1920px) {/* large screens */
 	.timeline .row{
-		max-width: 65%;
+		max-width: 75%;
 	}
 	.columns-split{
 		max-width: 50%;
