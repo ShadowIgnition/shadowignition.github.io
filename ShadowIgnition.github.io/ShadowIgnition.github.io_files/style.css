@@ -50,13 +50,13 @@
 	--tertiaryColor:#505050;
 	
 	--overlayPanelColor:#0006;
-	--primaryPageTint:#131417;
+	--primaryPageTint:#151515;
 	--secondaryPageTint:#F5F5F5;
 	
 	--scrollBarTrack: #0E0E0E;
 	--scrollBarThumb: #3E3E3E;
 	
-	--tertiaryPageTint:#0e0e0e;
+	--tertiaryPageTint:#1D1D1D;
 	--inversion: invert(1);
 	--darkModeIcon: "\f185";
 	
@@ -111,7 +111,6 @@ body {
 
 h1,h2{
 	font-family: var(--headerFont);
-	border: 10px solid transparent;
 }
 
 h1 {
@@ -120,7 +119,7 @@ h1 {
 h3,h4,h5,h6 {
 	font-family: var(--bodyFont);
 	text-transform: uppercase;
-
+	letter-spacing: 0.05rem;
 }
 h4 {
 	color:#888888;
@@ -283,7 +282,7 @@ mark{
 
 .columns-split, .columns-full {
     width: 100%;
-    max-width: 700px;
+    max-width: 50%;
     margin-left: auto;
 	line-height: 1.8;
     margin-right: auto;
@@ -345,6 +344,24 @@ mark{
     text-align: center;
     padding-top: 12rem;
     padding-bottom: 12rem;
+}
+.about-form{
+    margin: auto;
+	background-color:var(--primaryPageTint);
+
+}
+#about .column.left {
+    flex: 35%;
+    border-radius: 30px;
+    /* background-color: var(--tertiaryColor); */
+    color: #fff;
+    padding: 1rem 3rem 3rem 3rem;
+    background-image: url(../ShadowIgnition.github.io_files/images/ForestGameDay.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0.5rem;
+    border: 1px solid var(--scrollBarThumb);
+    border-radius: 1em;
 }
 
 #timeline{
@@ -458,8 +475,8 @@ mark{
 }
 
 .timeline .column:nth-child(2) {
-    padding-left: 5%;
-    /* margin-left: 5%; */
+	padding-left: 3%;
+    padding-right: 3%;
     width: 85%;
     border: 1px solid var(--scrollBarThumb);
     border-right: none;
@@ -474,8 +491,7 @@ mark{
 }
 
 .row {
-	max-width: 80%;
-	margin: 0 auto;
+	margin: auto;
 	display: flex;
 }
 
@@ -513,6 +529,7 @@ li{
     padding-bottom: 12rem;
 	height:inherit;
 }
+
 .contact-form{
     width: 45%;
     margin-left: auto;
@@ -880,7 +897,11 @@ date {
 		transition: none;
 	}
 	.thrubutton {
-		margin-right: 10%;
+		margin-right: 0%;
+		width: 10%;
+	}
+	.thrubutton a {
+		background-color: var(--secondaryColor);
 	}
 }
 .toggle {
