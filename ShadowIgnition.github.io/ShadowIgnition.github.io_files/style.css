@@ -166,15 +166,12 @@ c {
 
 @keyframes terminalCursor {
   0% {color: #0000;text-shadow: 0 0 6px rgba(0, 0, 0, 0);}
-  40% {color: #ffff;text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
-  60% {color: #ffff;text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
+  40% {color: var(--fontColor);text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
+  60% {color: var(--fontColor);text-shadow: 0 0 6px rgba(0, 0, 0, .75);}
   100% {color: #0000;text-shadow: 0 0 6px rgba(0, 0, 0, 0);}
 }
 header {
-    z-index: 600;
-    position: fixed;
-    left: 1em;
-    top: 1em;
+
 }
 mark{
 	background-color: red;
@@ -229,12 +226,12 @@ mark{
 	width:1em;
 	filter: drop-shadow(0 0 3px rgba(0, 0, 0, .75));
 	vertical-align: middle;
-	fill:#fff;
+	fill:var(--fontColor);
 }
 
 
-#awards{
-	background-color: #f0f0f0;
+#awards {
+    background-color: var(--primaryPageTint);
     width: 100%;
     height: auto;
     min-height: 720px;
@@ -243,6 +240,12 @@ mark{
     text-align: center;
     padding-top: 12rem;
     padding-bottom: 12rem;
+}
+
+.award-main{
+	margin: auto;
+    display: grid;
+	padding: 1em;
 }
 
 .row {
@@ -263,7 +266,7 @@ mark{
     width: 2em;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, .75));
     vertical-align: middle;
-    fill: #fff;
+    fill: var(--fontColor);
     margin: 1em;
 }
 .award-title {
@@ -272,6 +275,21 @@ mark{
 .award-date {
 	display: contents;
 }
+
+.award-container{
+	margin: 3% auto;
+	display: flex;
+	justify-content: center;
+}
+@media (max-width: 1440px) {
+	.award-main{
+		display: block;
+	}
+	.award-container{
+	display: inline-grid;
+	}
+}
+	
 .award-result {
     display: contents;
     text-transform: uppercase;
@@ -279,12 +297,12 @@ mark{
     font-weight: bold;
     font-size: 1.25em;
 }
-.award-container {
+.award-box {
 	margin: auto;
     display: flex;
 	padding: 1em;
 }
-.award-container::before {
+.award-box::before {
 	display: inline-flex; 
     content: ''; 
 	background-image: url('../ShadowIgnition.github.io_files/icons/AwardWreathA.svg'); 
@@ -292,7 +310,7 @@ mark{
     height: 104px;
     width: 48px;
 }
-.award-container::after {
+.award-box::after {
 	display: inline-flex; 
     content: ''; 
 	background-image: url('../ShadowIgnition.github.io_files/icons/AwardWreathB.svg'); 
@@ -319,7 +337,7 @@ mark{
     -webkit-transform: translateY(-2.1rem);
     -ms-transform: translateY(-2.1rem);
     transform: translateY(-2.1rem);
-	color: #fff;
+	color: var(--fontColor);
 	letter-spacing: .2rem;
 	text-shadow: 0 0 6px rgba(0, 0, 0, .75);
 }    
@@ -355,6 +373,7 @@ mark{
     margin-left: auto;
 	line-height: 1.8;
     margin-right: auto;
+	display: table;
 }
 
 .intro-columns span::after,span:first-child::before {
@@ -403,7 +422,7 @@ mark{
     flex: 35%;
     border-radius: 30px;
     /* background-color: var(--tertiaryColor); */
-    color: #fff;
+    color: var(--fontColor);
     padding: 1rem 3rem 3rem 3rem;
     background-image: url(../ShadowIgnition.github.io_files/images/ForestGameDay.png);
     background-size: cover;
@@ -411,6 +430,28 @@ mark{
     margin: 0.5rem;
     border: 1px solid var(--scrollBarThumb);
     border-radius: 1em;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 1024px) {
+	#about .column.left {
+		display: none;
+	}
+	.projectButton{
+		display: none;
+	}
+}
+
+#postmortem {
+	background-color: var(--tertiaryPageTint);
+    width: 100%;
+    height: auto;
+    min-height: 720px;
+    display: table;
+    position: relative;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
 }
 
 #timeline{
@@ -504,13 +545,17 @@ mark{
 */
 .timeline .column{
   flex: 65%;
-
 }
 
 .column{
   flex: 50%;
   padding: 5px;
   text-align:left;
+}
+
+.column.right{
+	margin-left: 1em;
+	text-align: middle;
 }
 
 .timeline .column:nth-child(1) {
@@ -600,7 +645,7 @@ li{
     flex: 35%;
 	border-radius: 30px;
     background-color: var(--tertiaryColor);
-    color: #fff;
+    color: var(--fontColor);
 	padding: 1rem 3rem 3rem 3rem;
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .25)), url("../ShadowIgnition.github.io_files/images/preview.png");
 	background-size:cover;
@@ -656,7 +701,7 @@ li{
   color: white;
 }
 .intro-links a{
-	color: #fff;
+	color: var(--fontColor);
     cursor: pointer;
     margin: 0.5em;
     /* border: 10px solid transparent; */
@@ -695,6 +740,16 @@ li{
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
+.emptybutton {
+    width: 5%;
+	margin: 0px -3.5% 0px 0;
+	border: 1px solid var(--scrollBarThumb);
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+	background-color: var(--primaryPageTint);
+}
+
 .thrubutton {
     width: 5%;
 	margin: 0px -3.5% 0px 0;
@@ -801,6 +856,76 @@ date {
     text-transform: uppercase;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 75%;
+  margin: auto;
+  padding: 10px;
+}
+
+.grid-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: .1em;
+	overflow: hidden;
+	//max-width: 512px;
+	//max-height: 512px;
+	//display:contents;
+    position:relative;
+	
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+}
+
+.grid-image {
+	display: block;
+	width: 100%;
+	//height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out, filter 400ms ease-out;
+}
+
+.grid-title{
+    position:absolute;
+    display:none;
+    cursor:pointer;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.6em;
+    text-shadow: 1px 5px 10px black;
+    transition-duration: .4s;
+    font-family: var(--headerFont);
+}
+.grid-text{
+    position:absolute;
+    display:none;
+    cursor:pointer;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 5px 10px black;
+    top: 50%;
+    max-width: 80%;
+    text-align:center;
+    transition-duration: .4s;
+}
+
+.grid-item:hover img{
+	transform: scale(1.05);
+	filter: brightness(50%);
+}
+
+.grid-item:hover span {
+    color:white;
+    display: inline-block;
+    transition-duration: .4s;
+}
 
 /* Portfolio Gallery */
 .porfolio {
@@ -891,18 +1016,123 @@ date {
     -moz-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
-    position: fixed;
+    position: absolute;
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
 }
+.mobileMenu {
+	display: none;
+	text-align:center;
+	vertical-align:middle;
+	z-index: 500;
+    position: fixed;
+    left: 1.5em;
+    top: 1.5em;
+}
 
+.toggleTheme {
+	text-align:center;
+    //margin-top: .75rem;
+	vertical-align:middle;
+	z-index: 600;
+    position: fixed;
+    left: 1.5em;
+    top: 1.5em;
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+#toggleSwitch {
+    background: none;
+    border: none;
+    font-family: var(--bodyFont);
+    color: var(--fontColor);
+    font-size: 1rem;
+    height: 2em;
+    width: 2em;
+    background-color: var(--altFontColor);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+	position:relative;
+	cursor: pointer;
+}
+
+#toggleSwitch.darkMode::before {
+    font: normal normal normal 14px/1 FontAwesome;
+	content: var(--darkModeIcon);
+}
+
+#toggleSwitch:hover{
+	background-color: var(--secondaryColor);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+//MASONRY GRID https://w3bits.com/css-masonry/
+
+.item { /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+.masonry {
+	margin: 0em auto;
+	max-width: 45%;
+	column-gap: 0;
+	column-count: 2;
+}
+
+.masonry-single {
+	margin: 0em auto;
+	max-width: 45%;
+	column-gap: 0;
+	column-count: 1;
+}
+
+/* The Masonry Brick */
+.gallery-item {
+  background: var(--fontColor);
+  //padding: 1em;
+  margin: 0 0 1.5em;
+  margin-bottom: 0;
+}
+
+.intro-name{
+	font-size: 5em;
+    text-align: center;
+    font-family: var(--headerFont);
+    height: 100%;
+    margin: 0;
+}
 
 /* Media queries - Responsive timeline on screens less than 1024px wide */
 @media screen and (max-width: 1024px) {
 	::-webkit-scrollbar {width: 8px;}
 	.timeline .column:nth-child(2), .timeline::after, .left::after, .right::after,.container::after,.smolContainer::after {
-		
 		display:none;
 	}
 	
@@ -950,93 +1180,125 @@ date {
 		width: 10%;
 	}
 	.thrubutton a {
-		background-color: var(--secondaryColor);
+		width: 50%;
+		float: right;
+	}
+	.emptybutton {
+		margin-right: 0%;
+		width: 10%;
+	}
+	.emptybutton a {
+		width: 50%;
+		float: right;
 	}
 }
-.toggle {
-	text-align:center;
-    //margin-top: .75rem;
-	vertical-align:middle;
+@media screen and (max-width: 768px) {
+	#awards{
+		display: none;
+	}
+	.mobileMenu {
+		display: contents;
+	}
+	.toggleSwitch {
+		display: none;
+	}
+	.menuButton{
+		text-align:center;
+		vertical-align:middle;
+		z-index: 600;
+		position: fixed;
+		left: 1.5em;
+		top: 1.5em;
+	}
+	#toggleSwitch{
+		font-size: 1.5em;
+	}
+	.footer-left{
+		display: none;
+	}
+	.footer-right{
+		display: flex;
+		vertical-align: middle;
+		place-content: center;
+		float: none;
+	}
+	.footer	{
+		float: none;
+		display: flex;
+		vertical-align: middle;
+		justify-content: center;
+	}
 }
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+
+.menuButton{
+    color: aliceblue;
+    align-self: center;
+    justify-content: center;
+    padding: 1em;
+    outline: 1em;
 }
-#toggleSwitch {
-    background: none;
-    border: none;
-    font-family: var(--bodyFont);
-    color: var(--fontColor);
-    font-size: 1rem;
-    height: 2em;
-    width: 2em;
-    background-color: var(--altFontColor);
-    border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
+
+.menuIndex{
+    color: aliceblue;
+    align-self: center;
+    justify-content: center;
+    padding: 1em;
+    outline: 1em;
+}
+
+#tableOfContents{
+	display: none;
+    width: 100%;
     text-align: center;
-	position:relative;
-	cursor: pointer;
+    vertical-align: middle;
+    z-index: 400;
+    position: fixed;
+    height: 100%;
+    font-size: 2em;
 }
 
-#toggleSwitch.darkMode::before {
-    font: normal normal normal 14px/1 FontAwesome;
-	content: var(--darkModeIcon);
+@media screen and (max-width: 425px) {
+	#quotes{
+		font-size: 0.75rem;
+	}
+	.intro-name{
+		font-size: 3em;
+		height: 60%;
+	}
+	.intro-content .intro-columns {
+		font-size: 0.75em;
+	}
 }
 
-#toggleSwitch:hover{
-	background-color: var(--secondaryColor);
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+@media screen and (max-width: 320px) {
+	#quotes{
+		font-size: 0.5rem;
+	}
+	.intro-name{
+		font-size: 3em;
+		height: 60%;
+	}
+	.intro-content .intro-columns {
+		font-size: 0.75em;
+	}
+	.intro-links {
+		display: none;
+	
+	}
+	.intro-content .intro-columns {
+		width: 320px;
+		font-size: 0.5em;
+	}
+	.column.right{
+		margin-left: 0;
+		text-align: center;
+	}
+	.row {
+		display: block;
+	}
 }
 
-
-//MASONRY GRID https://w3bits.com/css-masonry/
-.masonry { /* Masonry container */
-  column-count: 2;
-  column-gap: 1em;
-}
-
-.item { /* Masonry bricks or child elements */
-  background-color: #eee;
-  display: inline-block;
-  margin: 0 0 1em;
-  width: 100%;
-}
-
-
-/* Box-sizing reset: //w3bits.com/?p=3225 */
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-/* The Masonry Container */
-.masonry {
-	margin: 0em auto;
-	max-width: 45%;
-	column-gap: 0;
-	column-count: 2;
-}
-
-/* The Masonry Brick */
-.gallery-item {
-  background: #fff;
-  //padding: 1em;
-  margin: 0 0 1.5em;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 1366px) {/* regular screens */
+@media screen and (max-width: 1366px, min-width: 425px) {/* regular screens */
 	.timeline .row{
 		max-width: 80%;
 	}
@@ -1066,10 +1328,10 @@ html {
 		max-width: 75%;
 	}
 	.columns-split{
-		max-width: 50%;
+		max-width: 75%;
 	}
 	.masonry{
-		max-width: 50%;
+		max-width: 75%;
 		column-count: 2;
 	}
 	.intro-links{
@@ -1143,7 +1405,7 @@ html {
   content: "·";
   font-size: 20px;
   left: 0;
-  color: #fff;
+  color: var(--fontColor);
   display: inline-block;
   padding-right: 5px;
 }
@@ -1162,13 +1424,16 @@ html {
     font-size: 1.75rem;
     color: var(--fontColor);
 }
+.footer-links a:hover{color:var(--secondaryColor);; text-decoration:underline;}
 
 .footer-socials a:hover{
-	filter: invert(14%) sepia(80%) saturate(7391%) hue-rotate(339deg) brightness(98%) contrast(106%);
+	background-color:var(--secondaryColor);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-
-.footer-links a:hover{color:#f04; text-decoration:underline;}
-.footer-socials a:hover{background-color:#f04;}
 
 .footer .footer-right {
   float: right;
@@ -1187,3 +1452,4 @@ html {
     line-height: 1.8;
   }
 }
+

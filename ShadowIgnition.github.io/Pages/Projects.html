@@ -1,0 +1,233 @@
+<head> <!--Setup -->
+	<link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
+	<title>Porfolio - Dylan - Game Developer</title> 
+	<meta name = "description" content="">
+	<link rel="stylesheet" href="../ShadowIgnition.github.io_files/style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src ="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
+	<script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<!-- SET BACKGROUND -->
+<header>
+<div class="row">
+	<div class="column">
+		<div class="toggle">
+			<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()">
+			</button>
+		</div>
+	</div>
+</header>
+<html>
+<body>
+<body onload="InitializeQuote()">
+
+<section id = "intro">
+<div class = "intro-content">
+	<div class = "intro text">
+		<div class = "row">
+			<div class = "columns-split">
+				<p class = "intro-columns" id = "quotes"></p>
+				<h1 style="font-size:84px;">Dylan Imrei</h1>
+				<p class = "intro-columns">
+					<span>Programmer</span>
+					<span>Game Developer</span>
+					<span>Designer</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<ul class = "intro-links">
+		<li>
+			<a href="https://twitter.com/ShadowIgnition" target="_blank" alt ="Twitter">
+			<div class="icons svg">
+				<svg width="48" height="52"  version="1.1" viewBox="0 0 1999.8 2e3" xmlns="http://www.w3.org/2000/svg">
+				<style/>
+				<path class="cls-2" d="m631.09 1807.4c749.9 0 1160.1-621.28 1160.1-1160 0-17.601 0-35.202-1.2395-52.679a829.52 829.52 0 0 0 203.4-211.04 813.79 813.79 0 0 1-234.14 64.082 409.12 409.12 0 0 0 179.23-225.5 817.04 817.04 0 0 1-258.81 98.912 408.08 408.08 0 0 0-694.87 371.84 1157.5 1157.5 0 0 1-840.26-425.97 408.01 408.01 0 0 0 126.31 544.24 404.67 404.67 0 0 1-185.06-51.068v4.958a407.85 407.85 0 0 0 326.98 399.67 407.05 407.05 0 0 1-184.07 7.437 408.16 408.16 0 0 0 380.9 283.13 818.08 818.08 0 0 1-506.34 174.87 829.92 829.92 0 0 1-96.681-6.1975 1154.2 1154.2 0 0 0 624.96 182.81" stroke-width="7.9487"/>
+				</svg>
+			</div>
+		</a>
+		<li>
+			<a href="https://gitlab.com/ShadowIgnition" target="_blank" alt ="Gitlab">
+				<div class="icons svg">
+					<svg width="48" height="52"  version="1.1" viewBox="0 0 1999.8 2e3" xmlns="http://www.w3.org/2000/svg">
+					<style/>
+					<g transform="matrix(5.864 0 0 5.864 -718.48 -638.99)">
+					<g id="logo_art">
+					<g>
+						<path id="path50_2_" class="st3" d="m293.03 434.98 62.199-191.32h-124.31z"/>
+						<path id="path66_6_" class="st4" d="m143.8 243.66-18.941 58.126c-1.714 5.278 0.137 11.104 4.661 14.394l163.51 118.8z"/>
+						<path id="path74_2_" class="st3" d="m143.8 243.66h87.12l-37.494-115.22c-1.919-5.895-10.282-5.895-12.27 0z"/>
+						<path id="path82_6_" class="st4" d="m442.35 243.66 18.873 58.126c1.714 5.278-0.137 11.104-4.661 14.394l-163.53 118.8z"/>
+						<path id="path86_2_" class="st3" d="m442.35 243.66h-87.12l37.425-115.22c1.919-5.895 10.282-5.895 12.27 0z"/>
+					</g>
+					</g>
+					</g>
+					</svg>
+				</div>
+			</a>
+		<li>
+			<a href="https://github.com/ShadowIgnition" target="_blank" alt ="Github">
+				<div class="icons svg">
+					<svg width="48" height="52" version="1.1" viewBox="0 0 1999.8 2e3" xmlns="http://www.w3.org/2000/svg">
+					<style/>
+					<g transform="matrix(125 0 0 125 -.10536 2.4397)">
+					<path d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27s1.36 0.09 2 0.27c1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38a8.012 8.012 0 0 0 5.45-7.59c0-4.42-3.58-8-8-8z"/>
+					</g>
+					</svg>
+				</div>
+			</a>
+		<li>
+			<a href="https://shadowignition.itch.io/" target="_blank" alt ="Itch.io">
+				<div class="icons svg">
+					<svg width="48" height="52" version="1.1" viewBox="0 0 1999.8 2e3" xmlns="http://www.w3.org/2000/svg">
+						<style/>
+						<path d="m262.19 113.38c-87.06 51.691-258.58 248.74-260.21 300.41v85.537c0 108.43 101.35 203.72 193.37 203.72 110.49 0 202.55-91.572 202.56-200.26 0 108.69 88.904 200.26 199.4 200.26 110.51 0 196.56-91.572 196.56-200.26 0 108.69 94.533 200.26 205.03 200.26h1.9887c110.51 0 205.04-91.572 205.04-200.26 0 108.69 86.057 200.26 196.55 200.26 110.5 0 199.41-91.572 199.41-200.26 0 108.69 92.075 200.26 202.56 200.26 92.017 0 193.37-95.281 193.37-203.72v-85.537c-1.6143-51.683-173.15-248.74-260.19-300.41-270.58-9.5003-458.17-11.143-737.74-11.103-279.57 0.0245-660.7 4.3925-737.73 11.103zm530.29 538.61a227.95 227.95 0 0 1-38.881 50.065c-41.711 40.784-98.886 66.064-161.91 66.064a231.67 231.67 0 0 1-162.26-66.096c-15.114-14.804-26.6-30.633-37.117-49.064v0.0288c-10.509 18.464-25.15 34.285-40.296 49.105a231.82 231.82 0 0 1-162.25 66.048c-7.5974 0-15.503-2.0982-21.899-4.2948-8.8802 92.499-12.63 180.9-13.956 245.35l-0.0192 0.366c-0.28836 32.731-0.31703 59.646-0.48997 97.038 1.7004 194.08-19.222 629.03 85.567 735.9 162.39 37.863 461.2 55.108 760.97 55.214 299.77 0 598.58-17.351 760.97-55.214 104.79-106.88 83.861-541.83 85.57-735.91-0.2884-37.384-0.317-64.299-0.49-97.038l-0.027-0.3661c-1.3258-64.47-5.067-152.86-13.95-245.36-6.3929 2.1962-14.29 4.2948-21.896 4.2948a231.82 231.82 0 0 1-162.26-66.047c-15.146-14.82-29.788-30.632-40.305-49.105v-0.0289c-10.523 18.432-22.003 34.269-37.114 49.064a231.66 231.66 0 0 1-162.25 66.089c-63.022 0-120.21-25.297-161.92-66.072a227.95 227.95 0 0 1-38.878-50.064 227.67 227.67 0 0 1-38.524 50.064 231.74 231.74 0 0 1-162.27 66.08c-2.1905 0-4.3896-0.0866-6.5859-0.17295-2.1905 0.0577-4.3923 0.17295-6.6146 0.17295a231.74 231.74 0 0 1-162.27-66.072 227.69 227.69 0 0 1-38.524-50.064zm-166.63 215.47-0.0192 0.0864c65.991 0.14409 124.61 0 197.25 79.274 57.166-5.9947 116.9-8.9882 176.68-8.8985 59.785-0.0864 119.52 2.9038 176.69 8.8985 72.637-79.282 131.26-79.144 197.25-79.274l-0.019-0.0864c31.18 0 155.9 0 242.8 244.08l93.346 334.83c69.17 249.09-22.15 255.19-136.06 255.41-168.93-6.2889-262.46-128.96-262.46-251.62-93.508 15.325-202.59 22.988-311.68 22.994-109.09 0-218.18-7.6695-311.68-22.994 0 122.66-93.539 245.34-262.46 251.62-113.91-0.2882-205.22-6.3033-136.05-255.41l93.372-334.83c86.901-244.08 211.62-244.08 242.8-244.08zm374.04 191.82v0.058c-0.28817 0.1729-177.83 163.33-209.77 221.37l116.35-4.6605v101.46c0 4.7499 46.689 2.8246 93.427 0.663 46.723 2.1616 93.421 4.0984 93.421-0.663v-101.46l116.35 4.6605c-31.949-58.036-209.77-221.37-209.77-221.37v-0.058l-0.0269 0.017z" stroke-width="8.134"/>
+					</svg>
+				</div>
+			</a>
+		<li>
+			<a href="https://sketchfab.com/ShadowIgnition" target="_blank" alt="Sketchfab">
+				<div class="icons svg">
+					<svg width="48" height="52" version="1.1" viewBox="0 0 1999.8 2e3" xmlns="http://www.w3.org/2000/svg">
+						<style/>
+						<path d="m1500.3 652.83-429.49-247.98v516.12l429.49 232.06zm-510.44 388.29-510.04 270.38 510.04 294.54 510.12-294.54zm-76.794-636.19-431.08 248.86v502.04l431.08-232.86zm86.873 1595.1c-552.28 0-999.92-447.72-999.92-1e3s447.64-1e3 999.92-1e3 999.92 447.72 999.92 1e3c0.08 552.28-447.56 1e3 -999.92 1e3" style=""/>
+					</svg>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div> 
+</section>
+<!-- PORTFOLIO -->
+<section id = "porfolio">
+<h1>Projects Hub</h1>
+<h5>A Showcase of previous work</h5>
+<div class="porfolio">
+	<div class="grid">
+		<div class="grid-container">
+		 <div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Prelude Garden</h5>
+					<ul>
+						<li>Lead User Expierence Designer</li>
+						<li>Lead User Interface Designer</li>
+						<li>Lead Visual Effects Designer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Oh Shroom!</h5>
+					<ul>
+						<li>Lead Programmer</li>
+						<li>Lead User Interface Designer</li>
+						<li>Lead Visual Effects Designer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Digital Divine</h5>
+					<ul>
+						<li>Sole Developer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Consume (Game Jam)</h5>
+					<ul>
+						<li>Sole Developer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Covid 2: Electric Boogaloo</h5>
+					<ul>
+						<li>Lead Programmer</li>
+						<li>Lead Systems Designer</li>
+						<li>Lead AI Designer</li>
+						<li>Lead User Interface Designer</li>
+						<li>Lead Visual Effects Designer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Black Sheep Play Smiley Face</h5>
+					<ul>
+						<li>Lead Programmer</li>
+						<li>Lead Designer</li>
+					</ul>
+				</span>
+			</div>
+			<div class="grid-item">
+				<img class="grid-image" src="../ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+				<span class="grid-text"><h5>Fishy Business</h5>
+					<ul>
+						<li>Lead Programmer</li>
+						<li>Lead Designer</li>
+					</ul>
+				</span>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</section>
+<!-- TODO MAKE SEPERATE PAGE
+<section id = "contact">
+	<h2>CONTACT</h2>
+<div class = "contact-form">
+	<div class="row">
+		<div class="column left">
+			<h3>Contact Information</h3>
+			<p><a href="https://shadowignition.itch.io/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> Via LinkedIn</p>
+			<p><a href="https://shadowignition.itch.io/"><i class="fa fa-twitter" aria-hidden="true"></i></a> Via Twitter</p>
+			<p><a href="https://shadowignition.itch.io/"><i class="fa fa-instagram" aria-hidden="true"></i></a> Via Instagram</p>
+		</div>
+		<div class="column right">
+			<div class="toggle">
+				<h3>Let's Chat</h3>
+				<p>Feel free to reach out if you have any enquiries or job offers and I'll get back to you promptly.</p>
+				<h5>You can find me at</h5>
+				<a href="https://twitter.com/ShadowIgnition" class = "linkToButton"><i class="fa fa-twitter"style=" vertical-align: middle;"></i> ShadowIgnition</a>
+				<a href="https://www.instagram.com/shadowignition/" class = "linkToButton"><i class="fa fa-instagram"></i> ShadowIgnition</a>
+				<a href="https://www.linkedin.com/in/dylan-imrei/" class = "linkToButton"><i class="fa fa-linkedin-square"></i> Dylan Imrei</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+-->
+</section>
+</body>
+
+<footer class="footer">
+<div class = "footer-right">
+	<p class="footer-socials">
+		<a href="#"><i class="fa fa-gitlab" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a href="#"><i class="fab fa-itch-io" aria-hidden="true"></i></a>
+	</p>
+</div>
+<div class = "footer-left">
+	<p class="footer-links">
+		<a href="#">Home</a>
+		<a href="#">Portfolio</a>
+		<a href="#">Projects</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</p>
+	<p>Copyright ShadowIgnition and Afiltated Aliases &copy; 2018 - 2021</p>
+</div>
+</footer>
+</html>
