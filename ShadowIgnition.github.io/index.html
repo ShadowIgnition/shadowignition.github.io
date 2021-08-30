@@ -15,16 +15,8 @@
 
 <!-- SET BACKGROUND -->
 <header>
-	<!-- <div class="toggleTheme"> -->
-		<!-- <button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()"></button> -->
-	<!-- </div> -->
-	<div class="menuButton">
-		<button id="toggleSwitch" onclick="menuButtonDisplay()"><i class="fa fa-bars"></i></button>
-	</div>
-	<div id="tableOfContents">
-		<a class="menuIndex" href="#about" onclick="menuButtonDisplay(), switchLoaded(0)">About</a>
-		<a class="menuIndex" href="#timeline" onclick="menuButtonDisplay(), switchLoaded(1)">Projects & Experience</a>
-		<a class="menuIndex" href="#porfolio" onclick="menuButtonDisplay(), switchLoaded(2)">Gallery</a>	
+	<div class="toggleTheme">
+		<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()"></button>
 	</div>
 </header>
 <body>
@@ -71,15 +63,7 @@ function switchLoaded(x){
 }
 </script>
 
-<!--
-<div id="loader">
-	<div class="circleA"></div>
-	<div class="circleB"></div>
-</div>
-<div id="page">-->
-
-<body onload="InitializeQuote()">
-<body onload="SwitchTab(event, 'Projects')">
+<body onload="InitializeQuote(),SwitchTab(event, 'Projects')">
 
 <section id = "intro">
 <div class = "intro-content">
@@ -163,19 +147,18 @@ function switchLoaded(x){
 	<span class="project-description">
 		<h2>About Me</h2>
 		Hi, I'm Dylan, 
-		<p>A passionate Game Developer specializing in Programming and Mechanic Design, when I'm not working you can often find me experimenting with smaller projects, playing or studying games or occasionally doing some 2D & 3D Art.
-		With an interest in systematic game design and mechanics, my dream game would be a Turn-Based Tactics game similar to the Final Fantasy Tactics or Tactics Orge Series with a heavier focus on Systematic Gameplay and mechanics.</p>
-					Languages
-				</h4>
-				<ul>
-					<li><p>C# <c>(Unity - 2 Years)</c></p><!--2 Years--></li>
-					<li><p>C++ <c>(Arduino - 1 Year)</c></p><!--1 Year --></li>
-					<li><p>GML <c>(Game Maker - 1 Year)</c></p></li>
-					<li><p>Python <c>(1 Year)</c></p></li>
-				</ul>
-				<p><c>Misc: 1 Year (Game Modding, WebDev, etc)</c></p><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
-			</div>
-		<span class="project-links">Links go here</span>
+		<p>I'm a programmer in the games industry focusing on gameplay design & development as well as the occasional tool which you can read about <a href="https://shadowignition.itch.io/">here</a>.</p>
+		<p>If you'd like to reach out, you can contact me <a href="https://shadowignition.itch.io/">here</a>.</p>
+	</span>
+	<span class="project-description">
+		<h3>Programming Experience</h3>
+		<ul>
+			<li><p>C# <c>(Unity - 3 Years)</c></p><!--2 Years--></li>
+			<li><p>C++ <c>(Arduino - 1 Year)</c></p><!--1 Year --></li>
+			<li><p>GML <c>(Game Maker - 1 Year)</c></p></li>
+			<li><p>Python <c>(1 Year)</c></p></li>
+		</ul>
+		<p><c>Misc: 1 Year (Game Modding, WebDev, etc)</c></p><!--GTA SA - Cleo Modding, WebDev (This site, previous site. HTML CSS & Javascript, Yes i know it doesnt reallly count) Some Visual Basic, Mostly Unnotable-->
 	</span>
 </div>
 </section>
@@ -199,15 +182,19 @@ function switchLoaded(x){
 	<img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanner/AWildTaleProjectBanner.png" alt="1"></class>
 	<div class="project-description">
 		<h2>A Wild Tale</h2>
-		<p>Explore A Musical Garden, or just sit back and watch the clouds roll by.</p>
-		<span class="project-links">Links go here</span>
+		<p>The rations are low, the water is dried up but the story is not over.</p>
+		<span class="project-links">
+			<a href="https://shadowignition.itch.io/" class = "project-button">View in Gallery</a>
+		</span>
 	</div>
 	<!-- Prelude Garden -->
 	<img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanner/PreludeGardenProjectBanner.png" alt="1"></class>
 	<div class="project-description">
 		<h2>Prelude Garden</h2>
 		Explore A Musical Garden, or just sit back and watch the clouds roll by.
-		<span class="project-links">Links go here</span>
+		<span class="project-links">
+			<a href="https://shadowignition.itch.io/" class = "project-button">Preview on Sketchfab</a>
+		</span>
 	</div>
 	<!-- Oh Shroom! -->
 	<img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanner/OhShroomProjectBanner.png" alt="1"></class>
@@ -215,7 +202,10 @@ function switchLoaded(x){
 		<h2>Oh Shroom!</h2>
 		<p>A small mystical puzzle adventure!</p>
 		<p>Aid the Shrooms of the forest through the dangerous depths of the forest ruins, avoiding the various enemies you may encounter.</p>
-		<span class="project-links">Links go here</span>
+				<span class="project-links">Links go here
+			<a href="https://shadowignition.itch.io/" class = "project-button">Play on Itch.io</a>
+			<a href="https://shadowignition.itch.io/" class = "project-button">Preview Source Code</a>
+		</span>
 	</div>
 	<img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanner/CovidGameProjectBanner.png" alt="1"></class>
 	<!-- Covid 2: Electric Boogaloo -->
@@ -223,8 +213,8 @@ function switchLoaded(x){
 		<h2>Covid 2: Electric Boogaloo</h2>
 		<p>Deliver all the burgers in this fastpaced racing prototype for android!</p>
 		<span class="project-links">Links go here
-			<a href="https://shadowignition.itch.io/" class = "project-button">Play on Itch.io</a>
-			<a href="https://shadowignition.itch.io/" class = "project-button">View Source Code</a>
+			<a href="https://shadowignition.itch.io/" class = "project-button">Download from Itch.io</a>
+			<a href="https://shadowignition.itch.io/" class = "project-button">Preview Source Code</a>
 		</span>
 	</div>
 	<!-- Digital Divine -->
@@ -233,7 +223,10 @@ function switchLoaded(x){
 		<h2>Digital Divine</h2>
 		<p>The dream state of the digital realm</p>
 		<p>Digital Divine is a prototype hacker-stealth game where you must use your environment to hide yourself from the drones that scrawl the offices.</p>
-		<span class="project-links">Links go here</span>
+		<span class="project-links">Links go here
+			<a href="https://shadowignition.itch.io/" class = "project-button">Download from Itch.io</a>
+			<a href="https://shadowignition.itch.io/" class = "project-button">Preview Source Code</a>
+		</span>
 	</div>
 </section>
 
@@ -310,9 +303,6 @@ function switchLoaded(x){
 							<li>Programming new modular card mechanics for upcoming cards</li>
 						</ul>
 					</div>
-						<div class="thrubutton">
-							<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -351,9 +341,6 @@ function switchLoaded(x){
 							<!-- <li>The UV Mapping & Gradient Texturing of 3D Assets</li>-->
 						</ul>
 					</div>
-						<div class="thrubutton">
-							<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-						</div>
 				</div>
 			</div>
 		</div>
@@ -402,9 +389,6 @@ function switchLoaded(x){
 							<li>The conceptualization and implementation of User Interface designs</li>
 						</ul>
 					</div>
-					<div class="thrubutton">
-						<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -447,9 +431,6 @@ function switchLoaded(x){
 							<li>Performance testing and asset optimization for lower-end mobile devices</li>
 						</ul>
 						<p><i>For my work on this project, I was granted a High Distinction.</i></p>
-					</div>
-					<div class="emptybutton">
-						<!--<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
 					</div>
 				</div>
 			</div>
@@ -500,9 +481,6 @@ function switchLoaded(x){
 						</ul>
 						<p><i>For my work on this project, I was granted a High Distinction.</i></p>
 					</div>
-					<div class="emptybutton">
-						<!--<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
-					</div>
 				</div>
 			</div>
 		</div>
@@ -545,9 +523,6 @@ function switchLoaded(x){
 						<li>Detailing the development process in a GDD</li>
 						</ul>
 						<p><i>For my performance in this Game Jam, I was invited to the <a href="https://www.worldskills.org.au/what-we-do/worldskills-australia-competitions/national/">National Championships</a> in Perth.</i></p>
-					</div>
-					<div class="emptybutton">
-						<!--<a href="https://shadowignition.itch.io/"><i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
 					</div>
 				</div>
 			</div>

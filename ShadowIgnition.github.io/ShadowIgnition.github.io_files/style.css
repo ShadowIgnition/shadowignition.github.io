@@ -110,18 +110,24 @@ body {
 	color: var(--altFontColor);
 }
 
-h1,h2{
+h1, h2 {
 	font-family: var(--headerFont);
 }
 
 h1 {
 	letter-spacing: .2rem;
 }
-h3,h4,h5,h6 {
+
+h3 {
+	font-family: var(--bodyFont);
+}
+
+h4,h5,h6 {
 	font-family: var(--bodyFont);
 	text-transform: uppercase;
 	letter-spacing: 0.05rem;
 }
+
 h4 {
 	color:#888888;
 }
@@ -390,10 +396,9 @@ mark{
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 7.2rem;
     font-size: 3.3rem;
     margin: 0;
-    padding: 0;
+    padding: 1em;
 	
 }
 
@@ -413,6 +418,7 @@ mark{
     text-align: center;
     padding-top: 12rem;
     padding-bottom: 12rem;
+	line-height: 1.5em;
 }
 .about-form{
     margin: auto;
@@ -455,7 +461,7 @@ mark{
     padding-bottom: 12rem;
 }
 
-#timeline{
+#DevelopmentHistory{
 	background-color: var(--tertiaryPageTint);
     width: 100%;
     height: auto;
@@ -485,7 +491,7 @@ mark{
 }
 
 /* Container around content */
-#timeline .container{
+#DevelopmentHistory .container{
     padding: 10px 10px;
     position: relative;
     background-color: inherit;
@@ -494,7 +500,7 @@ mark{
 }
 
 /* The circles on the timeline */
-#timeline .container::after {
+#DevelopmentHistory .container::after {
 	content: '';
 	position: absolute;
 	width: 30px;
@@ -516,7 +522,7 @@ mark{
 }
 
 /* The circles on the timeline */
-#timeline .smolContainer::after {
+#DevelopmentHistory .smolContainer::after {
 	content: '';
 	position: absolute;
 	width: 20px;
@@ -563,25 +569,25 @@ mark{
     padding-left: 5%;
     /* margin-left: 5%; */
     width: 85%;
-    vertical-align: middle;
-    border: 1px solid var(--scrollBarThumb);
-    border-right: none;
-    border-radius: 3px 0 0 3px;
+    /* vertical-align: middle; */
+    /* border: 1px solid var(--scrollBarThumb); */
+    /* border-right: none; */
+    /* border-radius: 3px 0 0 3px; */
 }
 
 .timeline .column:nth-child(2) {
 	padding-left: 3%;
     padding-right: 3%;
     width: 85%;
-    border: 1px solid var(--scrollBarThumb);
-    border-right: none;
-    border-radius: 3px 0 0 3px;
-    border-left: none;
+    /* border: 1px solid var(--scrollBarThumb); */
+    /* border-right: none; */
+    /* border-radius: 3px 0 0 3px; */
+    /* border-left: none; */
 }
 
 .timeline .row{
     max-width: 50%;
-    background-color: var(--primaryPageTint);
+    /* background-color: var(--primaryPageTint); */
     margin: auto;
 }
 
@@ -1163,7 +1169,7 @@ html {
 		overflow: hidden;
 		position: relative;
 	}
-	#timeline, #about, #porfolio ,#awards{
+	#DevelopmentHistory, #about, #porfolio ,#awards{
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 	}
