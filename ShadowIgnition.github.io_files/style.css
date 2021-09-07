@@ -34,7 +34,7 @@
 	--tertiaryPageTint:#ebebeb;
 	--inversion: invert(0);
 	--darkModeIcon: "\f186";
-	--mainPagePhoto: url("./images/PreludeBackdrop.png");
+	--mainPagePhoto: url("./Images/PreludeBackdrop.png");
 	--containerBorderImg: url(border-dark.png) 30 round;
 	
 	--interactiveBorder: 0px solid transparent;
@@ -65,7 +65,7 @@
 	--inversion: invert(1);
 	--darkModeIcon: "\f185";
 	
-	--mainPagePhoto: url("./images/OhShroomBackdrop.png");
+	--mainPagePhoto: url("./Images/OhShroomBackdrop.png");
 	--containerBorderImg: url(border-light.png) 30 round;
 	
 	--interactiveBorder: 0px solid transparent;
@@ -436,36 +436,6 @@ mark{
     padding-bottom: 12rem;
 	line-height: 1.5em;
 }
-.about-form{
-    margin: auto;
-	background-color:var(--primaryPageTint);
-
-}
-#about .column.left {
-    flex: 35%;
-    border-radius: 30px;
-    /* background-color: var(--tertiaryColor); */
-    color: var(--fontColor);
-    padding: 1rem 3rem 3rem 3rem;
-    background-image: url(../ShadowIgnition.github.io_files/images/ForestGameDay.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0.5rem;
-    border: 1px solid var(--scrollBarThumb);
-    border-radius: 1em;
-}
-
-#postmortem {
-	background-color: var(--tertiaryPageTint);
-    width: 100%;
-    height: auto;
-    min-height: 720px;
-    display: table;
-    position: relative;
-    text-align: center;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-}
 
 #DevelopmentHistory{
 	background-color: var(--primaryPageTint);
@@ -594,15 +564,6 @@ li{
 	padding: 16px 32px;
 	border: 2px solid var(--altFontColor);
 	background-position: left center;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)), url("../ShadowIgnition.github.io_files/images/Prelude_Garden-Screenshot (2).png");
-  height: 95%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 .hero-text {
