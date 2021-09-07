@@ -1,7 +1,6 @@
 ﻿/*Font Awesome Fonts*/
 @font-face {
     font-family: 'FontAwesome';
-    //in url add your folder path of FontAwsome Fonts
     src: url('font-awesome/fontawesome-webfont.ttf') format('truetype');
 }
 
@@ -30,6 +29,8 @@
 	--scrollBarThumb: #C1C1C1;
 	--altHoverColor: #DDD;
 	
+	--footerColor:#131417;
+	
 	--tertiaryPageTint:#ebebeb;
 	--inversion: invert(0);
 	--darkModeIcon: "\f186";
@@ -44,7 +45,7 @@
 }
 
 .theme-dark {
-	--fontColor: #000;
+	--fontColor: #fff;
 	--altFontColor: #fff;
 	
 	--secondaryColor:#FF0045;
@@ -57,6 +58,8 @@
 	--scrollBarTrack: #0E0E0E;
 	--scrollBarThumb: #3E3E3E;
 	--altHoverColor: #DDD;
+	
+	--footerColor:#131417;
 	
 	--tertiaryPageTint:#1D1D1D;
 	--inversion: invert(1);
@@ -553,9 +556,17 @@ li{
 }
 
 #contact-form{
-    background-color: #0000;
+    background-color: var(--tertiaryPageTint);
     width: 40%;
+    border-radius: 1em;
+    padding: 1em;
+    min-height: 0;
+    top: 25%;
     margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .fa {
@@ -641,46 +652,6 @@ li{
     -webkit-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
-
-.emptybutton {
-    width: 5%;
-	margin: 0px -3.5% 0px 0;
-	border: 1px solid var(--scrollBarThumb);
-    border-left: none;
-    border-radius: 0 3px 3px 0;
-	background-color: var(--primaryPageTint);
-}
-
-.thrubutton {
-    width: 5%;
-	margin: 0px -3.5% 0px 0;
-	border: 1px solid var(--scrollBarThumb);
-    border-left: none;
-    border-radius: 0 3px 3px 0;
-}
-.thrubutton a {
-    color: var(--altFontColor);
-    cursor: pointer;
-    font-size: 3.3rem;
-    background-color: var(--scrollBarThumb);
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-	text-decoration: none;
-
-    transition: background-position 0.5s ease-out;
-    background-position: right center;
-}
-.thrubutton a:hover {
-	/*color: var(--secondaryColor);*/
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-	background-color: var(--secondaryColor);
 }
 
 hr {
@@ -870,7 +841,6 @@ date {
 .gallery-title{
     position:absolute;
     display:none;
-    cursor:pointer;
     top: 35%;
     left: 50%;
     margin-right: -50%;
@@ -884,7 +854,6 @@ date {
 .gallery-text{
     position:absolute;
     display:none;
-    cursor:pointer;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -957,11 +926,11 @@ input[type=checkbox]{
     background: none;
     border: none;
     font-family: var(--bodyFont);
-    color: var(--fontColor);
+    color: var(--FontColor);
     font-size: 1rem;
     height: 2em;
     width: 2em;
-    background-color: var(--altFontColor);
+    background-color: var(--overlayPanelColor);
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
@@ -1216,7 +1185,7 @@ html {
 
 /*FOOTER*/
 .footer {
-	background-color: var(--secondaryPageTint);
+	background-color: var(--footerColor);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -1484,6 +1453,7 @@ hr.divider {
     font-size: 1.0625em;
     border-radius: 1em;
     margin: 1em;
+	color: var(--altFontColor);
 }
 
 /* Change background color of buttons on hover */
@@ -1547,7 +1517,7 @@ div.navigation {
 #fs-frm textarea,
 #fs-frm #card-element {
   border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,1);
   padding: .75em 1rem;
   margin-bottom: 1.5rem;
 }
