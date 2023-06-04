@@ -1,0 +1,97 @@
+<head> <!--Setup -->
+	<link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
+	<title>Porfolio - Dylan - Game Developer</title> 
+	<meta name = "description" content="">
+	<link rel="stylesheet" href="../ShadowIgnition.github.io_files/style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src ="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
+	<script src ="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
+	<script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<html>
+
+<!-- SET BACKGROUND -->
+<header>
+	<div class="toggleTheme">
+		<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()"></button>
+	</div>
+</header>
+<body>
+
+<body onload="InitializeQuote(),InitTab(event, 'Projects')">
+
+<section id = "intro">
+	<section id="contact-form">
+		<h1>CONTACT</h1>
+		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
+		<fieldset id="fs-frm-inputs">
+			<label for="full-name">Full Name</label>
+			<input type="text" name="name" id="full-name" placeholder="Full Name" required="">
+			<label for="email-address">Email Address</label>
+			<input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
+			<label for="message">Message</label>
+			<textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+			<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+			</fieldset>
+			<input type="submit" value="Submit">
+		</form>
+		</section>
+</section>
+</body>
+
+<footer class="footer" id = "footer">
+<div class = "footer-right">
+	<p class="footer-socials">
+		<a href="https://gitlab.com/ShadowIgnition"><i class="fa fa-gitlab" aria-hidden="true"></i></a>
+		<a href="https://github.com/ShadowIgnition"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/in/dylan-imrei/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		<a href="https://twitter.com/ShadowIgnition"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="https://shadowignition.itch.io/"><i class="fab fa-itch-io" aria-hidden="true"></i></a>
+	</p>
+</div>
+<div class = "footer-left">
+	<p class="footer-links">
+		<a href="../index.html">Home</a>
+	</p>
+	<p>&copy; 2018 - 2021</p>
+</div>
+</footer>
+</html>
+</section>
+
+<script>
+function InitTab(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 1; i < tabcontent.length; i++) 
+	{
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 1; i < tablinks.length; i++) 
+	{
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
+function SwitchTab(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) 
+	{
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) 
+	{
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+</script>
