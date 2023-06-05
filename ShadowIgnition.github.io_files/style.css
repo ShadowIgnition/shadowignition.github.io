@@ -284,6 +284,26 @@ mark
     text-align: center;
 }
 
+#production
+{
+    background-color: var(--primaryPageTint);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 85%;
+    display: table;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+	display: flex;
+	align-items: center;
+}
+
 .text
 {
     background-color: var(--overlayPanelColor);
@@ -1105,6 +1125,7 @@ input[type=checkbox]
     display: flex;
     vertical-align: middle;
     justify-content: center;
+	height: 15%;
 }
 
 }
@@ -1307,6 +1328,7 @@ input[type=checkbox]
     padding: 45px 50px;
     color: var(--primaryTextColor);
     font-size: 1rem;
+	height: 15%;
 }
 
 .footer .footer-links
@@ -1392,16 +1414,15 @@ input[type=checkbox]
 .production-container
 {
     display: flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
     position: relative;
-
-    padding-bottom: 3em;
+margin-right: 12em;
 }
-.project-description
+.project-info-table
 {
     margin-left: auto;
     margin-right: auto;
@@ -1412,6 +1433,15 @@ input[type=checkbox]
     margin-bottom: 5em;
 	margin-top: 2em;
 	column-count: 2;
+}
+.project-info-details
+{
+margin-left: 12em;
+    display: block;
+    width: 50%;
+    text-align: left;
+	border-right: 1px solid var(--scrollBarThumb);
+    padding-right: 1em;
 }
 .project-image
 {
@@ -1426,6 +1456,7 @@ margin-left: auto;
     display: block;
     width: 172px;
     height: 256px;
+	margin-right: 1em;
 }
 
 .tool-description
@@ -1560,7 +1591,7 @@ div.navigation
     height: 14em;
 }
 
-.project-description
+.project-info-table
 {
     margin-left: auto;
     margin-right: auto;

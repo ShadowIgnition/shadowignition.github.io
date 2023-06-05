@@ -1,11 +1,10 @@
 <head> <!--Setup -->
-	<link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
-	<title>Porfolio - Dylan - Game Developer</title> 
+	<link rel="icon" href="../favicon.png" sizes="16x16" type="favicon.png">
+	<title>Kana Quest - Dylan - Game Developer</title> 
 	<meta name = "description" content="">
 	<link rel="stylesheet" href="../ShadowIgnition.github.io_files/style.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src ="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
-	<script src ="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+	<script src ="../ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,34 +12,51 @@
 </head>
 <html>
 
-<!-- SET BACKGROUND -->
+
 <header>
 	<div class="toggleTheme">
 		<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()"></button>
 	</div>
 </header>
-<body>
 
-<body onload="InitializeQuote(),InitTab(event, 'Projects')">
+<section id = "production">
 
-<section id = "intro">
-	<section id="contact-form">
-		<h1>CONTACT</h1>
-		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
-		<fieldset id="fs-frm-inputs">
-			<label for="full-name">Full Name</label>
-			<input type="text" name="name" id="full-name" placeholder="Full Name" required="">
-			<label for="email-address">Email Address</label>
-			<input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-			<label for="message">Message</label>
-			<textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
-			<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-			</fieldset>
-			<input type="submit" value="Submit">
-		</form>
-		</section>
+<div class = "project-info-details">
+
+<p>I led the development of KanaQuest Version 1.01 for Nintendo Switch and PC, published by Whitethorn Games and developed in Unity. Kana Quest is an educational puzzle game that aims to teach players how to read Japanese Hiragana.</p>
+
+<p>For Version 1.01, I focused on implementing various stability fixes and making quality of life and accessibility improvements. To achieve this, I made several contributions:</p>
+
+<ul>
+  <li>I performed minor refactors to the legacy codebase, ensuring better maintainability and stability.</li>
+  <li>I modularized the code, implemented error handling, and fixed incomplete logic to address edge cases.</li>
+  <li>In specific areas like User Interface, Gameplay Tutorialization, and Gameplay Softlocks, I conducted code refactoring.</li>
+</ul>
+
+<p>Additionally, I introduced the following features:</p>
+
+<ul>
+  <li>I implemented Full Controller/Keyboard support, customizing the button prompts for different platforms such as Mouse and Keyboard, Nintendo Switch, Xbox, Playstation, and aftermarket controllers.</li>
+  <li>To enhance the learning experience, I developed a popup system that provides players with helpful hints and reminders regarding the game's intricacies and Kana interactions.</li>
+  <li>I added a dyslexic font option to improve the readability of the pixel art text.</li>
+  <li>Recognizing the needs of players with motion sensitivity, I included an option to reduce motion and animation of Kana characters and visual effects.</li>
+</ul>
+
+<p>Throughout the development process, I collaborated closely with Whitethorn Games' Quality Assurance, Porting, and Accessibility Teams, ensuring a smooth, accessible and mostly bug-free experience for players on both consoles and PCs.</p>
+</div>
+	<div class="production-container">
+	<img class="production-image" src="../ShadowIgnition.github.io_files/ProjectBanners/Thumbnails/KanaQuest.png" alt="1"></img>
+	<ul class="production-description">
+		<li class="info-line"><div class="info-label">Game:</div><div class="info-value">Kana Quest</div></li>
+		<li class="info-line"><div class="info-label">Platform:</div><div class="info-value">PC & Nintendo Switch</div></li>
+		<li class="info-line"><div class="info-label">Role:</div><div class="info-value">Lead Programmer (Contract)</div></li>
+		<li class="info-line"><div class="info-label">Company:</div><div class="info-value">Not Dead Design & Whitethorn Games</div></li>
+		<li class="info-line"><div class="info-label">Date:</div><div class="info-value">May 2022 - Apr 2023</div></li>
+
+		<a href="https://www.kanaquestgame.com/">Official Site</a> | <a href="https://whitethorngames.com/kanaquest">Whitethorn Games</a> | <a href="https://store.steampowered.com/app/725850/Kana_Quest/">Kana Quest on Steam</a>
+	</ul>
+	</div>
 </section>
-</body>
 
 <footer class="footer" id = "footer">
 <div class = "footer-right">
@@ -60,38 +76,3 @@
 </div>
 </footer>
 </html>
-</section>
-
-<script>
-function InitTab(evt, cityName) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 1; i < tabcontent.length; i++) 
-	{
-		tabcontent[i].style.display = "none";
-	}
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 1; i < tablinks.length; i++) 
-	{
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
-	document.getElementById(cityName).style.display = "block";
-	evt.currentTarget.className += " active";
-}
-
-function SwitchTab(evt, cityName) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) 
-	{
-		tabcontent[i].style.display = "none";
-	}
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) 
-	{
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
-	document.getElementById(cityName).style.display = "block";
-	evt.currentTarget.className += " active";
-}
-</script>
