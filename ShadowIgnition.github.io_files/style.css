@@ -1928,11 +1928,76 @@ body
     z-index: 2;
 }
 
-.seemore
+.blankentry
+{
+    color: var(--secondaryTextColor);
+    clear: both;
+    text-align: left;
+    position: relative;
+    height: 6em;
+    margin: 2em;
+    border-radius: 1em;
+    margin: 1em 25% 1em 25%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+.title
+{
+    float: left;
+    width: 50%;
+    padding-right: 2em;
+    text-align: right;
+    position: relative;
+    height: inherit;
+&:before
+{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    right: -16px;
+    z-index: 99;
+    top: calc(50% - 32px/2);
+    right: calc(-32px/2);
+    background-color: var(--overlayHoverColor);
+}
+
+&:after
+{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: inherit;
+    z-index: 98;
+    top: 0;
+    right: calc(-1px);
+    background-color: #9B9B9B;
+}
+
+}
+.body
+{
+    height: inherit;
+    float: right;
+    width: 50%;
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+.icon
 {
     position: absolute;
-    right: 8em;
     font-size: 1.5em;
+    right: 3em;
+    color: var(--overlayHoverColor);
+}
+
+}
 }
 
 .entry
