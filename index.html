@@ -15,18 +15,19 @@
 
 <header>
     <div class="toggleTheme">
-        <button id="toggleSwitch" class="darkMode" onclick="toggleTheme(),notifyDarkmode()"></button>
+        <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
+        <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
+                        <p id="quotes"></p>
     </div>
 </header>
 
 <html>
-<body onload="InitializeQuote(), InitTab(event, 'Recent')">
+<body onload="speakWelcome(), InitTab(event, 'Recent')">
     <section id="intro">
         <div class="intro-content">
             <div class="intro text">
                 <div class="row">
                     <div class="columns-split">
-                        <p class="intro-columns" id="quotes"></p>
                         <p class="intro-name">Dylan Imrei</p>
                         <p class="intro-columns">
                             <span>Programmer</span>
@@ -54,12 +55,8 @@
             <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/AWildTaleProjectBanner.png">
             <div class="section-content about">
                 <h4>About Me</h4>
-                <p>
-                    I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.
-                </p>
-                <p>
-                    When I知 not programming or developing games, I知 either at the gym, listening to music, or playing games, with some of my favorite titles including Escape From Tarkov, Final Fantasy Tactics Advance, and The Legend of Zelda: Majora's Mask.
-                </p>
+                <p>I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.</p>
+                <p>When I知 not programming or developing games, I知 either at the gym, listening to music, or playing games, with some of my favorite titles including Escape From Tarkov, Final Fantasy Tactics Advance, and The Legend of Zelda: Majora's Mask.</p>
                 <p>
                     Thank you for visiting, If you'd like to reach out, you can contact me on
                     <a href="https://www.linkedin.com/in/dylan-imrei/">LinkedIn</a> or
@@ -69,8 +66,8 @@
         </div>
     </section>
 
-    <section>
-        <h4>testimonials</h4>What people say.<br><br>
+    <section id="testimonials">
+        <h4>testimonials</h4>See what clients and collaborators are saying.<br><br>
         <div class="section-content about">
             <div class="row">
                 <div class="testimonials">
