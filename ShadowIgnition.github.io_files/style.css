@@ -10,51 +10,60 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--scrollBarTrack);
+    background: var(--scrollbar-track);
 }
 
 #f1f1f1::-webkit-scrollbar-thumb {
-    background: var(--scrollBarThumb);
+    background: var(--scrollbar-thumb);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accentTextColor);
+    background: var(--text-accent);
 }
 
 ::selection {
-    background-color: var(--accentTextColor);
+    background-color: var(--text-accent);
 }
 
 :root {
-    --headerFont: 'Abel', sans-serif;
-    --bodyFont: 'Montserrat', sans-serif;
-    --primaryTextColor: #fff;
-    --secondaryTextColor: #000;
-    --accentTextColor: #f04;
-    --tertiaryColor: #505050;
-    --noteTextColor: #888;
-    --overlayPanelColor: #0003;
-    --primaryPageTint: #F5F5F5;
-    --secondaryPageTint: #131417;
-    --tertiaryPageTint: #ebebeb;
-    --overlayHoverColor: #DDD;
-    --footerColor: #131417;
-    --scrollBarTrack: #F1F1F1;
-    --scrollBarThumb: #C1C1C1;
-    --inversion: invert(0);
-    --darkModeIcon: "\f186";
-    /* --mainPagePhoto: url("./Images/PreludeBackdrop.png");*/
-    --containerBorderImg: url(border-light.png) 30 round;
-    --interactiveBorder: 0px solid transparent;
-    --interactiveBorderImg: none;
-    --interBorderTupple: 10px solid transparent;
-    --interBorderTuppleImg: url(border-interactive.png)30 round;
-}
-
-:root {
+    --font-header: 'Abel', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --text-primary: #fff;
+    --text-secondary: #000;
+    --text-accent: #f04;
+    --text-tertiary: #505050;
+    --text-note: #888;
+    --bg-primary: #F5F5F5;
+    --bg-secondary: #ebebeb;
+    --bg-overlay: #0003;
+    --bg-overlay-hover: #DDD;
+    --bg-footer: #131417;
+    --scrollbar-track: #F1F1F1;
+    --scrollbar-thumb: #C1C1C1;
+    --filter-inversion: invert(0);
+    --icon-theme: "\f042";
+    --icon-speak: "\f0e5";
     --mainPagePhoto: url("./Images/PreludeBackdrop.png");
+    --border-speech-img: url(border-dark.png) 30 round;
     --contentWidth: 50vw;
     --contentPadding: 12em;
+}
+
+.theme-dark {
+    --text-primary: #fff;
+    --text-secondary: #fff;
+    --text-accent: #FF0045;
+    --text-tertiary: #505050;
+    --bg-overlay: #0006;
+    --bg-primary: #151515;
+    --scrollbar-track: #0E0E0E;
+    --scrollbar-thumb: #3E3E3E;
+    --bg-overlay-hover: #DDD;
+    --bg-footer: #131417;
+    --bg-secondary: #1D1D1D;
+    --filter-inversion: invert(1);
+    --mainPagePhoto: url("./Images/OhShroomBackdrop.png");
+    --border-speech-img: url(border-light.png) 30 round;
 }
 
 @media (orientation:portrait) {
@@ -76,7 +85,7 @@
     }
 
     .info-line {
-        border-bottom: 1px solid var(--scrollBarThumb);
+        border-bottom: 1px solid var(--scrollbar-thumb);
     }
 
     .info-label {
@@ -87,12 +96,7 @@
         -ms-hyphens: auto;
         hyphens: auto;
         font-weight: normal;
-        color: var(--tertiaryColor);
-    }
-
-    #Recent, #DevelopmentHistory, #ToolsShowcase, #porfolio, #about {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        color: var(--text-tertiary);
     }
 
     .intro-links li {
@@ -104,7 +108,7 @@
     }
 
     .entry.linked {
-        background-color: var(--tertiaryPageTint);
+        background-color: var(--bg-secondary);
     }
 
     .footer .footer-socials a {
@@ -112,7 +116,7 @@
     }
 
     .intro-links a {
-        color: var(--primaryTextColor);
+        color: var(--text-primary);
         cursor: pointer;
         margin: 0.5em;
         text-decoration: none;
@@ -130,11 +134,6 @@
 
     .intro-content .intro-columns {
         font-size: 4.5vw;
-    }
-
-    .intro-columns #quotes {
-        font-size: 2.5vw;
-        width: 100vw;
     }
 
     .timeline .row {
@@ -169,7 +168,7 @@
         display: block;
         width: 75vw;
         text-align: left;
-        border-bottom: 2px solid var(--scrollBarThumb);
+        border-bottom: 2px solid var(--scrollbar-thumb);
         margin-bottom: 1em;
         height: 14em;
     }
@@ -180,7 +179,7 @@
         display: block;
         width: 75vw;
         text-align: left;
-        border-bottom: 2px solid var(--scrollBarThumb);
+        border-bottom: 2px solid var(--scrollbar-thumb);
         margin-bottom: 1em;
     }
 
@@ -197,11 +196,11 @@
     }
 
     .project-button a {
-        font: var(--bodyFont);
+        font: var(--font-body);
     }
 
     .project-button:hover {
-        border: 2px solid var(--accentTextColor);
+        border: 2px solid var(--text-accent);
         border-radius: 4px;
         margin: 12px;
         font-size: 1rem;
@@ -229,13 +228,13 @@
         margin: 2em;
         padding: 1em;
         width: 2em;
-        background-color: var(--overlayPanelColor);
+        background-color: var(--bg-overlay);
         height: 2em;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        color: var(--overlayHoverColor);
+        color: var(--bg-overlay-hover);
     }
 
     .nav-links {
@@ -249,32 +248,6 @@
         --contentWidth: 80vw;
         --contentPadding: 6em;
     }
-}
-
-.theme-dark {
-    --primaryTextColor: #fff;
-    --secondaryTextColor: #fff;
-    --accentTextColor: #FF0045;
-    --tertiaryColor: #505050;
-    --overlayPanelColor: #0006;
-    --primaryPageTint: #151515;
-    --secondaryPageTint: #F5F5F5;
-    --scrollBarTrack: #0E0E0E;
-    --scrollBarThumb: #3E3E3E;
-    --overlayHoverColor: #DDD;
-    --footerColor: #131417;
-    --tertiaryPageTint: #1D1D1D;
-    --inversion: invert(1);
-    --darkModeIcon: "\f185";
-    --mainPagePhoto: url("./Images/OhShroomBackdrop.png");
-    --containerBorderImg: url(border-light.png) 30 round;
-    --interactiveBorder: 0px solid transparent;
-    --interactiveBorderImg: none;
-}
-
-.isInteractive {
-    --interactiveBorder: 10px solid transparent;
-    --interactiveBorderImg: url(border-interactive.png) 30 round;
 }
 
 #loader {
@@ -303,17 +276,17 @@ html {
 }
 
 body {
-    background-color: var(--primaryPageTint);
+    background-color: var(--bg-primary);
     text-align: center;
-    font-family: var(--bodyFont);
+    font-family: var(--font-body);
     height: 100%;
     margin: 0;
-    color: var(--secondaryTextColor);
+    color: var(--text-secondary);
     width: 100%;
 }
 
 h1, h2 {
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
 }
 
 h1 {
@@ -321,7 +294,7 @@ h1 {
 }
 
 h3, h4, h5, h6 {
-    font-family: var(--bodyFont);
+    font-family: var(--font-body);
 }
 
 h4, h5 {
@@ -330,20 +303,20 @@ h4, h5 {
 }
 
 h4 {
-    color: var(--tertiaryColor);
+    color: var(--text-tertiary);
 }
 
 h6 {
-    color: var(--tertiaryColor);
+    color: var(--text-tertiary);
     font-size: 0.9em;
 }
 
 a {
-    color: var(--accentTextColor);
+    color: var(--text-accent);
 }
 
 c {
-    color: var(--tertiaryColor);
+    color: var(--text-tertiary);
     text-transform: uppercase;
     font-size: 0.67em;
     margin-block-start: 2.33em;
@@ -364,11 +337,20 @@ c {
 
 #quotes {
     display: inline;
-    font: var(--bodyFont);
+    font: var(--font-body);
     font-weight: bold;
     max-width: 50%;
     border: 10px solid transparent;
-    border-image: var(--containerBorderImg);
+    border-image: var(--border-speech-img);
+    color: var(--text-primary);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+    background-color: var(--bg-overlay);
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    min-width: fit-content;
 }
 
     #quotes::after {
@@ -385,7 +367,7 @@ c {
     }
 
     40%, 60% {
-        color: var(--primaryTextColor);
+        color: var(--text-primary);
         text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
     }
 
@@ -395,17 +377,13 @@ c {
     }
 }
 
-header {
-    ;
-}
-
 mark {
     background-color: red;
-    color: var(--primaryTextColor);
+    color: var(--text-primary);
 }
 
 #intro, #production {
-    background-color: var(--primaryPageTint);
+    background-color: var(--bg-primary);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -429,7 +407,7 @@ mark {
 }
 
 .text {
-    background-color: var(--overlayPanelColor);
+    background-color: var(--bg-overlay);
     width: 100%;
     height: auto;
     position: relative;
@@ -451,14 +429,14 @@ mark {
     width: 2.5em;
     top: 0.75em;
     vertical-align: middle;
-    filter: var(--inversion);
+    filter: var(--filter-inversion);
 }
 
     .icons.svg {
         width: 1em;
         filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.75));
         vertical-align: middle;
-        fill: var(--primaryTextColor);
+        fill: var(--text-primary);
     }
 
 .row {
@@ -467,8 +445,8 @@ mark {
 }
 
 .svg:hover {
-    color: var(--accentTextColor);
-    fill: var(--accentTextColor);
+    color: var(--text-accent);
+    fill: var(--text-accent);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -483,13 +461,13 @@ mark {
     -webkit-transform: translateY(-2.1rem);
     -ms-transform: translateY(-2.1rem);
     transform: translateY(-2.1rem);
-    color: var(--primaryTextColor);
+    color: var(--text-primary);
     letter-spacing: 0.2rem;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
 }
 
     .intro-content h5 {
-        font-family: var(--headerFont);
+        font-family: var(--font-header);
         font-size: 2.3rem;
         line-height: 1.565;
         margin-bottom: 0;
@@ -498,14 +476,14 @@ mark {
     }
 
     .intro-content h1 {
-        font-family: var(--headerFont);
+        font-family: var(--font-header);
         line-height: 1.565;
         margin-bottom: 0.6rem;
         margin-top: 0;
     }
 
     .intro-content .intro-columns {
-        font-family: var(--headerFont);
+        font-family: var(--font-header);
         line-height: 2.4em;
         text-transform: uppercase;
         margin-bottom: 0;
@@ -539,54 +517,6 @@ mark {
         flex-direction: row;
     }
 
-#about {
-    background-color: var(--primaryPageTint);
-    width: 100%;
-    height: auto;
-    min-height: 720px;
-    display: table;
-    position: relative;
-    text-align: center;
-    padding-top: var(--contentPadding);
-    padding-bottom: var(--contentPadding);
-    line-height: 1.5em;
-}
-
-#DevelopmentHistory {
-    background-color: var(--primaryPageTint);
-    width: 100%;
-    height: auto;
-    min-height: 720px;
-    display: table;
-    position: relative;
-    text-align: center;
-    padding-top: var(--contentPadding);
-    padding-bottom: var(--contentPadding);
-}
-
-#porfolio {
-    background-color: var(--primaryPageTint);
-    width: 100%;
-    display: table;
-    position: relative;
-    text-align: center;
-    padding-top: var(--contentPadding);
-    padding-bottom: var(--contentPadding);
-}
-
-#contact-form {
-    background-color: var(--tertiaryPageTint);
-    width: 40%;
-    border-radius: 1em;
-    padding: 1em;
-    min-height: 0;
-    top: 25%;
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
 
 .fa {
     vertical-align: middle;
@@ -600,8 +530,8 @@ mark {
     padding: 18px 32px;
     font-size: 1rem;
     border-radius: 9px;
-    background-image: linear-gradient(to right,#FF512F, var(--accentTextColor));
-    box-shadow: 0px 18px 40px -18px var(--accentTextColor);
+    background-image: linear-gradient(to right,#FF512F, var(--text-accent:));
+    box-shadow: 0px 18px 40px -18px var(--text-accent);
     width: 224px;
     background-size: 200% auto;
     margin: 1rem;
@@ -611,7 +541,7 @@ mark {
 
     .linkToButton:hover {
         padding: 16px 32px;
-        border: 2px solid var(--secondaryTextColor);
+        border: 2px solid var(--text-secondary);
         background-position: left center;
     }
 
@@ -625,15 +555,15 @@ mark {
 }
 
 .intro-links a {
-    color: var(--primaryTextColor);
+    color: var(--text-primary);
     cursor: pointer;
     margin: 0.5em;
     text-decoration: none;
 }
 
     .intro-links a:hover {
-        color: var(--accentTextColor);
-        fill: var(--accentTextColor);
+        color: var(--text-accent);
+        fill: var(--text-accent);
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
@@ -642,8 +572,8 @@ mark {
     }
 
 .projectButton a {
-    color: var(--tertiaryColor);
-    fill: var(--tertiaryColor);
+    color: var(--text-tertiary);
+    fill: var(--text-tertiary);
     cursor: pointer;
     margin: 8px;
     font-size: 1.5em;
@@ -651,8 +581,8 @@ mark {
 }
 
     .projectButton a:hover {
-        color: var(--accentTextColor);
-        fill: var(--accentTextColor);
+        color: var(--text-accent);
+        fill: var(--text-accent);
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
@@ -668,30 +598,19 @@ hr {
 
 .Monospace {
     letter-spacing: .2rem;
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
 }
 
 .Abel {
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
 }
 
 .centerAlign {
-    color: var(--accentTextColor);
+    color: var(--text-accent);
     text-align: center;
 }
 
-section {
-/*    background-color: var(--tertiaryPageTint);*/
-    width: 100%;
-    height: auto;
-    min-height: 720px;
-    display: table;
-    position: relative;
-    text-align: center;
-    padding-top: var(--contentPadding);
-    padding-bottom: var(--contentPadding);
-/*    border-bottom: 2px solid var(--scrollBarThumb);*/
-}
+
 
 /* Style the navigation menu */ nav {
     -webkit-flex: 1;
@@ -725,7 +644,7 @@ date {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: normal;
-    color: var(--noteTextColor);
+    color: var(--text-note);
     text-transform: uppercase;
 }
 
@@ -770,7 +689,7 @@ date {
     font-size: 1.6em;
     text-shadow: 1px 5px 10px black;
     transition-duration: .33s;
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
 }
 
 .grid-text {
@@ -794,7 +713,7 @@ date {
 }
 
     .tab button {
-        background-color: var(--overlayHoverColor);
+        background-color: var(--bg-overlay-hover);
         border: none;
         cursor: pointer;
         padding: 0.875em 1em;
@@ -802,21 +721,21 @@ date {
         font-size: 1.0625em;
         border-radius: 1em;
         margin: 1em;
-        color: var(--secondaryTextColor);
+        color: var(--text-secondary);
         width: 96px;
     }
 
         /* Change background color of buttons on hover */ .tab button:hover {
-            background-color: var(--overlayHoverColor);
+            background-color: var(--bg-overlay-hover);
         }
 
         /* Create an active/current tablink class */ .tab button.active {
-            background-color: var(--scrollBarThumb);
+            background-color: var(--scrollbar-thumb);
         }
 
 /* Style the tab content */ .tabcontent {
     display: none;
-    background-color: var(--primaryPageTint);
+    background-color: var(--bg-primary);
 }
 
 .grid-item:hover img {
@@ -854,7 +773,7 @@ date {
 .gallery-thumbnail {
     display: block;
     width: 100%;
-    //height: 100%;
+    cursor: pointer;
     object-fit: cover;
     transition: transform 400ms ease-out, filter 400ms ease-out;
 }
@@ -871,7 +790,7 @@ date {
     font-size: 1.6em;
     text-shadow: 1px 5px 10px black;
     transition-duration: .33s;
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
 }
 
 .gallery-text {
@@ -901,12 +820,14 @@ date {
 
 .toggleTheme {
     text-align: center;
-    //margin-top: .75rem;
     vertical-align: middle;
     z-index: 600;
     position: fixed;
-    left: 1.5em;
-    top: 1.5em;
+    left: 1em;
+    top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0em .5em;
 }
 
 input[type=checkbox] {
@@ -915,15 +836,15 @@ input[type=checkbox] {
     visibility: hidden;
 }
 
-#toggleSwitch {
+#sys-toggle {
     background: none;
     border: none;
-    font-family: var(--bodyFont);
-    color: var(--primaryTextColor);
+    font-family: var(--font-body);
+    color: var(--text-primary);
     font-size: 1rem;
     height: 2em;
     width: 2em;
-    background-color: var(--overlayPanelColor);
+    background-color: var(--bg-overlay);
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
@@ -931,14 +852,18 @@ input[type=checkbox] {
     position: relative;
     cursor: pointer;
 }
-
-    #toggleSwitch.darkMode::before {
+    #sys-toggle.theme::before {
         font: normal normal normal 14px/1 FontAwesome;
-        content: var(--darkModeIcon);
+        content: var(--icon-theme);
     }
 
-    #toggleSwitch:hover {
-        background-color: var(--accentTextColor);
+    #sys-toggle.speak::before {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: var(--icon-speak);
+    }
+
+    #sys-toggle:hover {
+        background-color: var(--text-accent);
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
@@ -976,7 +901,7 @@ input[type=checkbox] {
 }
 
 /* The Masonry Brick */ .gallery-item {
-    background: var(--primaryTextColor);
+    background: var(--text-primary);
     //padding: 1em;
     margin: 0 0 1.5em;
     margin-bottom: 0;
@@ -984,12 +909,12 @@ input[type=checkbox] {
 
 .intro-name {
     text-align: center;
-    font-family: var(--headerFont);
+    font-family: var(--font-header);
     height: 100%;
     margin: 0;
 }
 
-.toggleSwitch {
+.theme-toggle {
     display: none;
 }
 
@@ -1072,12 +997,12 @@ input[type=checkbox] {
 }
 
 .footer {
-    background-color: var(--footerColor);
+    background-color: var(--bg-footer);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     padding: 45px 50px;
-    color: var(--primaryTextColor);
+    color: var(--text-primary);
     font-size: 1rem;
     height: 15%;
     display: flex;
@@ -1095,14 +1020,14 @@ input[type=checkbox] {
         .footer .footer-links a {
             display: inline-block;
             line-height: 1.8;
-            color: var(--primaryTextColor);
+            color: var(--text-primary);
         }
 
             .footer .footer-links a:nth-child(1n+2):before {
                 content: "·";
                 font-size: 20px;
                 left: 0;
-                color: var(--primaryTextColor);
+                color: var(--text-primary);
                 display: inline-block;
                 padding-right: 5px;
             }
@@ -1116,24 +1041,40 @@ input[type=checkbox] {
         height: 1.5em;
         align-items: center;
         justify-content: center;
-        background-color: var(--tertiaryColor);
+        background-color: var(--text-tertiary);
         font-size: 1.75em;
-        color: var(--primaryTextColor);
+        color: var(--text-primary);
     }
 
 .footer-links a:hover {
-    color: var(--accentTextColor);
+    color: var(--text-accent);
     ;
     text-decoration: underline;
 }
 
 .footer-socials a:hover {
-    background-color: var(--accentTextColor);
+    background-color: var(--text-accent);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    min-height: 720px;
+    display: table;
+    position: relative;
+    text-align: center;
+    padding-top: var(--contentPadding);
+    padding-bottom: var(--contentPadding);
+    /*    border-bottom: 2px solid var(--scrollbar-thumb);*/
+}
+
+#about {
+    line-height: 1.5em;
 }
 
 .section-content {
@@ -1146,10 +1087,10 @@ input[type=checkbox] {
 
 
 
-.section-content .about {
-    border-bottom: 2px solid var(--scrollBarThumb);
-    margin-bottom: 1em;
-}
+    .section-content .about {
+        border-bottom: 2px solid var(--scrollbar-thumb);
+        margin-bottom: 1em;
+    }
 
     .section-content .image {
         width: var(--contentWidth);
@@ -1215,7 +1156,7 @@ input[type=checkbox] {
         display: block;
         width: 50%;
         text-align: left;
-        border-right: 1px solid var(--scrollBarThumb);
+        border-right: 1px solid var(--scrollbar-thumb);
         padding-right: 1em;
     }
 
@@ -1240,7 +1181,7 @@ input[type=checkbox] {
         display: block;
         width: var(--contentWidth);
         text-align: left;
-        border-bottom: 2px solid var(--scrollBarThumb);
+        border-bottom: 2px solid var(--scrollbar-thumb);
         margin-bottom: 1em;
         height: 14em;
     }
@@ -1260,7 +1201,7 @@ input[type=checkbox] {
     margin-right: auto;
     display: block;
     text-align: left;
-    border-bottom: 1px solid var(--scrollBarThumb);
+    border-bottom: 1px solid var(--scrollbar-thumb);
     margin-bottom: 1em;
     list-style: none;
     display: flex;
@@ -1280,7 +1221,7 @@ input[type=checkbox] {
     -ms-hyphens: auto;
     hyphens: auto;
     font-weight: normal;
-    color: var(--tertiaryColor);
+    color: var(--text-tertiary);
 }
 
 .info-value {
@@ -1304,20 +1245,20 @@ input[type=checkbox] {
 }
 
 .project-button {
-    border: 2px solid var(--scrollBarThumb);
+    border: 2px solid var(--scrollbar-thumb);
     border-radius: 4px;
     margin: 12px;
     font-size: 1rem;
     padding: 16px;
-    background-color: var(--tertiaryPageTint);
+    background-color: var(--bg-secondary);
 }
 
     .project-button a {
-        font-color: var(--bodyFont);
+        font-color: var(--font-body);
     }
 
     .project-button:hover {
-        border: 2px solid var(--accentTextColor);
+        border: 2px solid var(--text-accent);
         border-radius: 4px;
         margin: 12px;
         font-size: 1rem;
@@ -1364,7 +1305,7 @@ li {
     }
 
     hr.divider {
-        border-top: 2px solid var(--scrollBarThumb);
+        border-top: 2px solid var(--scrollbar-thumb);
     }
 
     div.navigation {
@@ -1390,10 +1331,10 @@ li {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: var(--overlayHoverColor);
+    background-color: var(--bg-overlay-hover);
     padding: 1em;
     position: relative;
-    border: solid var(--overlayHoverColor);
+    border: solid var(--bg-overlay-hover);
     border-radius: 1em;
     height: 1em;
     border-radius: 1em;
@@ -1403,7 +1344,7 @@ li {
 }
 
 .entry {
-    color: var(--secondaryTextColor);
+    color: var(--text-secondary);
     clear: both;
     text-align: left;
     position: relative;
@@ -1420,7 +1361,7 @@ li {
 }
 
     .entry.linked:hover {
-        background-color: var(--tertiaryPageTint);
+        background-color: var(--bg-secondary);
     }
 
     .entry .title {
@@ -1441,11 +1382,11 @@ li {
             right: -16px;
             z-index: 99;
             top: calc(50% - 16px);
-            background-color: var(--overlayHoverColor);
+            background-color: var(--bg-overlay-hover);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--noteTextColor);
+            color: var(--text-note);
         }
 
         .entry .title.custom.work:before {
@@ -1493,7 +1434,7 @@ li {
             position: absolute;
             font-size: 1.5em;
             right: 3em;
-            color: var(--overlayHoverColor);
+            color: var(--bg-overlay-hover);
         }
 
 .lightbox {
@@ -1532,12 +1473,12 @@ li {
     flex: 1;
     padding: 0.5rem;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, .1);
-    background-color: var(--tertiaryPageTint);
+    background-color: var(--bg-secondary);
     padding: 0.875em 1em;
     transition: 0.33s;
     border-radius: 1em;
     margin: 1em;
-    color: var(--secondaryTextColor);
+    color: var(--text-secondary);
     height: fit-content;
     padding: 2em;
 }
@@ -1555,8 +1496,7 @@ li {
 
 blockquote {
     font-style: italic;
-    color: var(--secondaryPageTint);
-    border-left: 3px solid var(--overlayPanelColor);
+    border-left: 3px solid var(--bg-overlay);
     padding-left: 1em;
     font-family: system-ui;
     margin: 0 0 1em 0;

@@ -114,3 +114,19 @@
     box-sizing: border-box;
 }
 }
+
+
+
+#contact-form {
+    background-color: var(--tertiaryPageTint);
+    width: 40%;
+    border-radius: 1em;
+    padding: 1em;
+    min-height: 0;
+    top: 25%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}

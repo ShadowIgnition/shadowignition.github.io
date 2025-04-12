@@ -1,98 +1,91 @@
-var quotationArray = [
-	'Welcome'
-]
-//'Dark Mode is active'
-/*
-'Hello World',
-	'Hold The Future', 
-	'Cyber Talking',
-	'Virtual Visions',
-	'Better Die Than Rust',
-	'Transmit Data',
-	'Manifold Love',
-	'Lost In The Datastream',
-	'Broken Singularity',
-	'Binary Command',
-*/
-;/* 4/12/18 1:27AM - Implemented Superior RNG, Previous RNG favored smaller numbers																		*/
+// ========== CONFIGURATION ==========
+const QUOTATIONS = [
+    'Hello world...',
+    'Lost in time, like tears in rain',
+    'Better die than to rust',
+    'Etch out a future of your own design',
+    'The infomation wants to be free',
+    'Lost in the datastream?',
+    'Hold The Future',
+    'Virtualize Visions',
+    'Transmit Data',
+    'Manifold Love',
+    'Command Binary',
+];
 
-var numerator = Math.floor(quotationArray.length/(Math.ceil(Math.random()*4)+1))
-var denominator = Math.floor(quotationArray.length/1)
-/* document.getElementById("sub-title").addEventListener("click",nextQuote); */
+const WELCOME_TEXT = "Welcome";
+const WELCOME_BACK_TEXT = "Welcome back, friend";
+const DARK_MODE_ON_TEXT = "Dark Mode Activated";
+const DARK_MODE_OFF_TEXT = "Dark Mode Deactivated";
+const INTERACTABLES_TEXT = "Highlighting Interactable Elements";
 
-if (numerator < quotationArray.length/4){
-	numerator = 0;
-	denominator = Math.ceil(quotationArray.length/4);
-}
-var quotationArrayRan = quotationArray.slice(numerator, denominator);
+const PREFIX = "> ";
+const SUFFIX = "";
+const TYPING_SPEED = 50;
+const DARK_MODE_TIMEOUT = 2500;
 
-var rng = Math.floor(Math.random()* quotationArrayRan.length);
+// ========== STATE VARIABLES ==========
+let currentQuote = "";
+let fullDisplayText = "";
+let typingIndex = 0;
+let quoteTimeoutId;
+let notifyTimeoutId;
+let currentQuoteIndex = -1; // Start before first quote
 
-var textQuote = quotationArrayRan[rng];
-var themeNotificaiton = "Toggled Dark Mode";
-var interactablesNotificaiton = "Highlighting Interactable Elements";
-var selectedText = "";
-var welcomeBackText = "Welcome back, friend";
-
-var i = 0;
-var speedQuote = 50;
-
-var beforeQuote = "> ";
-var afterQuote = "";
-
-var quoteTimeout;
-var notifyTimeout;
-
-function InitializeQuote() {
-	if (localStorage.getItem("returnVisit") == "true") {//if is return visit
-		textQuote = welcomeBackText;
-		//console.log(x + " @a");
-	}
-	else
-	{
-		//console.log(x + " @b");
-		localStorage.setItem("returnVisit", "true");
-	}
-	selectedText = beforeQuote + textQuote + afterQuote;
-	typeQuote();
+// ========== QUOTE SELECTION LOGIC ==========
+function getRandomQuote() {
+    currentQuoteIndex = (currentQuoteIndex + 1) % QUOTATIONS.length;
+    return QUOTATIONS[currentQuoteIndex];
 }
 
+// ========== TYPING EFFECT ==========
 function typeQuote() {
-  if (i < selectedText.length) {
-    document.getElementById("quotes").innerHTML += selectedText.charAt(i);
-    i++;
-    quoteTimeout = setTimeout(typeQuote, speedQuote);
-  }
+    if (typingIndex < fullDisplayText.length) {
+        document.getElementById("quotes").innerHTML += fullDisplayText.charAt(typingIndex);
+        typingIndex++;
+        quoteTimeoutId = setTimeout(typeQuote, TYPING_SPEED);
+    }
 }
 
-function notifyDarkmode(){
-	clearTimeouts();
-	if (localStorage.getItem('theme') === 'theme-dark') {
-		selectedText = beforeQuote + "Dark Mode Activated" + afterQuote;
-	} else {
-		selectedText = beforeQuote + "Dark Mode Deactivated" + afterQuote;
-	}
-	typeQuote();
-	notifyTimeout = setTimeout(notifyVanillaText, 2500);
+// ========== NOTIFICATIONS ==========
+function speakWelcome() {
+    if (localStorage.getItem("returnVisit") === "true") {
+        currentQuote = WELCOME_BACK_TEXT;
+    } else {
+        localStorage.setItem("returnVisit", "true");
+        currentQuote = WELCOME_TEXT;
+    }
+    fullDisplayText = formatDisplayText(currentQuote);
+    typeQuote();
 }
 
-function notifyInteractables(){
-	clearTimeouts();
-	selectedText = beforeQuote + interactablesNotificaiton + afterQuote;
-	typeQuote();
-	notifyTimeout = setTimeout(notifyVanillaText, 3250);
+function speakQuote() {
+    resetDisplay();
+    currentQuote = getRandomQuote();
+    fullDisplayText = formatDisplayText(currentQuote);
+    typeQuote();
 }
 
-function notifyVanillaText(){ 
-	clearTimeouts();
-	selectedText = beforeQuote + textQuote + afterQuote;
-	typeQuote();
+function speakDarkmode() {
+    resetDisplay();
+    const isDarkMode = localStorage.getItem("theme") === "theme-dark";
+    fullDisplayText = formatDisplayText(isDarkMode ? DARK_MODE_ON_TEXT : DARK_MODE_OFF_TEXT);
+    typeQuote();
+    notifyTimeoutId = setTimeout(notifyVanillaText, DARK_MODE_TIMEOUT);
 }
 
-function clearTimeouts(){ 
-	i = 0;
-	clearTimeout(quoteTimeout);
-	clearTimeout(notifyTimeout);
-	clearTimeout(notifyInteractables);
-	document.getElementById("quotes").innerHTML = "";
+// ========== HELPERS ==========
+function resetDisplay() {
+    clearTimeouts();
+    typingIndex = 0;
+    document.getElementById("quotes").innerHTML = "";
+}
+
+function clearTimeouts() {
+    clearTimeout(quoteTimeoutId);
+    clearTimeout(notifyTimeoutId);
+}
+
+function formatDisplayText(text) {
+    return `${PREFIX}${text}${SUFFIX}`;
 }
