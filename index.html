@@ -20,7 +20,7 @@
 </header>
 
 <html>
-<body onload="InitializeQuote(),InitTab(event, 'Recent')">
+<body onload="InitializeQuote(), InitTab(event, 'Recent')">
     <section id="intro">
         <div class="intro-content">
             <div class="intro text">
@@ -51,9 +51,9 @@
 
     <section id="about">
         <div>
-            <img class="about-image" src="./ShadowIgnition.github.io_files/ProjectBanners/AWildTaleProjectBanner.png">
-            <div class="about-description">
-                <h3>About Me</h3>
+            <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/AWildTaleProjectBanner.png">
+            <div class="section-content about">
+                <h4>About Me</h4>
                 <p>
                     I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.
                 </p>
@@ -69,7 +69,26 @@
         </div>
     </section>
 
+    <section>
+        <h4>testimonials</h4>What people say.<br><br>
+        <div class="section-content about">
+            <div class="row">
+                <div class="testimonials">
+                    <blockquote>“Dylan was able to come in onto a project that had significant existing problems and holes within its codebase and was able to just get things working quickly and efficiently. My only regret with working with him is that I did not hire him sooner.”</blockquote>
+                    <div class="testimonials-author">Athena Kipen</div>
+                    <div class=testimonials-position h5>Lead Designer - Not Dead Design</div>
+                </div>
+                <div class="testimonials">
+                    <blockquote>“Throughout our collaboration, Dylan consistently demonstrated their problem-solving skills, teamwork abilities, clear communication, and dedication to delivering high-quality work. Their enthusiasm, professionalism, and proactive approach make them an invaluable asset to any game development team.”</blockquote>
+                    <div class="testimonials-author">Reuben Covington</div>
+                    <div class=testimonials-position h5>Lead Designer - Lightmare Studios</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="branch">
+        <h4>Previous Works</h4>PLACEHOLDER TEXT.<br><br>
         <div class="tab">
             <button class="tablinks active" onclick="SwitchTab(event, 'Recent')">Recent</button>
             <button class="tablinks" onclick="SwitchTab(event, 'DevelopmentHistory')">All</button>
@@ -78,7 +97,7 @@
 
     <section id="Recent" class="tabcontent">
         <!-- Infinity Wars -->
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/InfinityWars.png"></img>
+        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/InfinityWars.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -103,7 +122,7 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="./lightmare.html">Read More</a>
+                        <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/">See More</a>
                     </div>
                 </li>
             </ul>
@@ -141,7 +160,7 @@
                 </li>
             </ul>
         </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/KanaQuest.png"></img>
+        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/KanaQuest.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -166,12 +185,12 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="./kanaquest.html">Read More</a>
+                        <a href="https://www.nintendo.com/us/store/products/kana-quest-switch/">See More</a>
                     </div>
                 </li>
             </ul>
         </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/PreludeGardenProjectBanner.png"></img>
+        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/PreludeGardenProjectBanner.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -196,15 +215,13 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="./preludegarden.html">Read More</a>
+                        <a href="https://sketchfab.com/3d-models/prelude-garden-environment-483c8099cfb749a99643274a67b94111">See More</a>
                     </div>
                 </li>
             </ul>
         </div>
-        <a onclick="SwitchTab(event, 'DevelopmentHistory')" class="project-button">See All</a>
+        <a onclick="SwitchTab(event, 'DevelopmentHistory')" class="project-button" href="#DevelopmentHistory">See All</a>
     </section>
-
-
 
     <!-- Timeline -->
     <section id="DevelopmentHistory" class="tabcontent">
@@ -327,79 +344,78 @@
                     <date>21ST OCT. 2019</date>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
     <!-- Asset Showcase -->
     <section id="porfolio">
-        <h1>ASSET GALLERY</h1>
-        <h5>A Showcase of previous work</h5>
+        <h4>Art Gallery</h4>PLACEHOLDER TEXT.<br><br>
         <div class="porfolio">
             <div class="gallery">
                 <div class="masonry">
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_CTCG.png" alt="Infinity Wars CTCG Overhaul">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Infinity Wars</h5>CTCG Monetization Model Visual Overhaul
-                            <p>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.</p>
+                            <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_Foiling.png" alt="Prelude Garden Preview">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Infinity Wars</h5>Foiling
-                            <p>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.</p>
+                            <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>BLAH BLAH
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_ChatUIDesign.png" alt="Prelude Garden Preview">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Infinity Wars</h5>Chat User Interface Design
-                            <p>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.</p>
+                            <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_UIStyleDirection.png" alt="Prelude Garden Preview">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Infinity Wars</h5>UIStyleDirection
-                            <p>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.</p>
+                            <b>Infinity Wars</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
                         </span>
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/Prelude (3).png" alt="Prelude Garden Preview">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/Prelude (3).png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Prelude Garden</h5>Gradient Texturing & Particle Design
+                            <b>Prelude Garden</b><br><br>Gradient Texturing & Particle Design
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Oh Shroom!</h5>User Interface & Rune Particle Design
+                            <b>Oh Shroom!</b><br><br>User Interface & Rune Particle Design
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/OhShroomLighting.png" alt="Oh Shroom - Oh Shroom - Lighting"></a>
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomLighting.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Oh Shroom!</h5>Lighting & Particle Effects
+                            <b>Oh Shroom!</b><br><br>Lighting & Particle Effects
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/Covid2BoogalooSpriteSheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/Covid2BoogalooSpriteSheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Covid 2: Electric Boogaloo</h5>Mobile Game UI Design & Skybox Cubemap
+                            <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="./ShadowIgnition.github.io_files/Images/OhShroomParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
-                            <h5>Oh Shroom!</h5>Wind Waker Inspired Particles Sheet
+                            <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
                         </span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Preview" />
+    </div>
     <footer class="footer" id="footer">
         <div class="footer-right">
             <p class="footer-socials">
@@ -411,13 +427,12 @@
         <div class="footer-left">
             <p class="footer-links">
                 <a href="#about">About</a>
-                <a href="./testimonals.html">Testimonals</a>
                 <a href="./contact.html">Contact</a>
-
             </p>
 	<p>&copy; 2018 - 2023</p>
         </div>
     </footer>
+</body>
 </html>
 
 <script>
@@ -447,5 +462,17 @@
         }
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
+    }
+
+    const lightbox = document.getElementById('lightbox');
+
+    function openLightbox(src) {
+        const img = lightbox.querySelector('img');
+        img.src = src;
+        lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
     }
 </script>
