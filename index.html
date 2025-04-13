@@ -3,10 +3,12 @@
     <link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
     <title>Porfolio - Dylan - Game Developer</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/style.css" type="text/css">
+    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-portrait.css" media="(orientation: portrait)">
+    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css" media="(orientation: landscape)">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./ShadowIgnition.github.io_files/Javascript/speechCore.js"></script>
-    <script src="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+    <script src="./ShadowIgnition.github.io_files/js/speech.js"></script>
+    <script src="./ShadowIgnition.github.io_files/js/vision.js"></script>
     <script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
     <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +19,7 @@
     <div class="toggleTheme">
         <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
         <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
-                        <p id="quotes"></p>
+        <p id="quotes"></p>
     </div>
 </header>
 
@@ -28,11 +30,11 @@
             <div class="intro text">
                 <div class="row">
                     <div class="columns-split">
-                        <p class="intro-name">Dylan Imrei</p>
-                        <p class="intro-columns">
+                        <h1>Dylan Imrei</h1>
+                        <h2>
                             <span>Programmer</span>
                             <span>Game Developer</span>
-                        </p>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -52,7 +54,7 @@
 
     <section id="about">
         <div>
-            <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/AWildTaleProjectBanner.png">
+            <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/AWildTaleProjectBanner.png">
             <div class="section-content about">
                 <h4>About Me</h4>
                 <p>I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.</p>
@@ -94,7 +96,7 @@
 
     <section id="Recent" class="tabcontent">
         <!-- Infinity Wars -->
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/InfinityWars.png">
+        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/InfinityWars.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -125,7 +127,7 @@
             </ul>
         </div>
         <!-- Liquid Heart -->
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/MonsterFactory.png">
+        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/MonsterFactory.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -157,7 +159,7 @@
                 </li>
             </ul>
         </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/KanaQuest.png">
+        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/KanaQuest.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -187,7 +189,7 @@
                 </li>
             </ul>
         </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/ProjectBanners/PreludeGardenProjectBanner.png">
+        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/PreludeGardenProjectBanner.png">
         <div class="project-info-table">
             <ul class="production-description">
                 <li class="info-line">
@@ -351,56 +353,56 @@
             <div class="gallery">
                 <div class="masonry">
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Showcase_CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Showcase_Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>BLAH BLAH
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Showcase_ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/IW/Showcase_UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Showcase_UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Infinity Wars</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
                         </span>
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/Prelude (3).png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/Showcase_Prelude.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Prelude Garden</b><br><br>Gradient Texturing & Particle Design
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShroomSpriteSheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Oh Shroom!</b><br><br>User Interface & Rune Particle Design
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomLighting.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShroomLighting.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Oh Shroom!</b><br><br>Lighting & Particle Effects
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/Covid2BoogalooSpriteSheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/Covid2BoogalooSpriteSheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
                         </span>
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/Images/OhShroomParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
+                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShroomParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
                         <span class="gallery-text">
                             <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
                         </span>
@@ -425,6 +427,7 @@
             <p class="footer-links">
                 <a href="#about">About</a>
                 <a href="./contact.html">Contact</a>
+                <a href="https://www.ShadowIgnition.github.io">Source Code</a>
             </p>
 	<p>&copy; 2018 - 2023</p>
         </div>
