@@ -43,7 +43,7 @@
     --filter-inversion: invert(0);
     --icon-theme: "\f042";
     --icon-speak: "\f0e5";
-    --mainPagePhoto: url("../imgs/heroes/light/PreludeBackdrop.png");
+    --mainPagePhoto: url("../imgs/heroes/light/Hero_Prelude01.png");
     --border-speech-img: url(border-dark.png) 30 round;
     --contentWidth: 50vw;
     --contentPadding: 12em;
@@ -63,7 +63,7 @@
     --bg-footer: #131417;
     --bg-secondary: #1D1D1D;
     --filter-inversion: invert(1);
-    --mainPagePhoto: url("../imgs/heroes/dark/OhShroomBackdrop.png");
+    --mainPagePhoto: url("../imgs/heroes/dark/Hero_OhShroom01.png");
     --border-speech-img: url(border-light.png) 30 round;
 }
 
@@ -284,6 +284,9 @@ h1 {
     font-size: 5em;
     font-weight: 400;
     margin: 0;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE/Edge */
 }
 
 h2 {
@@ -293,6 +296,9 @@ h2 {
     margin-bottom: 0;
     margin-top: 0;
     font-weight: 400;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE/Edge */
 }
 
 h2 span::after, span:first-child::before {
@@ -507,6 +513,9 @@ mark {
 
 .intro-links {
     padding: 0;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE/Edge */
 }
 
     .intro-links li {
@@ -757,6 +766,9 @@ date {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE/Edge */
     //margin: -1rem -1rem;
 }
 
@@ -1157,6 +1169,9 @@ section {
         width: var(--contentWidth);
         border-radius: 1em;
         box-shadow: var(--box-shadow);
+        user-select: none;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE/Edge */
     }
 
     .production-image {
