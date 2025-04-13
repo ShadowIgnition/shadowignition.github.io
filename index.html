@@ -6,6 +6,7 @@
     <!--<link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-portrait.css" media="(orientation: portrait)">-->
     <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css" media="(orientation: landscape)">
     <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-theme.css">
+    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/contact-form.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./ShadowIgnition.github.io_files/js/speech.js"></script>
     <script src="./ShadowIgnition.github.io_files/js/vision.js"></script>
@@ -422,6 +423,21 @@
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img src="" alt="Preview" />
     </div>
+    <!-- Contact Form -->
+    <div id="contact-form" class="contact-form" onclick="closeCo1ntactForm()">
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
+            <fieldset id="fs-frm-inputs">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
+                <label for="email-address">Email Address</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
+                <label for="message">Message</label>
+                <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     <footer class="footer" id="footer">
         <div class="footer-right">
             <p class="footer-socials">
@@ -433,7 +449,7 @@
         <div class="footer-left">
             <p class="footer-links">
                 <a href="#about">About</a>
-                <a href="./contact.html">Contact</a>
+                <a onclick="openContactForm()">Contact</a>
                 <a href="https://github.com/ShadowIgnition/shadowignition.github.io">Source Code</a>
             </p>
 	<p>&copy; 2018 - 2023</p>
@@ -480,5 +496,15 @@
 
     function closeLightbox() {
         lightbox.classList.remove('active');
+    }
+
+    const contactForm = document.getElementById('contact-form');
+
+    function openContactForm() {
+        contactForm.classList.add('active');
+    }
+
+    function closeContactForm() {
+        contactForm.classList.remove('active');
     }
 </script>
