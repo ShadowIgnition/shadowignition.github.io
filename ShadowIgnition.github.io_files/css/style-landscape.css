@@ -25,222 +25,6 @@
     background-color: var(--text-accent);
 }
 
-:root {
-    --font-header: 'Abel', sans-serif;
-    --font-body: 'Montserrat', sans-serif;
-    --text-primary: #fff;
-    --text-secondary: #000;
-    --text-accent: #f04;
-    --text-tertiary: #505050;
-    --text-note: #888;
-    --bg-primary: #F5F5F5;
-    --bg-secondary: #ebebeb;
-    --bg-overlay: #00000033;
-    --bg-overlay-hover: #DDD;
-    --bg-footer: #131417;
-    --scrollbar-track: #F1F1F1;
-    --scrollbar-thumb: #C1C1C1;
-    --filter-inversion: invert(0);
-    --icon-theme: "\f042";
-    --icon-speak: "\f0e5";
-    --mainPagePhoto: url("../imgs/heroes/light/Hero_Prelude01.png");
-    --border-speech-img: url(border-dark.png) 30 round;
-    --contentWidth: 50vw;
-    --contentPadding: 12em;
-    --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-}
-
-.theme-dark {
-    --text-primary: #fff;
-    --text-secondary: #fff;
-    --text-accent: #FF0045;
-    --text-tertiary: #505050;
-    --bg-overlay: #0006;
-    --bg-primary: #151515;
-    --scrollbar-track: #0E0E0E;
-    --scrollbar-thumb: #3E3E3E;
-    --bg-overlay-hover: #DDD;
-    --bg-footer: #131417;
-    --bg-secondary: #1D1D1D;
-    --filter-inversion: invert(1);
-    --mainPagePhoto: url("../imgs/heroes/dark/Hero_OhShroom01.png");
-    --border-speech-img: url(border-light.png) 30 round;
-}
-
-@media (orientation:portrait) {
-    #production {
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: nowrap;
-        margin: auto;
-        max-width: var(--contentWidth);
-        align-items: center;
-        padding: 5em;
-        justify-content: space-between;
-    }
-
-    .info-line {
-        list-style-type: none;
-        font-weight: 600;
-        line-height: 2em;
-    }
-
-    .info-line {
-        border-bottom: 1px solid var(--scrollbar-thumb);
-    }
-
-    .info-label {
-        width: 100%;
-        word-wrap: break-word;
-        padding-right: 0.625rem;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        font-weight: normal;
-        color: var(--text-tertiary);
-    }
-
-    .intro-links li {
-        font-size: 8vw;
-    }
-
-    .entry .body .icon {
-        display: none;
-    }
-
-    .entry.linked {
-        background-color: var(--bg-secondary);
-    }
-
-    .footer .footer-socials a {
-        display: none;
-    }
-
-    .intro-links a {
-        color: var(--text-primary);
-        cursor: pointer;
-        margin: 0.5em;
-        text-decoration: none;
-        font-size: 8vw;
-    }
-
-    #intro.intro-links a {
-        background-attachment: local;
-    }
-
-    .columns-split, .columns-full {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .intro-content .intro-columns {
-        font-size: 4.5vw;
-    }
-
-    .timeline .row {
-        max-width: 75%;
-    }
-
-    .masonry {
-        max-width: var(--contentWidth);
-        column-count: 2;
-    }
-
-    .intro-links {
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        font-size: 8vw;
-    }
-
-    .project-image {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 75vw;
-        border-radius: 1em;
-        box-shadow: var(--box-shadow);
-    }
-
-    .tool-description {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 75vw;
-        text-align: left;
-        border-bottom: 2px solid var(--scrollbar-thumb);
-        margin-bottom: 1em;
-        height: 14em;
-    }
-
-    .project-info-table {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 75vw;
-        text-align: left;
-        border-bottom: 2px solid var(--scrollbar-thumb);
-        margin-bottom: 1em;
-    }
-
-    .project-links {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        width: var(--contentWidth);
-        border-radius: 1em;
-        text-align: left;
-        height: 96px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .project-button a {
-        font: var(--font-body);
-    }
-
-    .project-button:hover {
-        border: 2px solid var(--text-accent);
-        border-radius: 4px;
-        margin: 12px;
-        font-size: 1rem;
-        padding: 16px;
-    }
-
-    .toggleTheme {
-        display: none;
-    }
-
-
-    .nav-button {
-        border-radius: 10px;
-        margin: 2em;
-        padding: 1em;
-        width: 2em;
-        background-color: var(--bg-overlay);
-        height: 2em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: var(--bg-overlay-hover);
-    }
-
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    :root {
-        --mainPagePhoto: url("./Images/Mobile/PreludeBackdrop.png");
-        --contentWidth: 80vw;
-        --contentPadding: 6em;
-    }
-}
-
 #loader {
     position: absolute;
     left: 50%;
@@ -722,7 +506,7 @@ date {
 }
 
     .tab button {
-        background-color: var(--bg-overlay-hover);
+        background-color: var(--bg-overlay);
         border: none;
         cursor: pointer;
         padding: 0.875em 1em;
@@ -732,14 +516,16 @@ date {
         margin: 1em;
         color: var(--text-secondary);
         width: 96px;
+        box-shadow: var(--box-shadow);
     }
 
-        /* Change background color of buttons on hover */ .tab button:hover {
-            background-color: var(--bg-overlay-hover);
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: var(--text-accent);
         }
 
         /* Create an active/current tablink class */ .tab button.active {
-            background-color: var(--scrollbar-thumb);
+            background-color: var(--bg-overlay-hover);
         }
 
 /* Style the tab content */ .tabcontent {
@@ -1047,7 +833,6 @@ input[type=checkbox] {
         height: 1.5em;
         align-items: center;
         justify-content: center;
-        background-color: var(--text-tertiary);
         font-size: 1.75em;
         color: var(--text-primary);
     }
@@ -1059,7 +844,7 @@ input[type=checkbox] {
 }
 
 .footer-socials a:hover {
-    background-color: var(--text-accent);
+    color: var(--text-accent);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1296,33 +1081,6 @@ li {
     float: right;
 }
 
-/* Media Queries */ @media (max-width:600px) {
-    .footer .footer-left, .footer .footer-right {
-        text-align: center;
-    }
-
-    .footer .footer-right {
-        float: none;
-        margin: 0 auto 20px;
-    }
-
-    .footer .footer-left p.footer-links {
-        line-height: 1.8;
-    }
-
-    hr.divider {
-        border-top: 2px solid var(--scrollbar-thumb);
-    }
-
-    div.navigation {
-        position: fixed;
-        font-size: 1.5em;
-        bottom: 2.5vh;
-        width: 100%;
-        z-index: 1;
-    }
-}
-
 .timeline:before {
     content: "";
     position: absolute;
@@ -1337,10 +1095,9 @@ li {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: var(--bg-overlay-hover);
+    background-color: var(--bg-secondary);
     padding: 1em;
     position: relative;
-    border: solid var(--bg-overlay-hover);
     border-radius: 1em;
     height: 1em;
     border-radius: 1em;
@@ -1388,10 +1145,10 @@ li {
             right: -16px;
             z-index: 99;
             top: calc(50% - 16px);
-            background-color: var(--bg-overlay-hover);
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: var(--bg-secondary);
             color: var(--text-note);
         }
 
@@ -1493,10 +1250,7 @@ li {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* Responsive upgrade: switch to row on wider screens */
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
+    flex-direction: row;
 }
 
 
@@ -1512,7 +1266,6 @@ blockquote {
     margin: 0.5rem 0 0.25rem 0;
     font-size: 1rem;
     font-weight: 600;
-    color: #222;
 }
 
 .testimonials-position {
