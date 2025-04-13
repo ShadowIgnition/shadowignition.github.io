@@ -1,0 +1,46 @@
+﻿:root {
+    --font-header: 'Abel', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --contentWidth: 50vw;
+    --contentPadding: 12em;
+    --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+    --icon-theme: "\f042";
+    --icon-speak: "\f0e5";
+}
+
+.theme-light {
+    --text-primary: #fff;
+    --text-secondary: #000;
+    --text-accent: #f04;
+    --text-tertiary: #505050;
+    --text-note: #888;
+    --bg-primary: #F5F5F5;
+    --bg-secondary: #ebebeb;
+    --bg-overlay: #00000033;
+    --bg-overlay-hover: #DDD3;
+    --bg-footer: #131417;
+    --scrollbar-track: #F1F1F1;
+    --scrollbar-thumb: #C1C1C1;
+    --filter-inversion: invert(0);
+    --mainPagePhoto: url("../imgs/heroes/light/Hero_Prelude01.png");
+    --border-speech-img: url(../imgs/borders/border-dark.png) 30 round;
+}
+
+
+.theme-dark {
+    --text-primary: #fff;
+    --text-secondary: #fff;
+    --text-accent: #FF0045;
+    --text-tertiary: #999;
+    --text-note: #888;
+    --bg-primary: #151515;
+    --bg-secondary: #1D1D1D;
+    --bg-overlay: #0006;
+    --bg-overlay-hover: #DDD3;
+    --bg-footer: #131417;
+    --scrollbar-track: #0E0E0E;
+    --scrollbar-thumb: #3E3E3E;
+    --filter-inversion: invert(1);
+    --mainPagePhoto: url("../imgs/heroes/dark/Hero_OhShroom01.png");
+    --border-speech-img: url(../imgs/borders/border-light.png) 30 round;
+}
