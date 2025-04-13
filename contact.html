@@ -3,93 +3,93 @@
 	<link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
 	<title>Contact - Dylan - Game Developer</title>
 	<meta name="description" content="">
-	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/style.css" type="text/css">
-	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/contact-form.css" type="text/css">
+	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css" media="(orientation: landscape)">
+	<link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-theme.css">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="./ShadowIgnition.github.io_files/Javascript/visionCore.js"></script>
+	<script src="./ShadowIgnition.github.io_files/js/speech.js"></script>
+	<script src="./ShadowIgnition.github.io_files/js/vision.js"></script>
 	<script src="https://use.fontawesome.com/fab08dfe9d.js"></script>
 	<script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <!-- SET BACKGROUND -->
+
 <header>
 	<div class="toggleTheme">
-		<button id="toggleSwitch" class = "darkMode" onclick="toggleTheme(),notifyDarkmode()"></button>
+		<button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
+		<button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
+		<p id="quotes"></p>
 	</div>
 </header>
+
 <html>
-
-<body onload="InitializeQuote(),InitTab(event, 'Projects')">
-
-<section id = "intro">
-	<section id="contact-form">
-		<h1>CONTACT</h1>
-		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
-		<fieldset id="fs-frm-inputs">
-			<label for="full-name">Full Name</label>
-			<input type="text" name="name" id="full-name" placeholder="Full Name" required="">
-			<label for="email-address">Email Address</label>
-			<input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-			<label for="message">Message</label>
-			<textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
-			<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-			</fieldset>
-			<input type="submit" value="Submit">
-		</form>
+<body onload="speakWelcome(), InitTab(event, 'Recent')">
+	<section id="intro">
+		<section id="contact-form">
+			
 		</section>
-</section>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="footer-right">
+			<p class="footer-socials">
+				<a href="https://github.com/ShadowIgnition"><i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/dylan-imrei/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				<a href="https://twitter.com/ShadowIgnition"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			</p>
+		</div>
+		<div class="footer-left">
+			<p class="footer-links">
+				<a href="#about">About</a>
+				<a href="./contact.html">Contact</a>
+				<a href="https://github.com/ShadowIgnition/shadowignition.github.io">Source Code</a>
+			</p>
+			<p>&copy; 2018 - 2025 | ABN 35 857 931 010</p>
+		</div>
+	</footer>
 </body>
-
-<footer class="footer" id = "footer">
-<div class = "footer-right">
-	<p class="footer-socials">
-		<a href="https://gitlab.com/ShadowIgnition"><i class="fa fa-gitlab" aria-hidden="true"></i></a>
-		<a href="https://github.com/ShadowIgnition"><i class="fa fa-github" aria-hidden="true"></i></a>
-		<a href="https://www.linkedin.com/in/dylan-imrei/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-		<a href="https://twitter.com/ShadowIgnition"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-		<a href="https://shadowignition.itch.io/"><i class="fab fa-itch-io" aria-hidden="true"></i></a>
-	</p>
-</div>
-<div class = "footer-left">
-	<p class="footer-links">
-		<a href="./index.html">Home</a>
-	</p>
-	<p>&copy; 2018 - 2023</p>
-</div>
-</footer>
 </html>
-
 <script>
-function InitTab(evt, cityName) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 1; i < tabcontent.length; i++) 
-	{
-		tabcontent[i].style.display = "none";
+	function InitTab(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 1; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 1; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
 	}
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 1; i < tablinks.length; i++) 
-	{
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
-	document.getElementById(cityName).style.display = "block";
-	evt.currentTarget.className += " active";
-}
 
-function SwitchTab(evt, cityName) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) 
-	{
-		tabcontent[i].style.display = "none";
+	function SwitchTab(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
 	}
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) 
-	{
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+	const lightbox = document.getElementById('lightbox');
+
+	function openLightbox(src) {
+		const img = lightbox.querySelector('img');
+		img.src = src;
+		lightbox.classList.add('active');
 	}
-	document.getElementById(cityName).style.display = "block";
-	evt.currentTarget.className += " active";
-}
+
+	function closeLightbox() {
+		lightbox.classList.remove('active');
+	}
 </script>
+
+

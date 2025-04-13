@@ -1104,6 +1104,7 @@ li {
     margin: 2.5em 41% 2.5em 41%;
     align-items: center;
     z-index: 2;
+    box-shadow: var(--box-shadow);
 }
 
 .entry {
@@ -1150,6 +1151,7 @@ li {
             align-items: center;
             background-color: var(--bg-secondary);
             color: var(--text-note);
+            box-shadow: var(--box-shadow);
         }
 
         .entry .title.custom.work:before {
