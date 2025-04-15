@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal [portfolio website](https://shadowignition.github.io/), hosted via GitHub Pages.
 
-## Work in progress
+## Work In Progress
 - **Responsive Design**: Optimized for both desktop and mobile.
 
 ## Features
