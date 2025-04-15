@@ -2,8 +2,10 @@
 
 This repository contains the source code for my personal [portfolio website](https://shadowignition.github.io/), hosted via GitHub Pages.
 
-## Features
+## Work in progress
 - **Responsive Design**: Optimized for both desktop and mobile.
+
+## Features
 - **Interactive Gallery**: Browse through various projects and view details.
 - **Contact Form**: Get in touch with me through the contact form.
 - **Dark Mode**: A low-light theme for a more comfortable browsing experience in dark environments. Users can toggle between Light and Dark modes, and the preference is saved locally across sessions.
