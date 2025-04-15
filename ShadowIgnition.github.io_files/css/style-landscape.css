@@ -25,29 +25,12 @@
     background-color: var(--text-accent);
 }
 
-#loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 #page {
     display: none;
-}
-
-.no-js #loader {
-    display: none;
-}
-
-.no-js #page {
-    display: block;
 }
 
 body {
@@ -114,6 +97,8 @@ h6 {
 
 a {
     color: var(--text-accent);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 c {
@@ -506,7 +491,7 @@ date {
 }
 
     .tab button {
-        background-color: var(--bg-overlay);
+        background-color: var(--bg-overlay-hover);
         border: none;
         cursor: pointer;
         padding: 0.875em 1em;
@@ -525,7 +510,7 @@ date {
         }
 
         /* Create an active/current tablink class */ .tab button.active {
-            background-color: var(--bg-overlay-hover);
+            background-color: var(--bg-overlay);
         }
 
 /* Style the tab content */ .tabcontent {

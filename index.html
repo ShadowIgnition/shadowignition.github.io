@@ -41,13 +41,13 @@
             </div>
             <ul class="intro-links">
                 <li>
-                    <a href="https://github.com/ShadowIgnition"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/ShadowIgnition"target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/dylan-imrei/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/dylan-imrei/"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/ShadowIgnition"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/ShadowIgnition"target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
@@ -62,8 +62,8 @@
                 <p>When I’m not programming or developing games, I’m either at the gym, listening to music, or playing games, with some of my favorite titles including Escape From Tarkov, Final Fantasy Tactics Advance, and The Legend of Zelda: Majora's Mask.</p>
                 <p>
                     Thank you for visiting, If you'd like to reach out, you can contact me on
-                    <a href="https://www.linkedin.com/in/dylan-imrei/">LinkedIn</a> or
-                    <a href="./Contact.html">here</a>.
+                    <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank">LinkedIn</a> or
+                    <a onclick="openContactForm()">here</a>
                 </p>
             </div>
         </div>
@@ -122,7 +122,7 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/">See More</a>
+                        <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/"target="_blank">See More</a>
                     </div>
                 </li>
             </ul>
@@ -155,7 +155,7 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="https://liquidheart.studio/">See More</a>
+                        <a href="https://liquidheart.studio/"target="_blank">See More</a>
                     </div>
                 </li>
             </ul>
@@ -185,7 +185,7 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="https://www.nintendo.com/us/store/products/kana-quest-switch/">See More</a>
+                        <a href="https://www.nintendo.com/us/store/products/kana-quest-switch/"target="_blank">See More</a>
                     </div>
                 </li>
             </ul>
@@ -215,7 +215,7 @@
                 </li>
                 <li class="info-line">
                     <div class="info-label">
-                        <a href="https://sketchfab.com/3d-models/prelude-garden-environment-483c8099cfb749a99643274a67b94111">See More</a>
+                        <a href="https://sketchfab.com/3d-models/prelude-garden-environment-483c8099cfb749a99643274a67b94111"target="_blank">See More</a>
                     </div>
                 </li>
             </ul>
@@ -424,33 +424,33 @@
         <img src="" alt="Preview" />
     </div>
     <!-- Contact Form -->
-    <div id="contact-form" class="contact-form" onclick="closeCo1ntactForm()">
+    <div id="contact-form" class="contact-form">
         <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
             <fieldset id="fs-frm-inputs">
-                <label for="full-name">Full Name</label>
+                <h3>Contact Form</h3>
                 <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
-                <label for="email-address">Email Address</label>
                 <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-                <label for="message">Message</label>
                 <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
                 <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                <div class="row">
+                    <input type="submit" value="Submit">
+                    <input type="button" value="Back" onclick="closeContactForm()">
+                </div>
             </fieldset>
-            <input type="submit" value="Submit">
         </form>
     </div>
     <footer class="footer" id="footer">
         <div class="footer-right">
             <p class="footer-socials">
-                <a href="https://github.com/ShadowIgnition"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/dylan-imrei/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/ShadowIgnition"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://github.com/ShadowIgnition"target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/dylan-imrei/"target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/ShadowIgnition"target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             </p>
         </div>
         <div class="footer-left">
             <p class="footer-links">
-                <a href="#about">About</a>
                 <a onclick="openContactForm()">Contact</a>
-                <a href="https://github.com/ShadowIgnition/shadowignition.github.io">Source Code</a>
+                <a href="https://github.com/ShadowIgnition/shadowignition.github.io"target="_blank">Source Code</a>
             </p>
 	<p>&copy; 2018 - 2023</p>
         </div>
