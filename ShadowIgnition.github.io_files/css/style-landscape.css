@@ -399,15 +399,6 @@ date {
 }
 
 .footer {
-    float: none;
-    display: flex;
-    vertical-align: middle;
-    justify-content: center;
-    height: 15%;
-}
-
-
-.footer {
     background-color: var(--bg-footer);
     box-sizing: border-box;
     width: 100%;
