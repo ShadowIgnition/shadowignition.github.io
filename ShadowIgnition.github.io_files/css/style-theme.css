@@ -18,7 +18,7 @@
     --bg-secondary: #ebebeb;
     --bg-overlay: #00000033;
     --bg-overlay-hover: #DDD3;
-    --bg-footer: #131417;
+    --bg-footer: #0F0F0F;
     --scrollbar-track: #F1F1F1;
     --scrollbar-thumb: #C1C1C1;
     --filter-inversion: invert(0);
@@ -37,7 +37,7 @@
     --bg-secondary: #1D1D1D;
     --bg-overlay: #0006;
     --bg-overlay-hover: #DDD3;
-    --bg-footer: #131417;
+    --bg-footer: #0F0F0F;
     --scrollbar-track: #0E0E0E;
     --scrollbar-thumb: #3E3E3E;
     --filter-inversion: invert(1);
