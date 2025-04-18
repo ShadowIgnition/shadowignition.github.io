@@ -1,8 +1,6 @@
 ﻿:root {
     --font-header: 'Abel', sans-serif;
     --font-body: 'Montserrat', sans-serif;
-    --contentWidth: 50vw;
-    --contentPadding: 12em;
     --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
     --icon-theme: "\f042";
     --icon-speak: "\f0e5";

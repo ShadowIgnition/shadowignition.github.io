@@ -6,7 +6,7 @@
 }
 
 :root {
-    --contentWidth: 50vw;
+    --contentWidth: 80vw;
     --contentPadding: 12em;
 }
 
@@ -89,7 +89,6 @@ a {
     display: inline;
     font: var(--font-body);
     font-weight: bold;
-    max-width: 50%;
     border: 10px solid transparent;
     border-image: var(--border-speech-img);
     color: var(--text-primary);
@@ -97,10 +96,10 @@ a {
     text-transform: uppercase;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
     background-color: var(--bg-overlay);
-    margin: 0;
-    padding: 0;
     white-space: nowrap;
-    min-width: fit-content;
+    width: -webkit-fill-available;
+    font-size: x-small;
+    text-align: left;
 }
 
     #quotes::after {
@@ -131,6 +130,8 @@ a {
     background-color: var(--bg-primary);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
     width: 100%;
     display: table;
@@ -151,11 +152,6 @@ a {
     position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-.row {
-    margin: auto;
-    display: flex;
 }
 
 .intro-content {
@@ -186,6 +182,7 @@ a {
     line-height: 1.8;
     margin-right: auto;
     display: table;
+    font-size: xx-small;
 }
 
 .intro-links {
@@ -227,6 +224,7 @@ a {
             -o-transition: all 0.3s ease-in-out;
             -webkit-transition: all 0.3s ease-in-out;
         }
+
 
 .fa {
     vertical-align: middle;
@@ -344,9 +342,11 @@ date {
     position: fixed;
     left: 1em;
     top: 1em;
+    right: 1em;
     display: flex;
     align-items: center;
     gap: 0em .5em;
+    flex-wrap: wrap;
 }
 
 #sys-toggle {
@@ -510,7 +510,7 @@ section {
 }
 
 .footer .footer-socials a {
-    display: inline-flex;
+    display: none;
 }
 
 .project-info-table {
@@ -521,7 +521,7 @@ section {
     text-align: left;
     margin-bottom: 5em;
     margin-top: 2em;
-    column-count: 2;
+    column-count: 1;
 }
 
 .project-image {
@@ -544,6 +544,7 @@ section {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: smaller;
 }
 
 .info-line {
@@ -627,7 +628,7 @@ li {
     position: relative;
     height: 1em;
     border-radius: 1em;
-    margin: 2.5em 41% 2.5em 41%;
+    margin: 2.5em 25% 2.5em 25%;
     align-items: center;
     z-index: 2;
     box-shadow: var(--box-shadow);
@@ -639,7 +640,7 @@ li {
     text-align: left;
     position: relative;
     height: 6em;
-    margin: 1em 25%;
+    margin: 1em 0;
     border-radius: 1em;
     z-index: 100;
     display: flex;
@@ -745,10 +746,6 @@ li {
         /*        border-radius: 12px;*/
     }
 
-.row {
-    display: flex;
-}
-
 .testimonials {
     flex: 1;
     padding: 0.5rem;
@@ -767,9 +764,9 @@ li {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    flex-direction: row;
+    margin: auto;
+    flex-direction: column;
 }
-
 
 blockquote {
     font-style: italic;
