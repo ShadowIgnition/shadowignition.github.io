@@ -592,27 +592,6 @@ section {
     align-items: center;
 }
 
-.project-button {
-    border: 2px solid var(--scrollbar-thumb);
-    border-radius: 4px;
-    margin: 12px;
-    font-size: 1rem;
-    padding: 16px;
-    background-color: var(--bg-secondary);
-}
-
-    .project-button a {
-        font-color: var(--font-body);
-    }
-
-    .project-button:hover {
-        border: 2px solid var(--text-accent);
-        border-radius: 4px;
-        margin: 12px;
-        font-size: 1rem;
-        padding: 16px;
-    }
-
 div.navigation {
     display: none;
 }
