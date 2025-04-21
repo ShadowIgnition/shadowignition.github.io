@@ -1,4 +1,4 @@
-# shadowignition.github.io
+# Shadowignition.github.io
 
 This repository contains the source code for my personal [portfolio website](https://shadowignition.github.io/), hosted via GitHub Pages.
 
