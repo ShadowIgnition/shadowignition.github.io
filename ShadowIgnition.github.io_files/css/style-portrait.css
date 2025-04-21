@@ -57,7 +57,7 @@ h2 {
     -ms-user-select: none; /* IE/Edge */
 }
 
-    h2 span::after, span:first-child::before {
+    h2 span::after, h2 span:first-child::before {
         content: "|";
         text-align: center;
         display: inline-block;
@@ -784,4 +784,27 @@ blockquote {
 
 .testimonials-position {
     margin: 0;
+}
+
+.skills-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-pill {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    padding: 1em;
+    position: relative;
+    height: 1em;
+    border-radius: 1em;
+    align-items: center;
+    box-shadow: var(--box-shadow);
 }
