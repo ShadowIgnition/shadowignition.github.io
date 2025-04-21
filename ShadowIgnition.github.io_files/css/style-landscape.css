@@ -141,7 +141,7 @@ a {
 
 #intro {
     background-image: var(--mainPagePhoto);
-    height: 100vh;
+    height: 100dvh;
 }
 
 .text {
