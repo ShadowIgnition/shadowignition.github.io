@@ -153,11 +153,6 @@ a {
     padding-bottom: 1rem;
 }
 
-.row {
-    margin: auto;
-    display: flex;
-}
-
 .intro-content {
     display: table-cell;
     vertical-align: middle;
@@ -402,7 +397,6 @@ date {
 
 /* The Masonry Brick */ .gallery-item {
     background: var(--text-primary);
-    //padding: 1em;
     margin: 0 0 1.5em;
     margin-bottom: 0;
 }
@@ -422,36 +416,25 @@ date {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    padding: 45px 50px;
+    padding: 3em;
     color: var(--text-primary);
     font-size: 1rem;
     height: 15%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: nowrap;
+    align-content: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-    .footer .footer-links {
+    .footer a {
         font-weight: bold;
-        margin: 0 0 10px;
         padding: 0;
+        display: inline-block;
+        line-height: 1.8;
+        color: var(--text-primary);
     }
-
-        .footer .footer-links a {
-            display: inline-block;
-            line-height: 1.8;
-            color: var(--text-primary);
-        }
-
-            .footer .footer-links a:nth-child(1n+2):before {
-                content: "·";
-                font-size: 20px;
-                left: 0;
-                color: var(--text-primary);
-                display: inline-block;
-                padding-right: 5px;
-            }
 
     .footer .footer-socials a {
         text-decoration: none;
@@ -464,11 +447,12 @@ date {
         justify-content: center;
         font-size: 1.75em;
         color: var(--text-primary);
+        align-self: center;
+        align-content: center;
     }
 
 .footer-links a:hover {
     color: var(--text-accent);
-    ;
     text-decoration: underline;
 }
 
@@ -745,10 +729,6 @@ li {
         /*        border-radius: 12px;*/
     }
 
-.row {
-    display: flex;
-}
-
 .testimonials {
     flex: 1;
     padding: 0.5rem;
@@ -764,12 +744,12 @@ li {
 }
 
 .row {
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     flex-direction: row;
 }
-
 
 blockquote {
     font-style: italic;
@@ -778,6 +758,16 @@ blockquote {
     font-family: system-ui;
     margin: 0 0 1em 0;
 }
+
+    blockquote::before {
+        content: "“";
+        font-weight: bold;
+    }
+
+    blockquote::after {
+        content: "”";
+        font-weight: bold;
+    }
 
 .testimonials-author {
     margin: 0.5rem 0 0.25rem 0;

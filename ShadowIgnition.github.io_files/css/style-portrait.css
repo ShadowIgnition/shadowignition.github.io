@@ -422,36 +422,25 @@ date {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    padding: 45px 50px;
+    padding: 3em;
     color: var(--text-primary);
     font-size: 1rem;
     height: 15%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     flex-wrap: nowrap;
+    align-content: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-    .footer .footer-links {
+    .footer a {
         font-weight: bold;
-        margin: 0 0 10px;
         padding: 0;
+        display: inline-block;
+        line-height: 1.8;
+        color: var(--text-primary);
     }
-
-        .footer .footer-links a {
-            display: inline-block;
-            line-height: 1.8;
-            color: var(--text-primary);
-        }
-
-            .footer .footer-links a:nth-child(1n+2):before {
-                content: "·";
-                font-size: 20px;
-                left: 0;
-                color: var(--text-primary);
-                display: inline-block;
-                padding-right: 5px;
-            }
 
     .footer .footer-socials a {
         text-decoration: none;
@@ -464,11 +453,12 @@ date {
         justify-content: center;
         font-size: 1.75em;
         color: var(--text-primary);
+        align-self: center;
+        align-content: center;
     }
 
 .footer-links a:hover {
     color: var(--text-accent);
-    ;
     text-decoration: underline;
 }
 
@@ -544,7 +534,6 @@ section {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: smaller;
 }
 
 .info-line {
@@ -562,6 +551,7 @@ section {
     font-weight: 600;
     padding-bottom: 0.9375rem;
     margin-bottom: 0.9375rem;
+    font-size: clamp(0.25em, 1em, 3vw);
 }
 
 .info-label {
@@ -649,6 +639,7 @@ li {
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
+    font-size: clamp(0.25em, 1em, 5vw);
 }
 
     .entry .title {
@@ -775,6 +766,16 @@ blockquote {
     font-family: system-ui;
     margin: 0 0 1em 0;
 }
+
+    blockquote::before {
+        content: "“";
+        font-weight: bold;
+    }
+
+    blockquote::after {
+        content: "”";
+        font-weight: bold;
+    }
 
 .testimonials-author {
     margin: 0.5rem 0 0.25rem 0;
