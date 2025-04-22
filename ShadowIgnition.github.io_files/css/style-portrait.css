@@ -142,7 +142,7 @@ a {
 
 #intro {
     background-image: var(--mainPagePhoto);
-    height: 100dvh;
+    height: 100vh;
 }
 
 .text {
@@ -425,7 +425,7 @@ date {
     padding: 3em 0em 3em 0em;
     color: var(--text-primary);
     font-size: 1rem;
-    height: 15%;
+    height: 15dvh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
