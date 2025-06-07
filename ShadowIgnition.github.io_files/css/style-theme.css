@@ -1,9 +1,9 @@
 ﻿:root {
     --font-header: 'Abel', sans-serif;
     --font-body: 'Montserrat', sans-serif;
-    --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
     --icon-theme: "\f042";
     --icon-speak: "\f0e5";
+    --transition: all 0.3s ease-in-out;
 }
 
 .theme-light {
@@ -12,8 +12,8 @@
     --text-accent: #f04;
     --text-tertiary: #505050;
     --text-note: #888;
-    --bg-primary: #F5F5F5;
-    --bg-secondary: #ebebeb;
+    --bg-primary: #FFF;
+    --bg-secondary: #F5F5F5;
     --bg-overlay: #00000033;
     --bg-overlay-hover: #DDD3;
     --bg-footer: #0F0F0F;
@@ -22,6 +22,11 @@
     --filter-inversion: invert(0);
     --mainPagePhoto: url("../imgs/heroes/light/Hero_Prelude01.png");
     --border-speech-img: url(../imgs/borders/border-dark.png) 30 round;
+    --shadow-color: #122b6914;
+    --box-shadow: 0 2px 6px var(--shadow-color), 0 1px 2px var(--shadow-color), 0 0 0 1px var(--shadow-color);
+    --box-shadow-hover: 45px 45px 140px 0 var(--shadow-color);
+    /*    --box-shadow-hover: 45px 45px 140px 0 #07090d14;*/
+
 }
 
 
@@ -41,4 +46,12 @@
     --filter-inversion: invert(1);
     --mainPagePhoto: url("../imgs/heroes/dark/Hero_OhShroom01.png");
     --border-speech-img: url(../imgs/borders/border-light.png) 30 round;
+    --shadow-color: var(--bg-overlay);
+    --box-shadow: 0 2px 6px var(--shadow-color), 0 1px 2px var(--shadow-color), 0 0 0 1px var(--shadow-color);
+    --box-shadow-hover: 45px 45px 140px 0 var(--text-accent);
+}
+
+.fa-solid, .fas {
+    color: var(--text-accent);
+    padding: 4px;
 }

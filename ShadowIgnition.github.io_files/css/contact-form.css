@@ -8,11 +8,11 @@
 }
 
 #fs-frm input, #fs-frm textarea {
-    border: 1px solid rgba(0,0,0,.2);
-    background-color: rgba(255,255,255,1);
-    padding: .75em 1rem;
-    margin-bottom: 1.5rem;
-    color: #000
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-primary);
+    padding: 1em;
+    margin: 0.5em 0;
+    color: var(--text-secondary);
 }
 
     #fs-frm input:focus, #fs-frm textarea:focus {
@@ -32,8 +32,16 @@
     cursor: pointer;
     -webkit-appearance: button;
     -moz-appearance: button;
-    appearance: button
+    border-radius: 1em;
+    appearance: button;
+    transition: var(--transition);
 }
+
+    #fs-frm [type=button]:hover,
+    #fs-frm [type=reset]:hover,
+    #fs-frm [type=submit]:hover {
+        box-shadow: var(--box-shadow-hover);
+    }
 
     #fs-frm [type=button]:focus, #fs-frm [type=reset]:focus, #fs-frm [type=submit]:focus {
         outline: 0;
@@ -64,3 +72,14 @@
         visibility: visible;
         opacity: 1
     }
+
+
+#fs-frm fieldset {
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-secondary);
+    border-radius: 1em;
+    color: var(--text-secondary);
+    height: fit-content;
+    padding: 2em;
+    width: var(--contentWidth);
+}
