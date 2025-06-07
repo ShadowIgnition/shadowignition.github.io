@@ -24,17 +24,18 @@
 </header>
 
 <html>
-<body onload="speakWelcome(), InitTab(event, 'Recent')">
+<body onload="speakWelcome()">
     <section id="intro">
         <div class="intro-content">
             <div class="intro text">
                 <div class="row">
                     <div class="columns-split">
-                        <h1>Dylan Imrei</h1>
-                        <h2>
+                        <hero>Dylan Imrei</hero>
+                        <br>
+                        <tagline>
                             <span>Programmer</span>
                             <span>Game Developer</span>
-                        </h2>
+                        </tagline>
                     </div>
                 </div>
             </div>
@@ -51,45 +52,40 @@
             </ul>
         </div>
     </section>
-
-    <section id="about">
+    <div class="section-content">
+        <div class="break"></div>
         <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/AWildTaleProjectBanner.png">
-        <div class="section-content about">
-            <h4>About Me</h4>
-            <p>I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.</p>
-            <p>When I'm not programming or developing games, I'm either at the gym, listening to music, or playing games, with some of my favorite titles including Escape From Tarkov, Final Fantasy Tactics Advance, and The Legend of Zelda: Majora's Mask.</p>
-            <p>
-                Thank you for visiting, If you'd like to reach out, you can contact me on
-                <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank">LinkedIn</a> or
-                <a onclick="openContactForm()">here</a>
-            </p>
+        <div class="small-break"></div>
+        <h3>About Me</h3>
+        <p>I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.</p>
+        <p>When I'm not programming or developing games, I'm either at the gym, listening to music, or playing games, with some of my favorite titles including <a href="https://www.escapefromtarkov.com/">Escape From Tarkov</a>, <a href="https://en.wikipedia.org/wiki/Final_Fantasy_Tactics_Advance">Final Fantasy Tactics Advance</a>, and <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Majora's_Mask">The Legend of Zelda: Majora's Mask</a>.</p>
+        <p>Thank you for visiting, If you'd like to reach out, you can contact me on <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank">LinkedIn</a> or <a onclick="openContactForm()">here</a>.</p>
+        <div class="small-break"></div>
+        <h3>Skills & Technologies</h3>
+        <desc>Blending hands-on technical skill with strategic insight to help clients build smarter, faster, and more maintainable systems.</desc>
+        <div class="small-break"></div>
+        <div class="skills-list">
+            <span class="skill-pill">Amazon Web Services</span>
+            <span class="skill-pill">Azure PlayFab</span>
+            <span class="skill-pill">Photon Networking</span>
+            <span class="skill-pill">Unity Gaming Services</span>
+            <span class="skill-pill">Steamworks.NET</span>
+            <span class="skill-pill">In-App Purchases</span>
+            <span class="skill-pill">Systems Design</span>
+            <span class="skill-pill">Database Management</span>
+            <span class="skill-pill">Project Management</span>
+            <span class="skill-pill">Unity</span>
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Tool Development</span>
+            <span class="skill-pill">UX/UI Design</span>
         </div>
-        <br>
-        <div class="section-content about">
-            <h4>Skills & Technologies</h4>
-            <div class="skills-list">
-                <span class="skill-pill">Amazon Web Services</span>
-                <span class="skill-pill">Azure PlayFab</span>
-                <span class="skill-pill">Photon Networking</span>
-                <span class="skill-pill">Unity Gaming Services</span>
-                <span class="skill-pill">Steamworks.NET</span>
-                <span class="skill-pill">In-App Purchases</span>
-                <span class="skill-pill">Systems Design</span>
-                <span class="skill-pill">Database Management</span>
-                <span class="skill-pill">Project Management</span>
-                <span class="skill-pill">Unity</span>
-                <span class="skill-pill">C#</span>
-                <span class="skill-pill">JavaScript</span>
-                <span class="skill-pill">MySQL</span>
-                <span class="skill-pill">Tool Development</span>
-                <span class="skill-pill">UX/UI Design</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <h4>testimonials</h4>See what others are saying.<br><br>
-        <div class="section-content about">
+        <div class="small-break"></div>
+        <h3>testimonials</h3>
+        <desc>Real stories from our partners and clients, see what they are saying about their experiences.</desc>
+        <div class="small-break"></div>
+        <div>
             <div class="row">
                 <div class="testimonials">
                     <blockquote>Dylan was able to come in onto a project that had significant existing problems and holes within its codebase and was able to just get things working quickly and efficiently. My only regret with working with him is that I did not hire him sooner.</blockquote>
@@ -103,339 +99,191 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <div id="branch">
-        <h4>Experience</h4>Previous technical experience & project contributions.<br><br>
-        <div class="tab">
-            <button class="tablinks active" onclick="SwitchTab(event, 'Recent')">Recent</button>
-            <button class="tablinks" onclick="SwitchTab(event, 'DevelopmentHistory')">All</button>
+        <div class="small-break"></div>
+        <h3>Experience</h3>
+        <desc>Previous technical experience & project contributions</desc>
+        <div class="small-break"></div>
+        <div style="margin:16px 0">
+            <div class="timeline">
+                <div class="title" style="--label: 'Current'; border: 1px solid var(--bg-overlay); width: calc(1em - 1px); place-self: anchor-center; "> </div>
+                <div class="entry " style="height: calc(10%);">
+                    <div class="title" style="--label: 'Current';"> </div>
+                </div>
+                <div class="entry">
+                    <div class="body sub left">
+                        <date>Jul. 2023 - Present<date>Contract</date></date>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body">
+                        <div class="upper">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Liquid Heart Studios
+                        </div>
+                        <div class="lower"><b>Lead Programmer</b> building core systems including minigames, dialogue, input, and in-game programming tools. Integrated Ink, Firebase, Unity IAP/ads.</div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Lightmare Studios
+                        </div>
+                        <div class="lower">
+                            <b>Lead Programmer / Art Director</b> for Infinity Wars: TCG, as well as providing game dev related mentorship for individuals with disabilities.
+                        </div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>Jan. 2021 - Present<date>Full-time</date></date>
+                    </div>
+                </div>
+                <div class="entry " style="height: calc(10%);">
+                    <div class="title" style="--label: 'Previous';"> </div>
+                </div>
+                <div class="entry">
+                    <div class="body sub left">
+                        <date>May 2022 - Apr 2023<date>Contract</date></date>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body">
+                        <div class="upper">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Not Dead Design, Whitethorn Games
+                        </div>
+                        <div class="lower">
+                            <b>Lead Programmer</b> on Kana Quest, optimizing for Switch post-Steam release. Refactored code, added input support, improved tutorials, and enhanced accessibility. Collaborated with QA and porting teams for a smooth launch.
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper">
+                            <i class="fa-solid fa-award"></i> World Skills National Competition
+                        </div>
+                        <div class="middle"></div>
+                        <div class="lower">Worked as <b>Lead Artist</b> to win second place in the national round of Australia's largest vocational education competition.</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>27th - 28th Aug. 2021<date>Volunteer</date></date>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body sub left">
+                        <date>16th Jul. 2020<date>Volunteer</date></date>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body">
+                        <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Food" - Game Jam</div>
+                        <div class="lower">Developer</div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper"><i class="fa-solid fa-building-columns"></i> Diploma of Digital and Interactive Games</div>
+                        <div class="lower">Graduated with high distinctions and the Dean's Award for Outstanding Graduate, during my studies I fullfilled several roles on student projects, including: <b>Lead Programmer</b>, <b>Art Director</b>, <b>Lead UI Designer</b> & <b>UX Designer</b>.</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>FEB. 2020 - NOV. 2020<date>Full-time</date></date>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body sub left">
+                        <date>9TH DEC. 2019<date>Volunteer</date></date>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body">
+                        <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Wolf in sheeps clothing" - Game Jam</div>
+                        <div class="lower"><b>Lead Programmer</b> for the lowerclassmen team in a "Wolf in Sheep's Clothing", lowerclassmen vs. upperclassmen game jam competition, resulting in a win.</div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper"><i class="fa-solid fa-award"></i> World Skills Regional Competition</div>
+                        <div class="lower">Worked as <b>Lead Programmer</b> to win third place in the regional round of Australia's largest vocational education competition.</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>21ST OCT. 2019<date>Volunteer</date></date>
+                    </div>
+                </div>
+                <div class="title" style="--label: 'Current'; border: 1px solid var(--bg-overlay); width: calc(1em - 1px); place-self: anchor-center; "> </div>
+            </div>
         </div>
-    </div>
+        <div class="small-break"></div>
+        <h3>Art Gallery</h3>
+        <desc>Showcasing art direction & creative works.</desc>
+        <div class="small-break"></div>
+        <div class="gallery">
+            <div class="masonry">
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
+                    </span>
+                </div>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Infinity Wars - User Interface Style Direction</b><br><br>Led a UI overhaul that evolved from an experiment into the default design, inspired by Artifact and Teamfight Tactics, and set a new visual standard for the project.
+                    </span>
+                </div>
 
-    <section id="Recent" class="tabcontent">
-        <!-- Infinity Wars -->
-        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/InfinityWars.png">
-        <div class="project-info-table">
-            <ul class="production-description">
-                <li class="info-line">
-                    <div class="info-label">Game(s):</div>
-                    <div class="info-value">Infinity Wars Classic / Infinity Heroes</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Role:</div>
-                    <div class="info-value">Programming Team Co-Lead / Art Director</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Date:</div>
-                    <div class="info-value">Jan. 2021 - Present</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Platform:</div>
-                    <div class="info-value">PC</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Company:</div>
-                    <div class="info-value">Lightmare Studios</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">
-                        <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/" target="_blank">See More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!-- Liquid Heart -->
-        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/MonsterFactory.png">
-        <div class="project-info-table">
-            <ul class="production-description">
-                <li class="info-line">
-                    <div class="info-label">Game(s):</div>
-                    <div class="info-value">
-                        Monster Factory, Sneak Attack! & more
-                    </div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Role:</div>
-                    <div class="info-value">Lead Programmer / Consultant (Contract)</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Date:</div>
-                    <div class="info-value">Jul. 2023 - Present</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Platform:</div>
-                    <div class="info-value">Android, IOS & PC</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Company:</div>
-                    <div class="info-value">Liquid Heart Studios</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">
-                        <a href="https://liquidheart.studio/" target="_blank">See More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/KanaQuest.png">
-        <div class="project-info-table">
-            <ul class="production-description">
-                <li class="info-line">
-                    <div class="info-label">Game(s):</div>
-                    <div class="info-value">Kana Quest</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Role:</div>
-                    <div class="info-value">Lead Programmer (Contract)</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Date:</div>
-                    <div class="info-value">May 2022 - Apr 2023</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Platform:</div>
-                    <div class="info-value">PC & Nintendo Switch</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Company:</div>
-                    <div class="info-value">Not Dead Design & Whitethorn Games</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">
-                        <a href="https://www.nintendo.com/us/store/products/kana-quest-switch/" target="_blank">See More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/PreludeGardenProjectBanner.png">
-        <div class="project-info-table">
-            <ul class="production-description">
-                <li class="info-line">
-                    <div class="info-label">Game(s):</div>
-                    <div class="info-value">Prelude Garden</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Role:</div>
-                    <div class="info-value">Art Director, UX Designer</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Date:</div>
-                    <div class="info-value">Oct. 2020 - Nov. 2020</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Platform:</div>
-                    <div class="info-value">Oculus Quest</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">Company:</div>
-                    <div class="info-value">Independent & Liminal VR</div>
-                </li>
-                <li class="info-line">
-                    <div class="info-label">
-                        <a href="https://sketchfab.com/3d-models/prelude-garden-environment-483c8099cfb749a99643274a67b94111" target="_blank">See More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <a onclick="SwitchTab(event, 'DevelopmentHistory')" href="#DevelopmentHistory">See All</a>
-    </section>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/PreludeGarden/Prelude.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Prelude Garden</b><br><br>Gradient Texturing & Particle Design
+                    </span>
+                </div>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/Spritesheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Oh Shroom!</b><br><br>User Interface & Rune Particle Design
+                    </span>
+                </div>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/C2EB/Spritesheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
+                    </span>
+                </div>
 
-    <!-- Timeline -->
-    <section id="DevelopmentHistory" class="tabcontent">
-        <div class="timeline">
-            <div class="category">
-                <h4>Current</h4>
-            </div>
-            <div class="entry">
-                <div class="title custom work">
-                    <h3>Monster Factory, Sneak Attack! & more</h3>
-                    <date>Liquid Heart Studios</date>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
+                    </span>
                 </div>
-                <div class="body">
-                    <p>Lead Programmer</p>
-                    <date>Jul. 2023 - Present</date>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>Reverse-engineered the original IW1 foiling effect, implementing enhancements to improve visual distinction and preserve card artwork integrity, overall improving clarity and premium feel to foiled cards.
+                    </span>
                 </div>
-            </div>
-            <div class="entry">
-                <div class="title custom work">
-                    <h3>Infinity Wars Classic</h3>
-                    <date>Lightmare Studios</date>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/CharacterDesign.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Oh Shroom! - Character Design & Creation</b><br><br>Created 'shroomy guy' a low poly character, from concept to implementation, including rigging, animation and texturing.
+                    </span>
                 </div>
-                <div class="body">
-                    <p>Programming Team Co-Lead / Art Director</p>
-                    <date>Jan. 2021 - Present</date>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/ParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
+                    </span>
                 </div>
-            </div>
-
-            <div class="category">
-                <h4>Previous</h4>
-            </div>
-            <div class="entry">
-                <div class="title custom work">
-                    <h3>Kana Quest</h3>
-                    <date>Not Dead Design, Whitethorn Games</date>
-                </div>
-                <div class="body">
-                    <p>Lead Programmer</p>
-                    <date>May 2022 - Apr 2023</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom comp">
-                    <h3>Vaxxed & VDay</h3>
-                    <date>World Skills National Competition</date>
-                </div>
-                <div class="body">
-                    <p>Lead Artist, Co-Designer</p>
-                    <date>27th - 28th Aug. 2021</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom edu">
-                    <h3>Prelude Garden</h3>
-                    <date>Independent - Liminal VR</date>
-                </div>
-                <div class="body">
-                    <p>Art Director, UX Designer</p>
-                    <date>OCT. 2020 - NOV. 2020</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom edu">
-                    <h3>Oh Shroom!</h3>
-                    <date>Independent</date>
-                </div>
-                <div class="body">
-                    <p>Lead Programmer, Lead VFX Artist</p>
-                    <date>JUL. 2020 - OCT. 2020</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom jam">
-                    <h3>Consume</h3>
-                    <date>Independent - Game Jam</date>
-                </div>
-                <div class="body">
-                    <p>Sole Developer</p>
-                    <date>16th Jul. 2020</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom edu">
-                    <h3>COVID 2: Electric Boogaloo</h3>
-                    <date>Independent</date>
-                </div>
-                <div class="body">
-                    <p>Lead Programmer, Lead UI Designer</p>
-                    <date>APR. 2020 - JUNE. 2020</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom edu">
-                    <h3>Digital Divine</h3>
-                    <date>Independent</date>
-                </div>
-                <div class="body">
-                    <p>Sole Developer</p>
-                    <date>FEB. 2020 - APR. 2020</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom jam">
-                    <h3>Sheep Play Smiley Face</h3>
-                    <date>Independent - Game Jam</date>
-                </div>
-                <div class="body">
-                    <p>Lead Programmer</p>
-                    <date>9TH DEC. 2019</date>
-                </div>
-            </div>
-            <div class="entry">
-                <div class="title custom comp">
-                    <h3>Fishy Business</h3>
-                    <date>World Skills Regional Competition</date>
-                </div>
-                <div class="body">
-                    <p>Lead Programmer, Co-Designer</p>
-                    <date>21ST OCT. 2019</date>
+                <div class="gallery-item">
+                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/EnemyParticles.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
+                    <span class="gallery-text">
+                        <b>Oh Shroom!</b><br><br>Wind Waker Inspired Enemy Particles
+                    </span>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Asset Showcase -->
-    <section id="porfolio">
-        <h4>Art Gallery</h4>Showcasing art direction & creative works.<br><br>
-        <div class="porfolio">
-            <div class="gallery">
-                <div class="masonry">
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Infinity Wars - User Interface Style Direction</b><br><br>Led a UI overhaul that evolved from an experiment into the default design, inspired by Artifact and Teamfight Tactics, and set a new visual standard for the project.
-                        </span>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/PreludeGarden/Prelude.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Prelude Garden</b><br><br>Gradient Texturing & Particle Design
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/Spritesheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Oh Shroom!</b><br><br>User Interface & Rune Particle Design
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/C2EB/Spritesheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
-                        </span>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>Reverse-engineered the original IW1 foiling effect, implementing enhancements to improve visual distinction and preserve card artwork integrity, overall improving clarity and premium feel to foiled cards.
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/CharacterDesign.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Oh Shroom! - Character Design & Creation</b><br><br>Created 'shroomy guy' a low poly character, from concept to implementation, including rigging, animation and texturing.
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/ParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
-                        </span>
-                    </div>
-                    <div class="gallery-item">
-                        <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/EnemyParticles.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
-                        <span class="gallery-text">
-                            <b>Oh Shroom!</b><br><br>Wind Waker Inspired Enemy Particles
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+        <div class="break"></div>
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img src="" alt="Preview" />
@@ -445,6 +293,7 @@
         <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
             <fieldset id="fs-frm-inputs">
                 <h3>Contact Form</h3>
+                <desc>leave a message after the beep.</desc>
                 <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
                 <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
                 <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
@@ -469,34 +318,6 @@
 </body>
 </html>
 <script>
-    function InitTab(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 1; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 1; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    function SwitchTab(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
     const lightbox = document.getElementById('lightbox');
 
     function openLightbox(src) {
