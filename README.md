@@ -14,7 +14,7 @@ This repository contains the source code for my personal [portfolio website](htt
 - **HTML5**: Markup language for structuring the content.
 - **CSS3**: Stylesheets for design and layout.
 - **JavaScript**: Plain JavaScript for interactivity and dynamic content, without any external libraries or frameworks.
-- **Font Awesome 4.0**: Icons for enhanced UI. [Font Awesome](https://fontawesome.com/)
+- **Font Awesome**: Icons for enhanced UI. [Font Awesome](https://fontawesome.com/)
 - **Formspree.io**: Form submission handling. [Formspree.io](https://formspree.io/)
 
 ## License
