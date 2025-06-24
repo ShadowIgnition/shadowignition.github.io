@@ -435,8 +435,12 @@ date {
     padding-bottom: 12em;
 }
 
-.small-break {
+.bottom-break {
     padding-bottom: 2em;
+}
+
+.top-break {
+    padding-bottom: 4em;
 }
 
 .section-content {
