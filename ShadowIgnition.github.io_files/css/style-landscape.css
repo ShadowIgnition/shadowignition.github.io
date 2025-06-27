@@ -710,7 +710,6 @@ date {
 .row {
     margin: auto;
     display: flex;
-    flex-direction: column;
     gap: 2rem;
     flex-direction: row;
     margin: 16px 0;
