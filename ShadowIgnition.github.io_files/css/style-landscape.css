@@ -30,7 +30,7 @@ body {
 }
 
 tagline {
-    font-family: var(--font-header);
+    font-family: var(--font-title);
     line-height: 2.4em;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -57,9 +57,10 @@ h4, h5, h6 {
     margin: 0;
 }
 
-h3 {
-    color: var(--text-tertiary);
-    text-transform: uppercase;
+h2 {
+    font-family: var(--font-header);
+    text-transform: capitalize;
+    margin: 0;
 }
 
 desc {
@@ -80,7 +81,7 @@ hero {
     -ms-user-select: none;
     line-height: 1.565;
     text-align: center;
-    font-family: var(--font-header);
+    font-family: var(--font-title);
     margin: 0;
 }
 
@@ -88,7 +89,7 @@ a {
     font-weight: bold;
     color: var(--text-accent);
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
     transition: var(--transition);
 }
 
@@ -128,6 +129,7 @@ a {
     line-height: 1.5em;
     margin-bottom: 0.5em;
     vertical-align: top;
+    font-size: 0.8em;
 }
 
 .lower {
@@ -248,7 +250,6 @@ date {
     margin-inline-end: 0px;
     font-weight: normal;
     color: var(--text-secondary);
-    text-transform: uppercase;
     transition: var(--transition);
 }
 
@@ -270,23 +271,13 @@ date {
     //margin: -1rem -1rem;
 }
 
-.gallery-item {
-    /* Minimum width of 24rem and grow to fit available space */ flex: 1 0 24rem;
-    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */ margin: .1em;
-    overflow: hidden;
-    /*    max-width: 512px;
-    max-height: 512px;
-    display: contents;*/
-    position: relative;
-    box-shadow: var(--box-shadow);
-}
-
 .gallery-thumbnail {
     display: block;
     width: 100%;
     cursor: pointer;
     object-fit: cover;
     transition: transform 400ms ease-out, filter 400ms ease-out;
+    object-fit: contain;
 }
 
 .gallery-text {
@@ -303,16 +294,24 @@ date {
     transition-duration: .33s;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-    filter: brightness(50%);
+/* Hide the images by default */
+.gallery-item {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--box-shadow);
 }
 
-.gallery-item:hover span {
-    color: white;
-    display: inline-block;
-    transition-duration: .33s;
-}
+    .gallery-item:hover img {
+        filter: brightness(50%);
+    }
+
+    .gallery-item:hover span {
+        color: white;
+        display: inline-block;
+        transition-duration: .33s;
+    }
+
 
 .toggleTheme {
     text-align: center;
@@ -364,19 +363,6 @@ date {
 
 *, *:before, *:after {
     box-sizing: inherit;
-}
-
-/* The Masonry Container */ .masonry {
-    margin: 0em auto;
-    max-width: var(--contentWidth);
-    column-gap: 0;
-    column-count: 2;
-}
-
-/* The Masonry Brick */ .gallery-item {
-    background: var(--text-primary);
-    margin: 0 0 1.5em;
-    margin-bottom: 0;
 }
 
 .footer-right {
@@ -561,8 +547,9 @@ date {
     clear: both;
     text-align: left;
     position: relative;
-    height: 10em;
-    border-radius: 1em;
+    height: 6em;
+    /* border-radius: 1em; */
+    border-bottom: solid 1px var(--bg-overlay);
     z-index: 100;
     display: flex;
     align-items: center;
@@ -572,11 +559,11 @@ date {
     justify-content: center;
 }
 
-    .entry .title {
+    /*    .entry .title {
         position: relative;
         height: 100%;
-    }
-
+    }*/
+    /*
         .entry .title:before {
             content: "\f111";
             position: absolute;
@@ -596,71 +583,43 @@ date {
             border-radius: 1em;
             cursor: default;
             transition: var(--transition);
-        }
+        }*/
 
 
-        .entry .title:not(:empty)::before {
-            width: fit-content;
-            padding: 1em;
-            color: var(--text-note);
-        }
+    .entry .title:not(:empty)::before {
+        width: fit-content;
+        padding: 1em;
+        color: var(--text-note);
+    }
 
-        .entry .title:empty::before {
+    /*        .entry .title:empty::before {
             font-size: 3px;
             color: var(--scrollbar-thumb);
             font-family: 'FontAwesome';
             border-radius: 100%;
             content: "\f111";
         }
-
-        .entry .title:after {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: inherit;
-            z-index: 98;
-            top: 0;
-            right: -1px;
-            border-radius: 1px;
-            background-color: var(--bg-overlay);
-        }
-
-    .entry .body {
-        float: right;
-        width: 50%;
-        padding-left: 2em;
-        display: flex;
-        flex-direction: column;
-        box-shadow: var(--box-shadow);
-        background-color: var(--bg-secondary);
-        border-radius: 1em;
-        transition: var(--transition);
-        margin: 1em;
-        color: var(--text-secondary);
-        padding: 2em;
-        margin: 2em;
-        height: fit-content;
-        justify-content: space-between;
-        cursor: default;
+*/
+    .entry .title:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: inherit;
+        z-index: 98;
+        top: 0;
+        right: -1px;
+        border-radius: 1px;
+        background-color: var(--bg-overlay);
     }
 
-        .entry .body:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
+    .entry .body {
+        width: 50%;
+        transition: var(--transition);  
+    }
 
         .entry .body.sub {
-            box-shadow: none;
-            background-color: inherit;
-            justify-content: center;
+            text-align: right;
         }
-
-            .entry .body.sub.left {
-                text-align: left;
-            }
-
-            .entry .body.sub.left {
-                text-align: right;
-            }
 
 .lightbox {
     position: fixed;
@@ -771,4 +730,34 @@ blockquote {
 
     .skill-pill:hover {
         box-shadow: var(--box-shadow-hover);
+    }
+
+.slideshow-container {
+    max-width: var(--contentWidth);
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
     }

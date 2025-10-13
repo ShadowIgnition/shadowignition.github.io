@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/contact-form.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./ShadowIgnition.github.io_files/js/speech.js"></script>
-    <script src="./ShadowIgnition.github.io_files/js/vision.js"></script>
+    <script src="./ShadowIgnition.github.io_files/js/theme.js"></script>
+    <script src="./ShadowIgnition.github.io_files/js/gallery.js"></script>
     <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -24,7 +25,7 @@
 </header>
 
 <html>
-<body onload="speakWelcome()">
+<body onload="speakWelcome(), autoplay()">
     <section id="intro">
         <div class="intro-content">
             <div class="intro text">
@@ -46,9 +47,6 @@
                 <li>
                     <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                 </li>
-                <li>
-                    <a href="https://twitter.com/ShadowIgnition" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                </li>
             </ul>
         </div>
     </section>
@@ -56,12 +54,14 @@
         <div class="break"></div>
         <img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/AWildTaleProjectBanner.png">
         <div class="bottom-break"></div>
-        <h3>About Me</h3>
-        <p>I'm a versatile and passionate Programmer & Game Developer having released titles available on Nintendo Switch, Mobile, and PC, driven by curiosity and a hunger for growth, I enjoy using my creative problem-solving skills to bring games to life.</p>
-        <p>When I'm not programming or developing games, I'm either at the gym, listening to music, or playing games, with some of my favorite titles including <a href="https://www.escapefromtarkov.com/">Escape From Tarkov</a>, <a href="https://en.wikipedia.org/wiki/Final_Fantasy_Tactics_Advance">Final Fantasy Tactics Advance</a>, and <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Majora's_Mask">The Legend of Zelda: Majora's Mask</a>.</p>
+        <h2>About Me</h2>
+        <p>A proactive, versatile, and ambitious developer with experience releasing titles across Nintendo Switch, mobile, and PC. I leverage my understanding of various fields in the industry to help projects and businesses creatively solve challenges, turning ideas into engaging, polished experiences.</p>
+        <p>My journey into game development began at a young age, driven by a curiosity and hunger for knowledge, with mod development, and prototyping in GameMaker kickstarting my career in the games industry.</p>
+        <p>Looking to the future, I’m focused on strengthening my expertise in lower-level programming with C++ and expanding my toolkit through platforms like Blender, Unreal Engine, and Godot.</p>
+        <p>Outside of development, you’ll usually find me at the gym, listening to music, or playing games - with favorites including Escape From Tarkov, Final Fantasy Tactics Advance, and The Legend of Zelda: Majora’s Mask.</p>
         <p>Thank you for visiting, If you'd like to reach out, you can contact me on <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank">LinkedIn</a> or <a onclick="openContactForm()">here</a>.</p>
         <div class="top-break"></div>
-        <h3>Skills & Technologies</h3>
+        <h2>Skills & Technologies</h2>
         <desc>The foundation of my creative and technical work…</desc>
         <div class="bottom-break"></div>
         <div class="skills-list">
@@ -82,7 +82,7 @@
             <span class="skill-pill">UX/UI Design</span>
         </div>
         <div class="top-break"></div>
-        <h3>testimonials</h3>
+        <h2>testimonials</h2>
         <desc>What our partners are saying…</desc>
         <div class="bottom-break"></div>
         <div>
@@ -100,229 +100,254 @@
             </div>
         </div>
         <div class="top-break"></div>
-        <h3>Experience</h3>
+        <h2>Experience</h2>
         <desc>Actions that speak louder than words…</desc>
         <div class="bottom-break"></div>
         <div style="margin:16px 0">
             <div class="timeline">
-                <div class="title" style="--label: 'Current'; border: 1px solid var(--bg-overlay); width: calc(1em - 1px); place-self: anchor-center; "> </div>
-                <div class="entry " style="height: calc(10%);">
-                    <div class="title" style="--label: 'Current';"> </div>
-                </div>
+                <!--<div class="entry">
+        <div class="body">
+            <div class="upper">Community & Marketing at Lightmare Studios</div>
+            <div class="lower">Melbourne, AU</div>
+        </div>
+        <div class="title"></div>
+        <div class="body sub right">
+            <date>Jun. 2025 - Present<date>Permanent</date></date>
+        </div>
+    </div>-->
                 <div class="entry">
-                    <div class="body sub left">
-                        <date>Jul. 2023 - Present<date>Contract</date></date>
+                    <div class="body">
+                        <div class="upper">Social Games Leader (Game Development) at Lightmare Studios</div>
+                        <div class="lower">Melbourne, AU</div>
                     </div>
                     <div class="title"></div>
-                    <div class="body">
-                        <div class="upper">
-                            <i class="fa-solid fa-briefcase"></i>
-                            Liquid Heart Studios
-                        </div>
-                        <div class="lower"><b>Lead Programmer</b> building core systems including minigames, dialogue, input, and in-game programming tools. Integrated Ink, Firebase, Unity IAP/ads.</div>
+                    <div class="body sub left">
+                        <date>May 2025 - Present<date>Permanent</date></date>
                     </div>
                 </div>
                 <div class="entry">
                     <div class="body">
-                        <div class="upper">
-                            <i class="fa-solid fa-briefcase"></i>
-                            Lightmare Studios
-                        </div>
-                        <div class="lower">
-                            <b>Lead Programmer / Art Director</b> for Infinity Wars: TCG, as well as providing game dev related mentorship for individuals with disabilities.
-                        </div>
+                        <div class="upper">Programming Team Co-Lead at Lightmare Studios</div>
+                        <div class="lower">Melbourne, AU</div>
                     </div>
                     <div class="title"></div>
                     <div class="body sub right">
-                        <date>Jan. 2021 - Present<date>Full-time</date></date>
+                        <date>Nov. 2023 - Present<date>Permanent</date></date>
                     </div>
                 </div>
-                <div class="entry " style="height: calc(10%);">
-                    <div class="title" style="--label: 'Previous';"> </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper">Art Director at Lightmare Studios</div>
+                        <div class="lower">Melbourne, AU</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>May 2023 - Present<date>Permanent</date></date>
+                    </div>
                 </div>
                 <div class="entry">
+                    <div class="body">
+                        <div class="upper">Lead Programmer at Liquid Heart</div>
+                        <div class="lower">Melbourne, AU</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub left">
+                        <date>Jul. 2023 - Aug. 2025<date>Contract</date></date>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper">Programming Consultant at Holmesglen Institute</div>
+                        <div class="lower">Melbourne, AU</div>
+                    </div>
+                    <div class="title"></div>
+                    <div class="body sub right">
+                        <date>May 2024<date>Volunteer</date></date>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="body">
+                        <div class="upper">
+                            Lead Programmer at Not Dead Design & Whitethorn Games
+                        </div>
+                        <div class="lower">Melbourne, AU</div>
+                    </div>
+                    <div class="title"></div>
                     <div class="body sub left">
                         <date>May 2022 - Apr 2023<date>Contract</date></date>
                     </div>
-                    <div class="title"></div>
-                    <div class="body">
-                        <div class="upper">
-                            <i class="fa-solid fa-briefcase"></i>
-                            Not Dead Design, Whitethorn Games
-                        </div>
-                        <div class="lower">
-                            <b>Lead Programmer</b> on Kana Quest, optimizing for Switch post-Steam release. Refactored codebase, adding input support and enhancing accessibility in collaboration with QA and porting teams.
-                        </div>
-                    </div>
                 </div>
                 <div class="entry">
                     <div class="body">
                         <div class="upper">
-                            <i class="fa-solid fa-award"></i> World Skills National Competition
+                            Lead Artist at World Skills Nationals
                         </div>
                         <div class="middle"></div>
-                        <div class="lower">Worked as <b>Lead Artist</b> to win second place in the national round of Australia's largest vocational education competition.</div>
+                        <div class="lower">Melbourne, AU</div>
                     </div>
                     <div class="title"></div>
                     <div class="body sub right">
-                        <date>27th - 28th Aug. 2021<date>Volunteer</date></date>
+                        <date>Aug. 2021<date>Volunteer</date></date>
                     </div>
                 </div>
                 <div class="entry">
-                    <div class="body sub left">
-                        <date>Oct. 2020<date>Volunteer</date></date>
+                    <div class="body">
+                        <div class="upper">Programmer at Lightmare Studios</div>
+                        <div class="lower">Melbourne, AU</div>
                     </div>
                     <div class="title"></div>
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-stopwatch"></i> Started development on Project: A Wild Tale</div>
-                        <div class="lower"> Started development on Project: A Wild Tale, a pixel art survival storyteller, currently on hiatus until further notice.</div>
+                    <div class="body sub left">
+                        <date>Jan. 2021 - Nov. 2023<date>Permanent</date></date>
                     </div>
                 </div>
                 <!--<div class="entry">
-                <div class="body sub left">
-                    <date>16th Jul. 2020<date>Volunteer</date></date>
-                </div>
-                <div class="title"></div>
-                <div class="body">
-                    <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Food" - Game Jam</div>
-                    <div class="lower">Developer</div>
-                </div>
-            </div>-->
+        <div class="body sub left">
+            <date>Oct. 2020<date>Volunteer</date></date>
+        </div>
+        <div class="title"></div>
+        <div class="body">
+            <div class="upper"><i class="fa-solid fa-stopwatch"></i> Started development on Project: A Wild Tale</div>
+            <div class="lower"> Started development on Project: A Wild Tale, a pixel art survival storyteller, currently on hiatus until further notice.</div>
+        </div>
+    </div>-->
+                <!--<div class="entry">
+        <div class="body sub left">
+            <date>16th Jul. 2020<date>Volunteer</date></date>
+        </div>
+        <div class="title"></div>
+        <div class="body">
+            <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Food" - Game Jam</div>
+            <div class="lower">Developer</div>
+        </div>
+    </div>-->
+                <!--<div class="entry">
+        <div class="body">
+            <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Wolf in sheeps clothing" - Game Jam</div>
+            <div class="lower"><b>Lead Programmer</b> for the juniors team in a "Wolf in Sheep's Clothing", juniors vs. seniors game jam competition, resulting in a win.</div>
+        </div>
+        <div class="title"></div>
+        <div class="body sub right">
+            <date>9TH DEC. 2019<date>Volunteer</date></date>
+        </div>
+    </div>-->
                 <div class="entry">
                     <div class="body">
-                        <div class="upper"><i class="fa-solid fa-stopwatch"></i> "Wolf in sheeps clothing" - Game Jam</div>
-                        <div class="lower"><b>Lead Programmer</b> for the juniors team in a "Wolf in Sheep's Clothing", juniors vs. seniors game jam competition, resulting in a win.</div>
+                        <div class="upper">Lead Programmer at World Skills Regionals</div>
+                        <div class="lower">Melbourne, AU</div>
                     </div>
                     <div class="title"></div>
-                    <div class="body sub right">
-                        <date>9TH DEC. 2019<date>Volunteer</date></date>
-                    </div>
-                </div>
-                <div class="entry">
                     <div class="body sub left">
-                        <date>21ST OCT. 2019<date>Volunteer</date></date>
-                    </div>
-                    <div class="title"></div>
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-award"></i> World Skills Regional Competition</div>
-                        <div class="lower">Worked as <b>Lead Programmer</b> to win third place in the regional round of Australia's largest vocational education competition.</div>
+                        <date>Oct. 2019<date>Volunteer</date></date>
                     </div>
                 </div>
-                <div class="entry">
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-building-columns"></i> Diploma of Digital and Interactive Games</div>
-                        <div class="lower">Graduated with high distinctions and the Dean's Award for Outstanding Graduate, during my studies I fullfilled several roles on student projects, including: <b>Lead Programmer</b>, <b>Art Director</b>, <b>Lead UI Designer</b> & <b>UX Designer</b>.</div>
-                    </div>
-                    <div class="title"></div>
-                    <div class="body sub right">
-                        <date>2019 - 2020<date>Full-time</date></date>
-                    </div>
-                </div>
-                <div class="entry">
-                    <div class="body sub left">
-                        <date>SEP. 2018<date>Volunteer</date></date>
-                    </div>
-                    <div class="title"></div>
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-gear"></i> Website</div>
-                        <div class="lower">Started development on what would become this very site.</div>
-                    </div>
-                </div>
-                <div class="entry">
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-gear"></i> Platformer Prototype</div>
-                        <div class="lower">Prototyped a 2D pixel art platformer in Game Maker over one year.</div>
-                    </div>
-                    <div class="title"></div>
-                    <div class="body sub right">
-                        <date>2016<date>Volunteer</date></date>
-                    </div>
-                </div>
-                <div class="entry">
-                    <div class="body sub left">
-                        <date>JUL. 2014<date>Volunteer</date></date>
-                    </div>
-                    <div class="title"></div>
-                    <div class="body">
-                        <div class="upper"><i class="fa-solid fa-gear"></i> Mods for Grand Theft Auto - San Andreas</div>
-                        <div class="lower">Developed and released multiple mods, including one introducing passive health regeneration and another deploying missile-equipped attack helicopters at a specified wanted level.</div>
-                    </div>
-                </div>
-                <div class="title" style="--label: 'Current'; border: 1px solid var(--bg-overlay); width: calc(1em - 1px); place-self: anchor-center; "> </div>
+                <!--<div class="entry">
+        <div class="body">
+            <div class="upper"><i class="fa-solid fa-building-columns"></i> Diploma of Digital and Interactive Games</div>
+            <div class="lower">Graduated with high distinctions and the Dean's Award for Outstanding Graduate, during my studies I fullfilled several roles on student projects, including: <b>Lead Programmer</b>, <b>Art Director</b>, <b>Lead UI Designer</b> & <b>UX Designer</b>.</div>
+        </div>
+        <div class="title"></div>
+        <div class="body sub right">
+            <date>2019 - 2020<date>Full-time</date></date>
+        </div>
+    </div>-->
+                <!--<div class="entry">
+        <div class="body sub left">
+            <date>SEP. 2018<date>Volunteer</date></date>
+        </div>
+        <div class="title"></div>
+        <div class="body">
+            <div class="upper"><i class="fa-solid fa-gear"></i> Website</div>
+            <div class="lower">Started development on what would become this very site.</div>
+        </div>
+    </div>-->
+                <!--<div class="entry">
+    <div class="body">
+        <div class="upper">Independent Game Developer</div>
+        <div class="lower">Melbourne, AU</div>-->
+                <!--<div class="lower">Prototyped a 2D pixel art platformer in Game Maker over one year.</div>-->
+                <!--</div>
+        <div class="title"></div>
+        <div class="body sub right">
+            <date>2016<date>Independent</date></date>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="body sub left">
+            <date>JUL. 2014<date>Independent</date></date>
+        </div>
+        <div class="title"></div>
+        <div class="body">
+            <div class="upper">Independent Mod Developer</div>
+            <div class="lower">Melbourne, AU</div>-->
+                <!--<div class="lower"> Mods for Grand Theft Auto - San Andreas Developed and released multiple mods, including one introducing passive health regeneration and another deploying missile-equipped attack helicopters at a specified wanted level.</div>-->
+                <!--</div>
+    </div>-->
+                <!--<div class="title" style="--label: 'Current'; border: 1px solid var(--bg-overlay); width: calc(1em - 1px); place-self: anchor-center; "> </div>-->
             </div>
         </div>
         <div class="top-break"></div>
-        <h3>Art Gallery</h3>
+        <h2>Art Gallery</h2>
         <desc>Where creative vision meets execution…</desc>
         <div class="bottom-break"></div>
-        <div class="gallery">
-            <div class="masonry">
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/ChatUIDesign.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/UIStyleDirection.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Infinity Wars - User Interface Style Direction</b><br><br>Led a UI overhaul that evolved from an experiment into the default design, inspired by Artifact and Teamfight Tactics, and set a new visual standard for the project.
-                    </span>
-                </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/PreludeGarden/Prelude.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Prelude Garden</b><br><br>Gradient Texturing & Particle Design
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/Spritesheet.png" alt="Oh Shroom - Sprite Sheet" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Oh Shroom!</b><br><br>User Interface & Rune Particle Design
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/C2EB/Spritesheet.png" alt="Covid 2: Electric Boogaloo - Mobile Game UI Design & Skybox Cubemap" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
-                    </span>
-                </div>
-
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/CTCG.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Foiling.png" alt="Prelude Garden Preview" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>Reverse-engineered the original IW1 foiling effect, implementing enhancements to improve visual distinction and preserve card artwork integrity, overall improving clarity and premium feel to foiled cards.
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/CharacterDesign.png" alt="Infinity Wars CTCG Overhaul" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Oh Shroom! - Character Design & Creation</b><br><br>Created 'shroomy guy' a low poly character, from concept to implementation, including rigging, animation and texturing.
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/ParticleSheet.png" alt="Oh Shroom - Wind Waker Inspired Particles Sheet" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
-                    </span>
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/EnemyParticles.png" alt="Oh Shroom - Oh Shroom - Lighting" onclick="openLightbox(this.src)">
-                    <span class="gallery-text">
-                        <b>Oh Shroom!</b><br><br>Wind Waker Inspired Enemy Particles
-                    </span>
-                </div>
+            <!-- Full-width images with number and caption text -->
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/ChatUIDesign.png" style="width:100%; display:block" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Infinity Wars - Chat User Interface Design</b><br><br>Designed Infinity War's Chat UI, including Chat rooms, friend list, 'Queue Invites' & Deck sharing.
+                </span>
             </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/UIStyleDirection.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Infinity Wars - User Interface Style Direction</b><br><br>Led a UI overhaul that evolved from an experiment into the default design, inspired by Artifact and Teamfight Tactics, and set a new visual standard for the project.
+                </span>
+            </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/MiscUI.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Covid 2: Electric Boogaloo</b><br><br>Mobile Game UI Design & Skybox Cubemap
+                </span>
+            </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/CTCG.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Infinity Wars - CTCG Monetization Model Visual Overhaul</b><br><br>Redesigned Infinity War's 'Grayscale' cards into 'Worn' cards to improve contrast, readability, and affordance.
+                </span>
+            </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Foiling.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Infinity Wars - Reverse Engineered Foiling Shader</b><br><br>Reverse-engineered the original IW1 foiling effect, implementing enhancements to improve visual distinction and preserve card artwork integrity, overall improving clarity and premium feel to foiled cards.
+                </span>
+            </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/CharacterDesign.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Oh Shroom! - Character Design & Creation</b><br><br>Created 'shroomy guy' a low poly character, from concept to implementation, including rigging, animation and texturing.
+                </span>
+            </div>
+
+            <div class="gallery-item">
+                <img class="gallery-thumbnail" src="./ShadowIgnition.github.io_files/imgs/gallery/OhShoom/WindWakerInspiredParticles.png" style="width:100%" onclick="openLightbox(this.src)">
+                <span class="gallery-text">
+                    <b>Oh Shroom!</b><br><br>Wind Waker Inspired Particles Sheet
+                </span>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
-        <div class="break"></div>
+    <div class="break"></div>
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img src="" alt="Preview" />
@@ -331,7 +356,7 @@
     <div id="contact-form" class="contact-form">
         <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
             <fieldset id="fs-frm-inputs">
-                <h3>Contact Form</h3>
+                <h2>Contact Form</h2>
                 <desc>leave a message after the beep.</desc>
                 <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
                 <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
@@ -351,7 +376,6 @@
         <div class="footer-socials">
             <a href="https://github.com/ShadowIgnition" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/ShadowIgnition" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
         </div>
     </footer>
 </body>
