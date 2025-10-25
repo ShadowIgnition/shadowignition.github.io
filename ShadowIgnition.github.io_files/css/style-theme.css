@@ -1,6 +1,7 @@
 ﻿:root {
-    --font-header: 'Abel', sans-serif;
+    --font-header: 'Manrope', sans-serif;
     --font-body: 'Montserrat', sans-serif;
+    --font-title: 'Abel', sans-serif;
     --icon-theme: "\f042";
     --icon-speak: "\f0e5";
     --transition: all 0.3s ease-in-out;
