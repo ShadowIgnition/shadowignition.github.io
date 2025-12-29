@@ -1,5 +1,5 @@
 ﻿:root {
-    --font-header: 'Manrope', sans-serif;
+    --font-header: 'Lexend', sans-serif;
     --font-body: 'Montserrat', sans-serif;
     --font-title: 'Abel', sans-serif;
     --icon-theme: "\f042";
@@ -25,9 +25,7 @@
     --border-speech-img: url(../imgs/borders/border-dark.png) 30 round;
     --shadow-color: #122b6914;
     --box-shadow: 0 2px 6px var(--shadow-color), 0 1px 2px var(--shadow-color), 0 0 0 1px var(--shadow-color);
-    --box-shadow-hover: 45px 45px 140px 0 var(--shadow-color);
-    /*    --box-shadow-hover: 45px 45px 140px 0 #07090d14;*/
-
+    --box-shadow-hover: 0 0 140px 0 #07090d14;
 }
 
 
@@ -49,10 +47,11 @@
     --border-speech-img: url(../imgs/borders/border-light.png) 30 round;
     --shadow-color: var(--bg-overlay);
     --box-shadow: 0 2px 6px var(--shadow-color), 0 1px 2px var(--shadow-color), 0 0 0 1px var(--shadow-color);
-    --box-shadow-hover: 45px 45px 140px 0 var(--text-accent);
+    --box-shadow-hover: 0 0 140px 0 var(--text-accent);
 }
 
 .fa-solid, .fas {
     color: var(--text-accent);
     padding: 4px;
 }
+
