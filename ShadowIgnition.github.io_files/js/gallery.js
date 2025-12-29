@@ -1,19 +1,9 @@
 // Slideshow
 let slideIndex = 0;
-let autoplaying = true;
 
 // Next/previous controls
 function plusSlides(n) {
-    autoplaying = false;
     showSlides(slideIndex += n);
-}
-
-function autoplay() {
-    if (!autoplaying) {
-        return;
-    }
-    showSlides(slideIndex += 1);
-    setTimeout(autoplay, 3000);
 }
 
 function showSlides(n)

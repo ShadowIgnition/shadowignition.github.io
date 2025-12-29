@@ -1,9 +1,8 @@
 // ========== CONFIGURATION ==========
 const QUOTATIONS = [
-    'Hello world...',
+    'Etch out a future of your own design',
     'Lost in time, like tears in rain',
     'Better die than to rust',
-    'Etch out a future of your own design',
     'The infomation wants to be free',
     'Lost in the datastream?',
     'Hold The Future',
@@ -11,6 +10,7 @@ const QUOTATIONS = [
     'Transmit Data',
     'Manifold Love',
     'Command Binary',
+    'Hello world...',
 ];
 
 const WELCOME_TEXT = "Welcome";
