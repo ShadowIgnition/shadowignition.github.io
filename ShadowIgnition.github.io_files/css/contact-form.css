@@ -1,31 +1,25 @@
 ﻿#fs-frm fieldset, #fs-frm input, #fs-frm label, #fs-frm textarea {
     display: block;
-    padding: 1em;
     border: none;
-    width: var(--contentWidth);
     font: var(--font-body);
-    color: #fff
 }
 
 #fs-frm input, #fs-frm textarea {
     box-shadow: var(--box-shadow);
-    background-color: var(--bg-primary);
     padding: 1em;
     margin: 0.5em 0;
     color: var(--text-secondary);
+    resize: none;
+    width: 100%;
+    background-color: var(--bg-tertiary);
 }
 
     #fs-frm input:focus, #fs-frm textarea:focus {
-        background-color: #fff;
         outline-style: solid;
         outline-width: thin;
         outline-color: gray;
         outline-offset: -1px
     }
-
-#fs-frm [type=email], #fs-frm [type=text] {
-    width: 100%
-}
 
 #fs-frm [type=button], #fs-frm [type=reset], #fs-frm [type=submit] {
     width: auto;
@@ -34,52 +28,39 @@
     -moz-appearance: button;
     border-radius: 1em;
     appearance: button;
-    transition: var(--transition);
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--text-secondary);
+    font-weight: bold;
+    gap: 8px;
+    display: flex;
+    background-color: var(--bg-tertiary);
 }
 
     #fs-frm [type=button]:hover,
     #fs-frm [type=reset]:hover,
     #fs-frm [type=submit]:hover {
-        box-shadow: var(--box-shadow-hover);
+        box-shadow: var(--box-shadow), var(--box-shadow-hover);
+        text-decoration: underline;
     }
-
-    #fs-frm [type=button]:focus, #fs-frm [type=reset]:focus, #fs-frm [type=submit]:focus {
-        outline: 0;
-        color: #000
-    }
-
-#fs-frm [type=reset], #fs-frm [type=submit] {
-    color: #000
-}
 
 .contact-form {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .3s ease
 }
 
     .contact-form.active {
         visibility: visible;
         opacity: 1
     }
-
-
-#fs-frm fieldset {
-    box-shadow: var(--box-shadow);
-    background-color: var(--bg-secondary);
-    border-radius: 1em;
-    color: var(--text-secondary);
-    height: fit-content;
-    padding: 2em;
-    width: var(--contentWidth);
-}

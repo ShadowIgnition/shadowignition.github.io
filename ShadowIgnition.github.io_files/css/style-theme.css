@@ -15,6 +15,7 @@
     --text-note: #888;
     --bg-primary: #FFF;
     --bg-secondary: #F5F5F5;
+    --bg-tertiary: #E9E9E9;
     --bg-overlay: #00000033;
     --bg-overlay-hover: #DDD3;
     --bg-footer: #0F0F0F;
@@ -35,8 +36,9 @@
     --text-accent: #FF0045;
     --text-tertiary: #999;
     --text-note: #888;
-    --bg-primary: #151515;
-    --bg-secondary: #1D1D1D;
+    --bg-primary: #1D1D1D;
+    --bg-secondary: #151515;
+    --bg-tertiary: #141414;
     --bg-overlay: #0006;
     --bg-overlay-hover: #DDD3;
     --bg-footer: #0F0F0F;
@@ -49,9 +51,3 @@
     --box-shadow: 0 2px 6px var(--shadow-color), 0 1px 2px var(--shadow-color), 0 0 0 1px var(--shadow-color);
     --box-shadow-hover: 0 0 140px 0 var(--text-accent);
 }
-
-.fa-solid, .fas {
-    color: var(--text-accent);
-    padding: 4px;
-}
-
