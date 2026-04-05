@@ -3,8 +3,8 @@
     <link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
     <title>Porfolio - Dylan - Game Developer</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-portrait.css" media="(orientation: portrait)">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css" media="(orientation: landscape)">
+    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css">
+    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-portrait.css">
     <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-theme.css">
     <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/contact-form.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +19,9 @@
 </head>
 
 <header>
-    <div class="toggleTheme">
-        <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
-        <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
-        <p id="quotes"></p>
-    </div>
+    <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
+    <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
+    <p id="quotes"></p>
 </header>
 <html>
 <body onload="speakWelcome()">
@@ -66,194 +64,198 @@
         <h1 class="section-content-header">About Me</h1>
         <br />
         <!--<img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/AWildTaleProjectBanner.png">-->
-        <div class="container grid">
-            <div class="grid-left">
-                <div class="sidebar card">
-                    <div class="card-profile-x2">
-                        <img src="https://media.licdn.com/dms/image/v2/D5603AQGjqItTbHnSFQ/profile-displayphoto-scale_400_400/B56Z0aTSbTGYAg-/0/1774262760200?e=1776902400&v=beta&t=DHDbp1e7EnPuCky7pzfTpJc9HPoWvn5Vo6UHOsLyyzw" alt="Profile" class="card-avatar-x2">
-                        <div class="card-textblock-x1">
-                            <div class="card-username-x1">Dylan Imrei</div>
-                            <div class="card-role-x1">Game Engineer & Producer</div>
+        <div class="container">
+            <div class="grid">
+                <div class="grid-left">
+                    <div class="sidebar card">
+                        <div class="card-profile-x2">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQGjqItTbHnSFQ/profile-displayphoto-scale_400_400/B56Z0aTSbTGYAg-/0/1774262760200?e=1776902400&v=beta&t=DHDbp1e7EnPuCky7pzfTpJc9HPoWvn5Vo6UHOsLyyzw" alt="Profile" class="card-avatar-x2">
+                            <div class="card-textblock-x1">
+                                <div class="card-username-x1">Dylan Imrei</div>
+                                <div class="card-role-x1">Game Engineer & Producer</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="button-layout">
+                            <a href="https://www.linkedin.com/in/dylan-imrei/" class="btn linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+                            <a href="https://www.github.com/ShadowIgnition/" class="btn github"><i class="fa-brands fa-github"></i> Github Profile</a>
+                            <a class="btn" onclick="openSection(event, 'contact')"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
                         </div>
                     </div>
-                    <hr>
-                    <div class="button-layout">
-                        <a href="https://www.linkedin.com/in/dylan-imrei/" class="btn linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
-                        <a href="https://www.github.com/ShadowIgnition/" class="btn github"><i class="fa-brands fa-github"></i> Github Profile</a>
-                        <a class="btn" onclick="openContactForm()"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+                    <div class="sidebar card">
+                        <h2>Favorite Games</h2>
+                        <br />
+                        <div class="fav-games">
+                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/mm.webp">
+                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/ffta.png">
+                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/eft.png">
+                        </div>
                     </div>
                 </div>
-                <div class="sidebar card">
-                    <h2>Favorite Games</h2>
-                    <br />
-                    <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/mm.webp">
-                    <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/ffta.png">
-                    <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/eft.png">
-                </div>
-            </div>
-            <div class="grid-right">
-                <div class="card wide">
-                    <h2>Who am I?</h2>
-                    <p>I'm a proactive, versatile, and ambitious game engineer with experience releasing titles across Nintendo Switch, mobile, and PC. My work spans across interactive game development, games production, and art direction.
-                    <p>Within teams, I act as a catalyst, leveraging cross-disciplinary knowledge to solve critical challenges and deliver idealised games and experiences across both small and mid-sized teams.</p>
-                </div>
-                <div class="card wide">
-                    <h2>Core Technologies</h2>
-                    <br />
-                    <div class="expertise-card">
-                        <div class="expertise-grid">
-                            <div class="expertise-column">
-                                <h3>Networking</h3>
-                                <ul class="expertise-list">
-                                    <li class="expertise-item"><span class="tooltip" data-tooltip="RDS, Lambda, S3, SES, SNS, SQS, CloudFront & Route 53">AWS</span></li>
-                                    <li class="expertise-item"><span class="tooltip" data-tooltip="Realtime, Chat">Photon Networking</span></li>
-                                    <li class="expertise-item">Azure PlayFab</li>
-                                    <li class="expertise-item">Unity Gaming Services</li>
-                                    <li class="expertise-item">Steamworks</li>
-                                    <li class="expertise-item">SMTP</li>
-                                </ul>
-                            </div>
+                <div class="grid-right">
+                    <div class="card wide">
+                        <h2>Who am I?</h2>
+                        <p>I'm a proactive, versatile, and ambitious game engineer with experience releasing titles across Nintendo Switch, mobile, and PC. My work spans across interactive game development, games production, and art direction.
+                        <p>Within teams, I act as a catalyst, leveraging cross-disciplinary knowledge to solve critical challenges and deliver idealised games and experiences across both small and mid-sized teams.</p>
+                    </div>
+                    <div class="card wide">
+                        <h2>Core Technologies</h2>
+                        <br />
+                        <div class="expertise-card">
+                            <div class="expertise-grid">
+                                <div class="expertise-column">
+                                    <h3>Networking</h3>
+                                    <ul class="expertise-list">
+                                        <li class="expertise-item"><span class="tooltip" data-tooltip="RDS, Lambda, S3, SES, SNS, SQS, CloudFront & Route 53">AWS</span></li>
+                                        <li class="expertise-item"><span class="tooltip" data-tooltip="Realtime, Chat">Photon Networking</span></li>
+                                        <li class="expertise-item">Azure PlayFab</li>
+                                        <li class="expertise-item">Unity Gaming Services</li>
+                                        <li class="expertise-item">Steamworks</li>
+                                        <li class="expertise-item">SMTP</li>
+                                    </ul>
+                                </div>
 
-                            <div class="expertise-column">
-                                <h3>Languages</h3>
-                                <ul class="expertise-list">
-                                    <li class="expertise-item">C#</li>
-                                    <li class="expertise-item">JavaScript / Typescript</li>
-                                    <li class="expertise-item">MySQL</li>
-                                    <li class="expertise-item">GDScript</li>
-                                </ul>
-                            </div>
+                                <div class="expertise-column">
+                                    <h3>Languages</h3>
+                                    <ul class="expertise-list">
+                                        <li class="expertise-item">C#</li>
+                                        <li class="expertise-item">JavaScript / Typescript</li>
+                                        <li class="expertise-item">MySQL</li>
+                                        <li class="expertise-item">GDScript</li>
+                                    </ul>
+                                </div>
 
-                            <div class="expertise-column">
-                                <h3>Tools</h3>
-                                <ul class="expertise-list">
-                                    <li class="expertise-item"><span class="tooltip" data-tooltip="3D & 2D, Including Shadergraph, Cinemachine, New Input System & Tool Development">Unity</span></li>
-                                    <li class="expertise-item">WinForms</li>
-                                    <li class="expertise-item">Autodesk Maya</li>
-                                    <li class="expertise-item">Blender</li>
-                                    <li class="expertise-item">Affinity</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card wide">
-                    <h2>Testimonials</h2>
-                    <div class="carousel">
-                        <input type="radio" name="slides" id="s1" checked>
-                        <input type="radio" name="slides" id="s2">
-                        <input type="radio" name="slides" id="s3">
-                        <input type="radio" name="slides" id="s4">
-                        <div class="slides">
-                            <div class="slide">
-                                "Dylan was able to come in onto a project that had significant existing problems and holes within its codebase and was able to just get things working quickly and efficiently. My only regret with working with him is that I did not hire him sooner."
-                                <div class="card-profile-x1">
-                                    <img src="./ShadowIgnition.github.io_files\imgs\profiles\AthenaKipen.png" alt="Profile" class="card-avatar-x1">
-                                    <div class="card-textblock-x1">
-                                        <div class="card-username-x1">Athena Kipen</div>
-                                        <div class="card-role-x1">Lead Designer at Not Dead Design</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                "Throughout our collaboration, Dylan consistently demonstrated their problem-solving skills, teamwork abilities, clear communication, and dedication to delivering high-quality work. Their enthusiasm, professionalism, and proactive approach make them an invaluable asset to any game development team."
-                                <div class="card-profile-x1">
-                                    <img src="./ShadowIgnition.github.io_files\imgs\profiles\ReubenCovington.png" alt="Profile" class="card-avatar-x1">
-                                    <div class="card-textblock-x1">
-                                        <div class="card-username-x1">Reuben Covington</div>
-                                        <div class="card-role-x1">Game Designer at PlaySide Studios</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                "Dylan managed scheduling, artists, writers, stakeholders, and programmers to successfully get releases out the door... I was able to lead many ambitious feature designs because of Dylan’s work managing the team day-to-day."
-                                <div class="card-profile-x1">
-                                    <img src="./ShadowIgnition.github.io_files\imgs\profiles\BenjaminArvey.png" alt="Profile" class="card-avatar-x1">
-                                    <div class="card-textblock-x1">
-                                        <div class="card-username-x1">Benjamin Arvey</div>
-                                        <div class="card-role-x1">Senior Software Engineer at Garmin</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                "Dylan put strong attention to detail making sure the front end user interface was clean and efficient, creating a positive user experience... I would strongly recommend Dylan for any game development field, as he has proven to be very capable with any challenge he is given."
-                                <div class="card-profile-x1">
-                                    <img src="./ShadowIgnition.github.io_files\imgs\profiles\CoreyHenderson.png" alt="Profile" class="card-avatar-x1">
-                                    <div class="card-textblock-x1">
-                                        <div class="card-username-x1">Corey Henderson</div>
-                                        <div class="card-role-x1">Full Stack / Platform Developer at Halfbrick</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dots">
-                            <label for="s1"></label>
-                            <label for="s2"></label>
-                            <label for="s3"></label>
-                            <label for="s4"></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="card wide">
-                    <h2>Experience</h2>
-                    <br />
-                    <h3>Current</h3>
-                    <div style="margin:16px 0">
-                        <div class="timeline">
-                            <div class="entry">
-                                <div class="body">
-                                    <div class="upper">Lead Producer</div>
-                                    <div class="lower">Lightmare Studios, Melbourne, AU</div>
-                                </div>
-                                <div class="title"></div>
-                                <div class="body sub right">
-                                    <date>Jan. 2021 - Present<date>Permanent</date></date>
-                                </div>
-                            </div>
-                            <div class="entry">
-                                <div class="body">
-                                    <div class="upper">Social Games Leader (Game Development)</div>
-                                    <div class="lower">Lightmare Studios, Melbourne, AU</div>
-                                </div>
-                                <div class="title"></div>
-                                <div class="body sub left">
-                                    <date>May 2025 - Present<date>Permanent</date></date>
-                                </div>
-                            </div>
-                            <div class="entry">
-                                <div class="body">
-                                    <div class="upper">Lead Programmer</div>
-                                    <div class="lower">Liquid Heart, Melbourne, AU</div>
-                                </div>
-                                <div class="title"></div>
-                                <div class="body sub left">
-                                    <date>Jul. 2023 - Present<date>Contract</date></date>
+                                <div class="expertise-column">
+                                    <h3>Tools</h3>
+                                    <ul class="expertise-list">
+                                        <li class="expertise-item"><span class="tooltip" data-tooltip="3D & 2D, Including Shadergraph, Cinemachine, New Input System & Tool Development">Unity</span></li>
+                                        <li class="expertise-item">WinForms</li>
+                                        <li class="expertise-item">Autodesk Maya</li>
+                                        <li class="expertise-item">Blender</li>
+                                        <li class="expertise-item">Affinity</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <h3>Previous</h3>
-                    <div style="margin:16px 0">
-                        <div class="timeline">
-                            <div class="entry">
-                                <div class="body">
-                                    <div class="upper">Industry Consultant</div>
-                                    <div class="lower">Holmesglen Institute, Melbourne, AU</div>
+                    <div class="card wide">
+                        <h2>Testimonials</h2>
+                        <div class="carousel">
+                            <input type="radio" name="slides" id="s1" checked>
+                            <input type="radio" name="slides" id="s2">
+                            <input type="radio" name="slides" id="s3">
+                            <input type="radio" name="slides" id="s4">
+                            <div class="slides">
+                                <div class="slide">
+                                    "Dylan was able to come in onto a project that had significant existing problems and holes within its codebase and was able to just get things working quickly and efficiently. My only regret with working with him is that I did not hire him sooner."
+                                    <div class="card-profile-x1">
+                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\AthenaKipen.png" alt="Profile" class="card-avatar-x1">
+                                        <div class="card-textblock-x1">
+                                            <div class="card-username-x1">Athena Kipen</div>
+                                            <div class="card-role-x1">Lead Designer at Not Dead Design</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="title"></div>
-                                <div class="body sub right">
-                                    <date>May 2024<date>Volunteer</date></date>
+                                <div class="slide">
+                                    "Throughout our collaboration, Dylan consistently demonstrated their problem-solving skills, teamwork abilities, clear communication, and dedication to delivering high-quality work. Their enthusiasm, professionalism, and proactive approach make them an invaluable asset to any game development team."
+                                    <div class="card-profile-x1">
+                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\ReubenCovington.png" alt="Profile" class="card-avatar-x1">
+                                        <div class="card-textblock-x1">
+                                            <div class="card-username-x1">Reuben Covington</div>
+                                            <div class="card-role-x1">Game Designer at PlaySide Studios</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    "Dylan managed scheduling, artists, writers, stakeholders, and programmers to successfully get releases out the door... I was able to lead many ambitious feature designs because of Dylan’s work managing the team day-to-day."
+                                    <div class="card-profile-x1">
+                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\BenjaminArvey.png" alt="Profile" class="card-avatar-x1">
+                                        <div class="card-textblock-x1">
+                                            <div class="card-username-x1">Benjamin Arvey</div>
+                                            <div class="card-role-x1">Senior Software Engineer at Garmin</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    "Dylan put strong attention to detail making sure the front end user interface was clean and efficient, creating a positive user experience... I would strongly recommend Dylan for any game development field, as he has proven to be very capable with any challenge he is given."
+                                    <div class="card-profile-x1">
+                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\CoreyHenderson.png" alt="Profile" class="card-avatar-x1">
+                                        <div class="card-textblock-x1">
+                                            <div class="card-username-x1">Corey Henderson</div>
+                                            <div class="card-role-x1">Full Stack / Platform Developer at Halfbrick</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="entry">
-                                <div class="body">
-                                    <div class="upper">Lead Programmer</div>
-                                    <div class="lower">Not Dead Design & Whitethorn Games, Melbourne, AU</div>
+                            <div class="dots">
+                                <label for="s1"></label>
+                                <label for="s2"></label>
+                                <label for="s3"></label>
+                                <label for="s4"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wide">
+                        <h2>Experience</h2>
+                        <br />
+                        <h3>Current</h3>
+                        <div style="margin:16px 0">
+                            <div class="timeline">
+                                <div class="entry">
+                                    <div class="body">
+                                        <div class="upper">Lead Producer</div>
+                                        <div class="lower">Lightmare Studios, Melbourne, AU</div>
+                                    </div>
+                                    <div class="title"></div>
+                                    <div class="body sub right">
+                                        <date>Jan. 2021 - Present<date>Permanent</date></date>
+                                    </div>
                                 </div>
-                                <div class="title"></div>
-                                <div class="body sub left">
-                                    <date>May 2022 - Apr 2023<date>Contract</date></date>
+                                <div class="entry">
+                                    <div class="body">
+                                        <div class="upper">Social Games Leader (Game Development)</div>
+                                        <div class="lower">Lightmare Studios, Melbourne, AU</div>
+                                    </div>
+                                    <div class="title"></div>
+                                    <div class="body sub left">
+                                        <date>May 2025 - Present<date>Permanent</date></date>
+                                    </div>
+                                </div>
+                                <div class="entry">
+                                    <div class="body">
+                                        <div class="upper">Lead Programmer</div>
+                                        <div class="lower">Liquid Heart, Melbourne, AU</div>
+                                    </div>
+                                    <div class="title"></div>
+                                    <div class="body sub left">
+                                        <date>Jul. 2023 - Present<date>Contract</date></date>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <h3>Previous</h3>
+                        <div style="margin:16px 0">
+                            <div class="timeline">
+                                <div class="entry">
+                                    <div class="body">
+                                        <div class="upper">Industry Consultant</div>
+                                        <div class="lower">Holmesglen Institute, Melbourne, AU</div>
+                                    </div>
+                                    <div class="title"></div>
+                                    <div class="body sub right">
+                                        <date>May 2024<date>Volunteer</date></date>
+                                    </div>
+                                </div>
+                                <div class="entry">
+                                    <div class="body">
+                                        <div class="upper">Lead Programmer</div>
+                                        <div class="lower">Not Dead Design & Whitethorn Games, Melbourne, AU</div>
+                                    </div>
+                                    <div class="title"></div>
+                                    <div class="body sub left">
+                                        <date>May 2022 - Apr 2023<date>Contract</date></date>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -608,10 +610,5 @@
 </body>
 </html>
 <footer class="footer" id="footer">
-    <a class="btn" href="https://github.com/ShadowIgnition/shadowignition.github.io" target="_blank">Source Code</a>
     © 2018 - 2026
-    <div class="footer-socials">
-        <a href="https://github.com/ShadowIgnition" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-    </div>
 </footer>

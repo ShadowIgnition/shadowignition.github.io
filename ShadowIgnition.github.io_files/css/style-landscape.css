@@ -19,10 +19,6 @@
     background-color: var(--text-accent);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: var(--bg-secondary);
     font-family: var(--font-body);
@@ -334,8 +330,10 @@ header {
         transition: all 0.3s ease-in-out;
     }
 
-/* Box-sizing reset://w3bits.com/?p=3225 */ html {
+/* Box-sizing reset://w3bits.com/?p=3225 */
+html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -616,7 +614,6 @@ date {
     .lightbox img {
         max-width: 90%;
         max-height: 90%;
-        
         box-shadow: var(--box-shadow);
         /*        border-radius: 12px;*/
     }
@@ -837,11 +834,11 @@ h1, h2, h3, h4, h5, h6, .section-content-header {
     padding: 0 24px;
 }
 
-    .container.grid {
+    .container .grid {
         display: grid;
         grid-template-columns: 320px 1fr;
         gap: 24px;
-        max-width: 1200px;
+        max-width: var(--contentWidth);
         margin: 0 auto;
         padding: 0 24px;
         display: grid;
@@ -1082,6 +1079,7 @@ input {
     padding: 1em 0;
     margin-top: auto;
 }
+
 .card-profile-x2 {
     display: flex;
     align-items: center;
@@ -1102,6 +1100,7 @@ input {
     object-fit: cover;
     box-shadow: var(--box-shadow);
 }
+
 .card-avatar-x2 {
     height: 6em;
     aspect-ratio: 1;
@@ -1196,7 +1195,6 @@ input {
         color: #fff;
         padding: 6px 10px;
         border-radius: 4px;
-        white-space: nowrap;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
@@ -1209,7 +1207,6 @@ input {
     }
 /* Container */
 .expertise-card {
-    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -1217,6 +1214,7 @@ input {
 .expertise-grid {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Columns */
@@ -1233,7 +1231,11 @@ input {
 
 
 .shadow-image {
-    filter: drop-shadow(0px 2px 2px #000)
+    filter: drop-shadow(0px 2px 2px #000);
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain; /* keeps aspect ratio */
 }
 
 hr {
@@ -1274,4 +1276,11 @@ hr {
     margin: auto;
     border-radius: 1em;
     z-index: 9999;
+}
+
+
+
+.fav-games {
+    display: grid;
+    grid-auto-flow: row;
 }
