@@ -1278,8 +1278,6 @@ hr {
     z-index: 9999;
 }
 
-
-
 .fav-games {
     display: grid;
     grid-auto-flow: row;
