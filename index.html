@@ -3,73 +3,97 @@
     <link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
     <title>Portfolio - Dylan - Game Developer</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-landscape.css">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-portrait.css">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/style-theme.css">
-    <link rel="stylesheet" href="./ShadowIgnition.github.io_files/css/contact-form.css" type="text/css">
+    <link rel="stylesheet" href="/files/css/style-landscape.css">
+    <link rel="stylesheet" href="/files/css/style-portrait.css">
+    <link rel="stylesheet" href="/files/css/style-theme.css">
+    <link rel="stylesheet" href="/files/css/contact-form.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./ShadowIgnition.github.io_files/js/speech.js"></script>
-    <script src="./ShadowIgnition.github.io_files/js/theme.js"></script>
-    <script src="./ShadowIgnition.github.io_files/js/gallery.js"></script>
+    <script src="/files/js/speech.js"></script>
+    <script src="/files/js/theme.js"></script>
+    <script src="/files/js/gallery.js"></script>
     <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="ShadowIgnition.github.io_files/js/include.js"></script>
+    <script src="files/js/include.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <header>
-    <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
-    <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
-    <p id="quotes"></p>
+    <div class="left gap">
+        <button class="sys-toggle theme" onclick="toggleTheme(),speakDarkmode()"></i></button>
+    </div>
+    <div class="center card-textblock-x1 ">
+        <div class="card-username-x1">Dylan Imrei</div>
+        <div class="card-role-x1">Game Engineer &amp; Producer</div>
+    </div>
+    <div class="horizontal-layout right gap mobile-hide">
+        <a class="btn" href="/index.html">About</a>
+        <a class="btn" href="/content/contributions.html">Contributions</a>
+        <a class="btn"
+            href="https://www.dropbox.com/scl/fi/yea2ekr7x9h8j8srqv6qn/Dylan-Imrei_Developer_Resume.pdf?rlkey=7z4pthbjabpv7ns640tl0eyvw&st=3dusrtms&dl=0"><i
+                class="fa-solid fa-file"></i>Resume</a>
+        <a class="btn cta white" href="/contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="right gap non-mobile-hide">
+        <button class="sys-toggle" onclick="openMenu()"></i><i class="fa-solid fa-bars"></i></button>
+        <div class="topnav">
+            <div id="myLinks">
+                <a class="btn" href="/index.html">About</a>
+                <a class="btn" href="/content/contributions.html">Contributions</a>
+                <a class="btn"
+                    href="https://www.dropbox.com/scl/fi/yea2ekr7x9h8j8srqv6qn/Dylan-Imrei_Developer_Resume.pdf?rlkey=7z4pthbjabpv7ns640tl0eyvw&st=3dusrtms&dl=0"><i
+                        class="fa-solid fa-file"></i>Resume</a>
+                <a class="btn cta white" href="/contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+            </div>
+        </div>
+    </div>
+    </div>
 </header>
 <html>
-<body onload="speakWelcome()">
-    <section id="intro">
+
+<body>
+    <section id="intro" style="background-image: var(--hero-gradient), url('/files/imgs/heroes/Hero_Prelude01.png'); ">
         <div class="intro-content">
             <div class="intro text">
                 <div class="row">
                     <div class="columns-split">
                         <hero>Dylan Imrei</hero>
-                        <br>
                         <div class="horizontal-list">
-                            <span>Programming</span>
-                            <span>Game Development</span>
-                            <span>Production</span>
+                            <span>GAME ENGINEER &amp; PRODUCER</span>
+                        </div>
+                        <br>
+                        <div class="quote-bar">
+                            <p id="quotes"></p>
                         </div>
                     </div>
                 </div>
             </div>
             <ul class="intro-links">
                 <li>
-                    <a href="https://github.com/ShadowIgnition" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/ShadowIgnition" target="_blank"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/dylan-imrei/" target="_blank"><i class="fa fa-linkedin-square"
+                            aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
     </section>
     <br />
-    <div class="horizontal-layout sticky">
-        <a class="btn" onclick="openSection(event, 'aboutme')">About</a>
-        <a class="btn" onclick="openSection(event, 'contributions')">Contributions</a>
-        <!--<a class="btn" onclick="openSection(event, 'graphic-design')">Graphic Design</a>-->
-        <a class="btn" onclick="openSection(event, 'contact')">Contact</a>
-    </div>
-    <br />
-
     <div id="aboutme" class="section-content">
         <br />
-        <h1 class="section-content-header">About Me</h1>
+        <h1 class="center">About Me</h1>
         <br />
-        <!--<img class="project-image" src="./ShadowIgnition.github.io_files/imgs/banners/AWildTaleProjectBanner.png">-->
+        <!--<img class="project-image" src="/files/imgs/banners/AWildTaleProjectBanner.png">-->
         <div class="container">
             <div class="grid">
                 <div class="grid-left">
                     <div class="sidebar card">
                         <div class="card-profile-x2">
-                            <img src="./ShadowIgnition.github.io_files\imgs\profiles\me.png" alt="Profile" class="card-avatar-x2">
+                            <img src="/files\imgs\profiles\me.png" alt="Profile" class="card-avatar-x2">
                             <div class="card-textblock-x1">
                                 <div class="card-username-x1">Dylan Imrei</div>
                                 <div class="card-role-x1">Game Engineer & Producer</div>
@@ -77,27 +101,35 @@
                         </div>
                         <hr>
                         <div class="button-layout">
-                            <a href="https://www.linkedin.com/in/dylan-imrei/" class="btn linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
-                            <a href="https://www.github.com/ShadowIgnition/" class="btn github"><i class="fa-brands fa-github"></i> Github Profile</a>
-                            <a class="btn" onclick="openSection(event, 'contact')"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+                            <a href="https://www.linkedin.com/in/dylan-imrei/" class="btn linkedin white"><i
+                                    class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+                            <a href="https://www.github.com/ShadowIgnition/" class="btn github white"><i
+                                    class="fa-brands fa-github"></i> Github Profile</a>
+                            <a class="btn" href="/contact.html"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
                         </div>
                     </div>
-                    <div class="sidebar card">
+                    <div class="sidebar card mobile-hide">
                         <h2>Favorite Games</h2>
                         <br />
                         <div class="fav-games">
-                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/mm.webp">
-                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/ffta.png">
-                            <img class="shadow-image" src="./ShadowIgnition.github.io_files/imgs/favorites/eft.png">
+                            <img class="shadow expand" src="/files/imgs/favorites/mm.webp">
+                            <img class="shadow expand" src="/files/imgs/favorites/ffta.png">
+                            <img class="shadow expand" src="/files/imgs/favorites/eft.png">
                         </div>
                     </div>
                 </div>
                 <div class="grid-right">
                     <div class="card wide">
                         <h2>Who am I?</h2>
-                        <p>I'm a proactive, versatile and ambitious engineer, specializing in Unity Development and Games Production, with experience releasing titles across Nintendo Switch, mobile, and PC.</p>
-                        <p>With experience working in engineering, production and art direction, I'm passionate about leveraging my cross-disciplinary expertise to provide teams with the resources they need to ship high quality games in an effective manner.</p>
-                        <p>I’m currently open to opportunities as a Unity Developer or Games Producer, and I’m actively expanding my skills in C++, Unreal Engine, and broader software engineering. If you’re interested in collaborating, feel free to get in touch!</p>
+                        <p>I'm a proactive, versatile and ambitious engineer, specializing in Unity Development and
+                            Games Production, with experience releasing titles across Nintendo Switch, mobile, and PC.
+                        </p>
+                        <p>With experience working in engineering, production and art direction, I'm passionate about
+                            leveraging my cross-disciplinary expertise to provide teams with the resources they need to
+                            ship high quality games in an effective manner.</p>
+                        <p>I'm currently open to opportunities as a Unity Developer or Games Producer, and I'm actively
+                            expanding my skills in C++, Unreal Engine, and broader software engineering. If you're
+                            interested in collaborating, feel free to get in touch!</p>
                     </div>
                     <div class="card wide">
                         <h2>Core Technologies</h2>
@@ -107,8 +139,11 @@
                                 <div class="expertise-column">
                                     <h3>Networking</h3>
                                     <ul class="expertise-list">
-                                        <li class="expertise-item"><span class="tooltip" data-tooltip="RDS, Lambda, S3, SES, SNS, SQS, CloudFront & Route 53">AWS</span></li>
-                                        <li class="expertise-item"><span class="tooltip" data-tooltip="Realtime, Chat">Photon Networking</span></li>
+                                        <li class="expertise-item"><span class="tooltip"
+                                                data-tooltip="RDS, Lambda, S3, SES, SNS, SQS, CloudFront & Route 53">AWS</span>
+                                        </li>
+                                        <li class="expertise-item"><span class="tooltip"
+                                                data-tooltip="Realtime, Chat">Photon Networking</span></li>
                                         <li class="expertise-item">Azure PlayFab</li>
                                         <li class="expertise-item">Unity Gaming Services</li>
                                         <li class="expertise-item">Steamworks</li>
@@ -129,7 +164,9 @@
                                 <div class="expertise-column">
                                     <h3>Tools</h3>
                                     <ul class="expertise-list">
-                                        <li class="expertise-item"><span class="tooltip" data-tooltip="3D & 2D, Including Shadergraph, Cinemachine, New Input System & Tool Development">Unity</span></li>
+                                        <li class="expertise-item"><span class="tooltip"
+                                                data-tooltip="3D & 2D, Including Shadergraph, Cinemachine, New Input System & Tool Development">Unity</span>
+                                        </li>
                                         <li class="expertise-item">WinForms</li>
                                         <li class="expertise-item">Autodesk Maya</li>
                                         <li class="expertise-item">Blender</li>
@@ -148,9 +185,13 @@
                             <input type="radio" name="slides" id="s4">
                             <div class="slides">
                                 <div class="slide">
-                                    "Dylan was able to come in onto a project that had significant existing problems and holes within its codebase and was able to just get things working quickly and efficiently. My only regret with working with him is that I did not hire him sooner."
+                                    "Dylan was able to come in onto a project that had significant existing problems and
+                                    holes within its codebase and was able to just get things working quickly and
+                                    efficiently. My only regret with working with him is that I did not hire him
+                                    sooner."
                                     <div class="card-profile-x1">
-                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\AthenaKipen.png" alt="Profile" class="card-avatar-x1">
+                                        <img src="/files\imgs\profiles\AthenaKipen.png" alt="Profile"
+                                            class="card-avatar-x1">
                                         <div class="card-textblock-x1">
                                             <div class="card-username-x1">Athena Kipen</div>
                                             <div class="card-role-x1">Lead Designer at Not Dead Design</div>
@@ -158,9 +199,13 @@
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    "Throughout our collaboration, Dylan consistently demonstrated their problem-solving skills, teamwork abilities, clear communication, and dedication to delivering high-quality work. Their enthusiasm, professionalism, and proactive approach make them an invaluable asset to any game development team."
+                                    "Throughout our collaboration, Dylan consistently demonstrated their problem-solving
+                                    skills, teamwork abilities, clear communication, and dedication to delivering
+                                    high-quality work. Their enthusiasm, professionalism, and proactive approach make
+                                    them an invaluable asset to any game development team."
                                     <div class="card-profile-x1">
-                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\ReubenCovington.png" alt="Profile" class="card-avatar-x1">
+                                        <img src="/files\imgs\profiles\ReubenCovington.png" alt="Profile"
+                                            class="card-avatar-x1">
                                         <div class="card-textblock-x1">
                                             <div class="card-username-x1">Reuben Covington</div>
                                             <div class="card-role-x1">Game Designer at PlaySide Studios</div>
@@ -168,9 +213,12 @@
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    "Dylan managed scheduling, artists, writers, stakeholders, and programmers to successfully get releases out the door... I was able to lead many ambitious feature designs because of Dylan’s work managing the team day-to-day."
+                                    "Dylan managed scheduling, artists, writers, stakeholders, and programmers to
+                                    successfully get releases out the door... I was able to lead many ambitious feature
+                                    designs because of Dylan's work managing the team day-to-day."
                                     <div class="card-profile-x1">
-                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\BenjaminArvey.png" alt="Profile" class="card-avatar-x1">
+                                        <img src="/files\imgs\profiles\BenjaminArvey.png" alt="Profile"
+                                            class="card-avatar-x1">
                                         <div class="card-textblock-x1">
                                             <div class="card-username-x1">Benjamin Arvey</div>
                                             <div class="card-role-x1">Senior Software Engineer at Garmin</div>
@@ -178,9 +226,13 @@
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    "Dylan put strong attention to detail making sure the front end user interface was clean and efficient, creating a positive user experience... I would strongly recommend Dylan for any game development field, as he has proven to be very capable with any challenge he is given."
+                                    "Dylan put strong attention to detail making sure the front end user interface was
+                                    clean and efficient, creating a positive user experience... I would strongly
+                                    recommend Dylan for any game development field, as he has proven to be very capable
+                                    with any challenge he is given."
                                     <div class="card-profile-x1">
-                                        <img src="./ShadowIgnition.github.io_files\imgs\profiles\CoreyHenderson.png" alt="Profile" class="card-avatar-x1">
+                                        <img src="/files\imgs\profiles\CoreyHenderson.png" alt="Profile"
+                                            class="card-avatar-x1">
                                         <div class="card-textblock-x1">
                                             <div class="card-username-x1">Corey Henderson</div>
                                             <div class="card-role-x1">Full Stack / Platform Developer at Halfbrick</div>
@@ -188,7 +240,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="dots">
+                            <div class="dots" style="margin-top: 16.563px;">
                                 <label for="s1"></label>
                                 <label for="s2"></label>
                                 <label for="s3"></label>
@@ -196,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card wide">
+                    <!--     <div class="card wide">
                         <h2>Experience</h2>
                         <br />
                         <h3>Current</h3>
@@ -209,7 +261,8 @@
                                     </div>
                                     <div class="title"></div>
                                     <div class="body sub right">
-                                        <date>Jan. 2021 - Present<date>Permanent</date></date>
+                                        <date>Jan. 2021 - Present<date>Permanent</date>
+                                        </date>
                                     </div>
                                 </div>
                                 <div class="entry">
@@ -218,8 +271,9 @@
                                         <div class="lower">Lightmare Studios, Melbourne, AU</div>
                                     </div>
                                     <div class="title"></div>
-                                    <div class="body sub left">
-                                        <date>May 2025 - Present<date>Permanent</date></date>
+                                    <div class="body sub right">
+                                        <date>May 2025 - Present<date>Permanent</date>
+                                        </date>
                                     </div>
                                 </div>
                                 <div class="entry">
@@ -228,8 +282,9 @@
                                         <div class="lower">Liquid Heart, Melbourne, AU</div>
                                     </div>
                                     <div class="title"></div>
-                                    <div class="body sub left">
-                                        <date>Jul. 2023 - Present<date>Contract</date></date>
+                                    <div class="body sub right">
+                                        <date>Jul. 2023 - Present<date>Contract</date>
+                                        </date>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +300,8 @@
                                     </div>
                                     <div class="title"></div>
                                     <div class="body sub right">
-                                        <date>May 2024<date>Volunteer</date></date>
+                                        <date>May 2024<date>Volunteer</date>
+                                        </date>
                                     </div>
                                 </div>
                                 <div class="entry">
@@ -254,352 +310,96 @@
                                         <div class="lower">Not Dead Design & Whitethorn Games, Melbourne, AU</div>
                                     </div>
                                     <div class="title"></div>
-                                    <div class="body sub left">
-                                        <date>May 2022 - Apr 2023<date>Contract</date></date>
+                                    <div class="body sub right">
+                                        <date>May 2022 - Apr 2023<date>Contract</date>
+                                        </date>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="contact" class="section-content fade-out" hidden>
+    <br />
+    <div class="section-content">
         <br />
-        <h1 class="section-content-header">Get In Touch</h1>
-        <br />
-        <div id="contact-form" class="card wide">
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbyyewd" method="post">
-                <fieldset id="fs-frm-inputs">
-                    <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
-                    <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-                    <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
-                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                    <div class="row">
-                        <input class="btn" type="submit" value="Submit">
-                        <input class="btn" type="button" value="Back" onclick="closeContactForm()">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-
-    <div id="contributions" class="section-content fade-out" hidden>
-        <br />
-        <h1 class="section-content-header">Contributions</h1>
+        <h1 class="center">Featured Contrbutions</h1>
         <br />
         <div class="container">
-            <div class="table">
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/InfinityWars.png&quot;)">
-                            <span class="state"></span>
-                        </a>
-                        <h2>Infinity Wars</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/" class="bold" target="_blank">Windows</a></span>
-                        </div>
+            <div class="card">
+                <div class="flex-left">
+                    <!-- LEFT: VIDEO -->
+                    <iframe class="embed large" src="https://www.youtube.com/embed/ewg3W5OLANA"></iframe>
+
+                    <!-- RIGHT: DETAILS -->
+                    <div class="highlight info">
+                        <h2>Infinity Wars: Animated TCG</h2>
+                        <ul>
+                            <li><span><i class="fa-solid fa-gamepad"></i> Genre: </span>Trading Card Game</li>
+                            <li><span><i class="fa-solid fa-user-group"></i> Modes: </span> Single-player & Multiplayer
+                            </li>
+                            <li><span><i class="fa-solid fa-diagram-project"></i> Platform: </span>PC</li>
+                            <li><span><i class="fa-solid fa-gear"></i> Engine: </span><i class="fa-brands fa-unity">
+                                </i>
+                                Unity Engine</li>
+                            <li><span><i class="fa-solid fa-wrench"></i> Tools: </span>Amazon Web Services, Azure
+                                PlayFab, Steamworks, Google Workspace, Miro, Jira/Trello</li>
+                            <li><span><i class="fa-regular fa-id-badge"></i> Role: </span>Lead Producer & Senior
+                                Engineer
+                            </li>
+                        </ul>
+                        <!-- <a class="btn cta">Read More <i class="fa-solid fa-chevron-right"></i></a> -->
                     </div>
                 </div>
+                <hr>
+                <div class="flex-right">
+                    <!-- LEFT: VIDEO -->
+                    <iframe class="embed large" src="https://www.youtube.com/embed/kJwStc1u_0k"></iframe>
 
-                <div class="col-md-4">
-                    <div class="project unavailable">
-                        <a href="" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/Unannounced.png&quot;" )>
-                            <span class="state">Unannounced</span>
-                        </a>
-                        <h2>Unannounced Title</h2>
-                        <div class="horizontal-list">
-                            <span>PC</span>
-                            <span>Mobile</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://kev07.itch.io/oswin-innovations" target="_blank" class="cover" style="background-image: url(&quot;https://img.itch.zone/aW1hZ2UvMjgyNzM5My8xNjkwMjc2NC5wbmc=/794x1000/TjirwY.png&quot;)">
-                            <span class="state"></span>
-                        </a>
-                        <h2>Oswin Innovations</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://kev07.itch.io/oswin-innovations" class="bold" target="_blank">Web-based</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project unavailable">
-                        <a href="https://liquidheart.studio/games/monster-factory/" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/monsterfactory.png&quot;" )>
-                            <span class="state">Unreleased</span>
-                        </a>
-                        <h2>Monster Factory</h2>
-                        <div class="horizontal-list">
-                            <span>PC</span>
-                            <span>Mobile</span>
-                            <span>Console</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://apps.apple.com/us/app/sneak-attack/id6464039519" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/SneakAttack.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>Sneak Attack!</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://apps.apple.com/us/app/sneak-attack/id6464039519" class="bold" target="_blank">iOS</a></span>
-                            <span><a href="https://play.google.com/store/apps/details?id=net.ScreenEditor.NinjaRun" class="bold" target="_blank">Android</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://store.steampowered.com/app/725850/Kana_Quest" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/KanaQuest.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
+                    <!-- RIGHT: DETAILS -->
+                    <div class="highlight info">
                         <h2>Kana Quest</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://www.nintendo.com/us/store/products/kana-quest-switch/" class="bold" target="_blank">Nintendo Switch</a></span>
-                            <span><a href="https://store.steampowered.com/app/725850/Kana_Quest" class="bold" target="_blank">Windows</a></span>
-                        </div>
+                        <ul>
+                            <li><span><i class="fa-solid fa-gamepad"></i> Genre: </span>Strategy, Educational</li>
+                            <li><span><i class="fa-solid fa-user-group"></i> Modes: </span> Single-player</li>
+                            <li><span><i class="fa-solid fa-diagram-project"></i> Platform: </span>Nintendo Switch & PC
+                            </li>
+                            <li><span><i class="fa-solid fa-gear"></i> Engine: </span><i class="fa-brands fa-unity"></i>
+                                Unity Engine</li>
+                            <li><span><i class="fa-solid fa-wrench"></i> Tools: </span>Rewired, Google Workspace</li>
+                            <li><span><i class="fa-regular fa-id-badge"></i> Role: </span>Lead Engineer
+                            </li>
+                        </ul>
+                        <!-- <a class="btn cta">Read More <i class="fa-solid fa-chevron-right"></i></a> -->
                     </div>
                 </div>
+                <hr>
+                <div class="flex-left">
+                    <!-- LEFT: VIDEO -->
+                    <iframe class="embed large" src="https://www.youtube.com/embed/1AAtuJKp8UI"></iframe>
 
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://store.steampowered.com/app/892310/Infinity_Heroes/" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/InfinityHeroes.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>Infinity Heroes</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://store.steampowered.com/app/892310/Infinity_Heroes/" class="bold" target="_blank">Windows</a></span>
-                        </div>
+                    <!-- RIGHT: DETAILS -->
+                    <div class="highlight info">
+                        <h2>Sneak Attack!</h2>
+                        <ul>
+                            <li><span><i class="fa-solid fa-gamepad"></i> Genre: </span>Casual</li>
+                            <li><span><i class="fa-solid fa-user-group"></i> Modes: </span> Single-player</li>
+                            <li><span><i class="fa-solid fa-diagram-project"></i> Platform: </span>iOS & Android</li>
+                            <li><span><i class="fa-solid fa-gear"></i> Engine: </span><i class="fa-brands fa-unity">
+                                </i>
+                                Unity Engine</li>
+                            <li><span><i class="fa-solid fa-wrench"></i> Tools: </span>Google Workspace, Firebase, Unity
+                                Gaming Services</li>
+                            <li><span><i class="fa-regular fa-id-badge"></i> Role: </span>Lead Engineer
+                            </li>
+                        </ul>
+                        <!-- <a class="btn cta">Read More <i class="fa-solid fa-chevron-right"></i></a> -->
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://shadowignition.itch.io/vaxxed" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/Vaxxed.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>
-                            Vaxxed
-                            <span class="tag no-select">game-jam</span>
-                        </h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://shadowignition.itch.io/vaxxed" class="" target="_blank">Web-based</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://shadowignition.itch.io/consume" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/Consume.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>
-                            Consume
-                            <span class="tag no-select">game-jam</span>
-                        </h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://shadowignition.itch.io/consume" class="" target="_blank">Web-based</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project unavailable">
-                        <a href="https://sketchfab.com/3d-models/prelude-garden-environment-483c8099cfb749a99643274a67b94111" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/PreludeGarden.png&quot;" )>
-                            <span class="state">unavailable</span>
-                        </a>
-                        <h2>Prelude Garden</h2>
-                        <div class="horizontal-list">
-                            <span>Oculus Quest</></span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="project">
-
-                        <a href="https://gooseinboots.itch.io/oh-shroom" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/ohshroom.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>Oh Shroom!</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://gooseinboots.itch.io/oh-shroom" class="bold" target="_blank">Web-based</a></span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="project">
-
-                        <a href="https://teamcrabproductions.itch.io/covid2electricboogaloo" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/Covid2ElectricBoogaloo.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>Covid 2: Electric Boogaloo</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://teamcrabproductions.itch.io/covid2electricboogaloo" class="" target="_blank">iOS &amp; Android</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project">
-                        <a href="https://shadowignition.itch.io/digital-divine" target="_blank" class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/digitaldivine.png&quot;" )>
-                            <span class="state"></span>
-                        </a>
-                        <h2>Digital Divine</h2>
-                        <div class="horizontal-list">
-                            <span><a href="https://shadowignition.itch.io/digital-divine" class="bold" target="_blank">Windows</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project unavailable">
-                        <a class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/blacksheepplaysmileyface.png&quot;" )>
-                            <span class="state">unavailable</span>
-                        </a>
-                        <h2>
-                            Black Sheep Play :)
-                            <span class="tag no-select">game-jam</span>
-                        </h2>
-                        <div class="horizontal-list">
-                            <span>Windows</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project unavailable">
-                        <a class="cover" style="background-image: url(&quot;./ShadowIgnition.github.io_files/imgs/contributions/FishyBusiness.png&quot;" )>
-                            <span class="state">unavailable</span>
-                        </a>
-                        <h2>
-                            Fishy Business
-                            <span class="tag no-select">game-jam</span>
-                        </h2>
-                        <div class="horizontal-list">
-                            <span>Windows</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="graphic-design" class="section-content fade-out" hidden>
-        <br />
-        <h1 class="section-content-header">Graphic Design</h1>
-        <br />
-        <div class="container">
-            <div class="card-grid">
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/PatchNotes.png" alt="Infinity Wars - Patch Notes Redesign">
-                    <div class="card-content">
-                        <div class="tag">Marketing</div>
-                        <div class="title">Infinity Wars - Patch Notes Redesign</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/PatreonBannerCW.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Marketing</div>
-                        <div class="title">Infinity Wars - Patreon Redesign</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/SouthEastDisabilityExpo2026.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Marketing</div>
-                        <div class="title">Lightmare Studios - Event Participation</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/Purification Pre-Launch 2.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Advertising</div>
-                        <div class="title">Infinity Wars: Purification - Pre-Launch</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/Purification Pre-Launch 1.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Advertising</div>
-                        <div class="title">Infinity Wars: Purification - Pre-Launch</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/graphic-design/Purification Pre-Launch 3.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Advertising</div>
-                        <div class="title">Infinity Wars: Purification - Pre-Launch</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/gallery/IW/ChatUIDesign.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">User Interface</div>
-                        <div class="title">Infinity Wars - Chat UI</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/gallery/IW/CTCG.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Product Design</div>
-                        <div class="title">Infinity Wars - Monetization Model Redesign</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/gallery/IW/Foiling.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">Product Design</div>
-                        <div class="title">Infinity Wars - Foiling Redesign</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
-                <div class="card-graphic">
-                    <img src="./ShadowIgnition.github.io_files/imgs/gallery/IW/UIStyleDirection.png" alt="City Building Kit">
-                    <div class="card-content">
-                        <div class="tag">User Interface</div>
-                        <div class="title">Infinity Wars - UI Style Redesign</div>
-                        <div class="description">
-                            Powerful and easy-to-use tool designed to streamline the creation of building areas for any city game project!
-                        </div>
-                    </div>
-                </div>
+                <hr>
+                <a class="btn" href="/content/contributions.html">View All</a>
             </div>
         </div>
     </div>
@@ -609,7 +409,8 @@
         <img src="" alt="Preview" />
     </div>
 </body>
+
 </html>
 <footer class="footer" id="footer">
-    © 2018 - 2026
+    &copy; 2018 - 2026
 </footer>

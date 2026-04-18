@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <!--Setup -->
+    <link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
+    <title>Portfolio - Dylan - Game Developer</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../files/css/style-landscape.css">
+    <link rel="stylesheet" href="../../files/css/style-portrait.css">
+    <link rel="stylesheet" href="../../files/css/style-theme.css">
+    <link rel="stylesheet" href="../../files/css/contact-form.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../files/js/speech.js"></script>
+    <script src="../../files/js/theme.js"></script>
+    <script src="../../files/js/gallery.js"></script>
+    <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="files/js/include.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <button id="sys-toggle" class="theme" onclick="toggleTheme(),speakDarkmode()"></button>
+    <button id="sys-toggle" class="speak" onclick="speakQuote()"></button>
+    <p id="quotes"></p>
+</header>
+<html lang="en">
+<body>
+
+    <!-- HERO -->
+    <section id="intro" class="min" style="background-image: var(--hero-gradient), url('../../files/imgs/heroes/Hero_IW.png'); ">
+        <div class="intro-content">
+            <img class="title-logo shadow" src="../../files/imgs/heroes/IW Logo.png" alt="Game Logo" style="padding: 40px">
+            <h2>The Animated Trading Card Game</h2>
+            <ul class="intro-links">
+                <li>
+                    <a href="https://store.steampowered.com/app/257730/Infinity_Wars_Animated_Trading_Card_Game/" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <br />
+    <div id="aboutme" class="section-content">
+        <br />
+        <h1 class="center">About Infinity Wars</h1>
+        <br />
+        <div class="container">
+            <div class="vertical-layout">
+                <div class="card wide center">
+                    <p>Outplay your opponent with simultaneous turns and commander-driven deck-building in a fully free-to-play PvP experience. Build your deck from 1000+ cards across 8 unique factions, and face opponents on a truly level playing field. In Infinity Wars, skill is the only factor that determines victory!</p>
+                    <b>Lightmare Studios</b>
+                    <hr>
+                    <p><i class="fa-brands fa-unity"></i> Unity Engine</p>
+                </div>
+                <div class="card wide">
+                    <div class="card-grid">
+                        <iframe class="embed" src="https://www.youtube.com/embed/ewg3W5OLANA"></iframe>
+                        <iframe class="embed" src="https://www.youtube.com/embed/mvCbJo7zJlY"></iframe>
+                        <iframe class="embed" src="https://www.youtube.com/embed/D3nVGKQQAeA"></iframe>
+                        <iframe class="embed" src="https://www.youtube.com/embed/7OgqQQd8KiA"></iframe>
+                        <iframe class="embed" src="https://www.youtube.com/embed/2bn6BnLez9M"></iframe>
+                        <!--<iframe class="embed" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>-->
+                    </div>
+                </div>
+                <div class="card wide">
+                    <h2>My Contributions</h2>
+                    <p>Here are a few of my contributions on Infinity Wars throughout the 5+ years I've worked on the game.</p>
+                    <br />
+                    <h3>Team Management & Coordination</h3>
+                    <ul>
+                        <li>Collaborating with department leads to plan and deliver regular patches, content updates, and development milestones.</li>
+                        <li>Shaping product vision and execution, including strategy, roadmaps, goals, KPIs, timelines, and risk management.</li>
+                        <li>Leading art direction across internal and external teams to maintain a cohesive visual identity throughout the product lifecycle.</li>
+                        <li>Actively implementing features and systems in support of upcoming milestones.</li>
+                        <li>Contributing to player experience by designing and refining Quality of Life features, visual feedback, and responsiveness.</li>
+                        <li>Overseeing community management &amp; support across multiple platforms, including marketing asset creation, copywriting, and ongoing promotional efforts.</li>
+                        <li>Managing daily bug triage and prioritization.</li>
+                        <li>Oversaw communications for Lightmare's Official Insider Group, fostering an inclusive environment that encouraged open discussions, feedback, and diverse perspectives.</li>
+                        <li>Provided multi-platform support and engagement across various social and community channels.</li>
+                    </ul>
+                    <h3>Art Direction</h3>
+                    <ul>
+                        <li>Organized art briefs development, outlining vision, mood and style while providing visual references, serving as a blueprint for artists, ensuring clear direction.</li>
+                        <li>Performed art reviews, offering constructive feedback on elements like composition, color palette, lighting, and adherence to existing style.</li>
+                        <li>Designed core monetizable cosmetics (F2P item readability / affordances vs paid cosmetics appeal)</li>
+                        <li>Designed environment lighting, including day/night cycles &amp; weather systems.</li>
+                        <li>Designed user interface in the areas of chat / social systems, news systems &amp; the core in-match user interface.</li>
+                    </ul>
+                    <h3>Features & Gameplay</h3>
+                    <ul>
+                        <li>Designed and implemented an extensive PvE framework to transition a PvP title into single-player content, increasing player engagement and enabling a higher price per user.</li>
+                        <li>Implemented multiplayer networking using Photon Realtime and developed player account systems leveraging PlayFab, AWS Lambda, and RDS for scalable backend management.</li>
+                        <li>Developed battle pass and store rotation systems using Azure PlayFab, boosting player engagement through consistent content updates.</li>
+                        <li>Created news systems integrating Azure PlayFab and Steam News API to streamline marketing and outreach, keeping players informed with timely updates and announcements.</li>
+                        <li>Deployed and managed AWS CloudFront and S3 for efficient and reliable Content Delivery Networks (CDN).</li>
+                    </ul>
+                    <h3>Analytics & Optimization</h3>
+                    <ul>
+                        <li>Conducted comprehensive research for an AWS Cost Analysis Report, identifying cost-saving strategies through detailed analysis of AWS systems and requirements, resulting in potential cost reductions of up to 76.21%.</li>
+                        <li>Refactored the game's initialization process and integrated validation, reducing startup time by 55% while improving system reliability.</li>
+                        <li>Led initiatives to increase adoption of unit testing and async/await programming by delivering training sessions to peers, improving code quality and development efficiency.</li>
+                    </ul>
+                    <h3>Tools & Developer Experience</h3>
+                    <ul>
+                        <li>Developed and implemented an SMTP tool integrated with AWS SES to automate bulk email template distribution, streamlining communication workflows and improving user retention.</li>
+                        <li>Developed a Discord bot using Node.js and Discord.js, deployed on AWS Lightsail, to automate and improve operational efficiency.</li>
+                        <li>Streamlined workflows and improved pipeline efficiency by developing in-engine and WinForms tools, resulting in faster processing and higher productivity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="break"></div>
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        &copy; 2018 - 2026
+    </footer>
+</body>
+</html>
