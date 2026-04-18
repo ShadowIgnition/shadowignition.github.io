@@ -40,9 +40,14 @@ function loadSection(section) {
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+    var currentSection = "aboutme";
 
-async function openSection(evt, cityName) {
+async function openSection(evt, sectionName) {
     var i, containers, tablinks;
+
+    if (currentSection == sectionName) {
+        return;
+    }
 
     containers = document.getElementsByClassName("section-content");
 
@@ -68,7 +73,8 @@ async function openSection(evt, cityName) {
     }
 
     // Show selected container
-    const current = document.getElementById(cityName);
+    const current = document.getElementById(sectionName);
+    currentSection = sectionName;
     current.hidden = false;
 
     // Start from invisible
@@ -79,8 +85,6 @@ async function openSection(evt, cityName) {
 
     // Fade in
     current.classList.remove("fade-out");
-
-    evt.currentTarget.className += " active";
 }
 
 
@@ -107,3 +111,14 @@ function closeContactForm() {
 document.addEventListener('DOMContentLoaded', () => {
     initialize();
 });
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function openMenu() {
+  var x = document.getElementById("myLinks");
+  x.classList.toggle("open");
+}
