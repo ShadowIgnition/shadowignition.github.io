@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <head>
     <!--Setup -->
-    <link rel="icon" href="./favicon.png" sizes="16x16" type="favicon.png">
-    <title>Portfolio - Dylan - Game Developer</title>
-    <meta name="description" content="">
+    <link rel="icon" href="/favicon.png" sizes="16x16" type="favicon.png">
+    <title>Blog - Dylan Imrei</title>
+    <meta name="description" content="Development notes from Dylan Imrei on game engineering, production, tools, and UI.">
     <link rel="stylesheet" href="/files/css/style-landscape.css">
     <link rel="stylesheet" href="/files/css/style-portrait.css">
     <link rel="stylesheet" href="/files/css/style-theme.css">
@@ -13,7 +14,7 @@
     <script src="/files/js/gallery.js"></script>
     <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="files/js/include.js"></script>
+    <script src="/files/js/include.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap"
@@ -22,7 +23,7 @@
 
 <header>
     <div class="left gap">
-        <button class="sys-toggle theme" onclick="toggleTheme(),speakDarkmode()"></i></button>
+        <button class="sys-toggle theme" onclick="toggleTheme(),speakDarkmode()"></button>
     </div>
     <div class="center card-textblock-x1 ">
         <div class="card-username-x1">Dylan Imrei</div>
@@ -38,7 +39,7 @@
         <a class="btn cta white" href="/contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
     </div>
     <div class="right gap non-mobile-hide">
-        <button class="sys-toggle" onclick="openMenu()"></i><i class="fa-solid fa-bars"></i></button>
+        <button class="sys-toggle" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
         <div class="topnav">
             <div id="myLinks">
                 <a class="btn" href="/index.html">About</a>
@@ -51,41 +52,50 @@
             </div>
         </div>
     </div>
-    </div>
 </header>
-<html>
+<html lang="en">
 
-<body>
+<body class="page-blog">
     <div class="break"></div>
     <br />
-    <div id="contact" class="section-content">
+    <div id="blog" class="section-content">
         <br />
-        <h1 class="center">Get In Touch</h1>
+        <h1 class="center">Blog</h1>
         <br />
         <div class="container">
-            <div id="contact-form" class="card wide">
-                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
-                    action="https://formspree.io/f/xzbyyewd" method="post">
-                    <fieldset id="fs-frm-inputs">
-                        <input type="text" name="name" id="full-name" placeholder="Full Name" required="">
-                        <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-                        <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
-                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                        <input class="btn" type="submit" value="Submit">
-                    </fieldset>
-                </form>
+            <div class="blog-list">
+                <article class="card blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-kicker">Game Design</div>
+                        <h2>Flipping into the Deep End</h2>
+                        <div class="blog-meta">
+                            <span>July 8, 2026</span>
+                            <span>10 min read</span>
+                        </div>
+                        <p>Designing a coin-flip board game prototype around push-and-pull systems, randomness, and player agency.</p>
+                        <a class="btn" href="/content/blog/flipping-into-the-deep-end.html"></i>Read More</a>
+                    </div>
+                </article>
+                <!--<article class="card blog-card">
+                    <div class="blog-image" style="background-image: url('/files/imgs/gallery/PreludeGarden/Prelude.png');"></div>
+                    <div class="blog-card-content">
+                        <div class="blog-kicker">Production</div>
+                        <h2>The spaghetti monster</h2>
+                        <div class="blog-meta">
+                            <span>July 9, 1999</span>
+                            <span>4 min read</span>
+                        </div>
+                        <p>blah blah blah.</p>
+                        <a class="btn" href="/content/blog/blah.html"></i>Read More</a>
+                    </div>
+                </article>-->
             </div>
         </div>
     </div>
-    </br>
-    <div class="section-content">
-        <div class="container">
-            <div class="card"><a class="btn" href="/index.html"><i class="fa-solid fa-house"></i> Home</a></div>
-        </div>
-    </div>
-    <div class="break"></div>
+    <div class="break blog-footer-spacer"></div>
+    <footer class="footer" id="footer">
+        &copy; 2018 - 2026
+    </footer>
+</body>
 
 </html>
-<footer class="footer" id="footer">
-    &copy; 2018 - 2026
-</footer>
