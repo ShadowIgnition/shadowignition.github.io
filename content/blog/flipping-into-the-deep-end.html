@@ -5,7 +5,8 @@
     <!--Setup -->
     <link rel="icon" href="/favicon.png" sizes="16x16" type="favicon.png">
     <title>Flipping into the Deep End - Dylan Imrei</title>
-    <meta name="description" content="A game design article about building a coin-flip board game prototype around push-and-pull systems.">
+    <meta name="description"
+        content="A game design article about building a coin-flip board game prototype around push-and-pull systems.">
     <link rel="stylesheet" href="/files/css/style-landscape.css">
     <link rel="stylesheet" href="/files/css/style-portrait.css">
     <link rel="stylesheet" href="/files/css/style-theme.css">
@@ -17,6 +18,7 @@
     <script src="https://kit.fontawesome.com/abd1c0b2b4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="/files/js/include.js"></script>
+    <script data-goatcounter="https://shadowignition.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap"
@@ -35,9 +37,7 @@
         <a class="btn" href="/index.html">About</a>
         <a class="btn" href="/content/contributions.html">Contributions</a>
         <a class="btn" href="/content/blog.html">Blog</a>
-        <a class="btn"
-            href="/resume.html"><i
-                class="fa-solid fa-file"></i>Resume</a>
+        <a class="btn" href="/resume.html"><i class="fa-solid fa-file"></i>Resume</a>
         <a class="btn cta white" href="/contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
     </div>
     <div class="right gap non-mobile-hide">
@@ -47,9 +47,7 @@
                 <a class="btn" href="/index.html">About</a>
                 <a class="btn" href="/content/contributions.html">Contributions</a>
                 <a class="btn" href="/content/blog.html">Blog</a>
-                <a class="btn"
-                    href="/resume.html"><i
-                        class="fa-solid fa-file"></i>Resume</a>
+                <a class="btn" href="/resume.html"><i class="fa-solid fa-file"></i>Resume</a>
                 <a class="btn cta white" href="/contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
             </div>
         </div>
@@ -58,191 +56,245 @@
 
 <html lang="en">
 
-<body>
+<body id="top">
     <div class="break"></div>
     <br>
-    <article class="section-content">
-        <div class="container">
-            <div class="card">
-                <div class="blog-post-content">
-                    <a class="btn article-top-back" href="/content/blog.html"></i>Back To Blog</a>
-                    <div class="blog-kicker">Game Design</div>
-                    <h1>Flipping into the Deep End</h1>
-                    <div class="blog-meta">
-                        <span>July 8, 2026</span>
-                        <span>10 min read</span>
+    <article class="section-content blog-post">
+        <div class="container slim">
+            <div class="grid">
+                <div class="grid-left">
+                    <div class="sidebar card blog-sidebar">
+                        <div class="blog-kicker">Game Design</div>
+                        <h1>Flipping into the Deep End</h1>
+                        <div class="blog-meta">
+                            <span>July 8, 2026</span>
+                            <span>10 min read</span>
+                        </div>
+                        <a class="btn article-top-back" href="/content/blog.html"><i
+                                class="fa-solid fa-arrow-left"></i>Back To Blog</a>
+                        <a class="btn" href="#top"><i class="fa-solid fa-arrow-up"></i>Back To Top</a>
                     </div>
-                    <h3>Goal and Direction</h3>
+                </div>
+                <div class="grid-right">
+                    <div class="card">
+                        <div class="blog-post-content">
+                            <h3>Goal and Direction</h3>
 
-                    <p>As part of Dan Felder's <em>Mastering Game Systems: Design Bootcamp</em>, students were
-                        challenged to design a game built around a single core system mechanic: the flip of a coin. For
-                        this challenge, my goal was to design a game inspired by the core push-and-pull gameplay of
-                        <em>Snakes &amp; Ladders</em> while introducing additional system mechanics.</p>
+                            <p>As part of Dan Felder's <em>Mastering Game Systems: Design Bootcamp</em>, students were
+                                challenged to design a game built around a single core system mechanic: the flip of a
+                                coin. For
+                                this challenge, my goal was to design a game inspired by the core push-and-pull gameplay
+                                of
+                                <em>Snakes &amp; Ladders</em> while introducing additional system mechanics.
+                            </p>
 
-                    <p>After establishing the initial concept, I developed a series of questions to generate a wide
-                        "scattershot" of interesting ideas and help guide the design process:</p>
+                            <p>After establishing the initial concept, I developed a series of questions to generate a
+                                wide
+                                "scattershot" of interesting ideas and help guide the design process:</p>
 
-                    <ul>
-                        <li>How would the push-and-pull of <em>Snakes &amp; Ladders</em> feel if it were pushed to its
-                            extremes?</li>
-                        <li>When does randomness stop being exciting and start becoming frustrating?</li>
-                        <li>What types of mechanics could be added to a <em>Snakes &amp; Ladders</em>-style game?</li>
-                    </ul>
+                            <ul>
+                                <li>How would the push-and-pull of <em>Snakes &amp; Ladders</em> feel if it were pushed
+                                    to its
+                                    extremes?</li>
+                                <li>When does randomness stop being exciting and start becoming frustrating?</li>
+                                <li>What types of mechanics could be added to a <em>Snakes &amp; Ladders</em>-style
+                                    game?</li>
+                            </ul>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Initial Designs</h3>
+                            <h3>Initial Designs</h3>
 
-                    <h4>System 1: Movement System</h4>
+                            <h4>System 1: Movement System</h4>
 
-                    <p>This system gave players three <strong>Travel Coins</strong>. During the Travel Phase, players
-                        flipped these coins to move across the game board. They moved forward for each head flipped and
-                        backward for every two tails flipped.</p>
+                            <p>This system gave players three <strong>Travel Coins</strong>. During the Travel Phase,
+                                players
+                                flipped these coins to move across the game board. They moved forward for each head
+                                flipped and
+                                backward for every two tails flipped.</p>
 
-                    <p><strong>Goal:</strong> Test the limits of push-and-pull gameplay (Q1) and determine how much
-                        randomness players would tolerate (Q2).</p>
+                            <p><strong>Goal:</strong> Test the limits of push-and-pull gameplay (Q1) and determine how
+                                much
+                                randomness players would tolerate (Q2).</p>
 
-                    <h4>System 2: Interaction System</h4>
+                            <h4>System 2: Interaction System</h4>
 
-                    <p>Inspired by D&amp;D rolls, this system gave players three <strong>Interaction Coins</strong>.
-                        During the Interaction Phase, players flipped these coins to trigger encounters based on the
-                        total number of heads flipped.</p>
+                            <p>Inspired by D&amp;D rolls, this system gave players three <strong>Interaction
+                                    Coins</strong>.
+                                During the Interaction Phase, players flipped these coins to trigger encounters based on
+                                the
+                                total number of heads flipped.</p>
 
-                    <p>The interactions were as follows:</p>
+                            <p>The interactions were as follows:</p>
 
-                    <ul>
-                        <li><strong>0 Heads:</strong> No interaction</li>
-                        <li><strong>1 Head:</strong> Trigger Combat</li>
-                        <li><strong>2 Heads:</strong> Trigger Detour (move backward)</li>
-                        <li><strong>3 Heads:</strong> Trigger Shop</li>
-                    </ul>
+                            <ul>
+                                <li><strong>0 Heads:</strong> No interaction</li>
+                                <li><strong>1 Head:</strong> Trigger Combat</li>
+                                <li><strong>2 Heads:</strong> Trigger Detour (move backward)</li>
+                                <li><strong>3 Heads:</strong> Trigger Shop</li>
+                            </ul>
 
-                    <p><strong>Goal:</strong> Test probabilistic encounters (Q2) while creating a sandbox for mechanics
-                        such as combat, shops, and movement debuffs (Q3).</p>
+                            <p><strong>Goal:</strong> Test probabilistic encounters (Q2) while creating a sandbox for
+                                mechanics
+                                such as combat, shops, and movement debuffs (Q3).</p>
 
-                    <h4>System 3: Combat System</h4>
+                            <h4>System 3: Combat System</h4>
 
-                    <p>This system gave each player three <strong>Combat Coins</strong>. During combat, players flipped
-                        these coins twice&mdash;once for themselves and once for their opponent&mdash;with outcomes determined by
-                        comparing the results.</p>
+                            <p>This system gave each player three <strong>Combat Coins</strong>. During combat, players
+                                flipped
+                                these coins twice&mdash;once for themselves and once for their opponent&mdash;with
+                                outcomes determined by
+                                comparing the results.</p>
 
-                    <p>The outcomes were as follows:</p>
+                            <p>The outcomes were as follows:</p>
 
-                    <ul>
-                        <li>For every head fewer than your opponent, take 1 damage.</li>
-                        <li>For every head more than your opponent, gain 1 gold by looting the enemy.</li>
-                        <li>If both players flipped the same number of heads, nothing happened.</li>
-                    </ul>
+                            <ul>
+                                <li>For every head fewer than your opponent, take 1 damage.</li>
+                                <li>For every head more than your opponent, gain 1 gold by looting the enemy.</li>
+                                <li>If both players flipped the same number of heads, nothing happened.</li>
+                            </ul>
 
-                    <p><strong>Goal:</strong> Test the upper bounds of system complexity while introducing additional
-                        mechanics (Q3).</p>
+                            <p><strong>Goal:</strong> Test the upper bounds of system complexity while introducing
+                                additional
+                                mechanics (Q3).</p>
 
-                    <h4>System 4: Shop / Bartering System</h4>
+                            <h4>System 4: Shop / Bartering System</h4>
 
-                    <p>The Shop System allowed players to purchase items, while the Bartering System determined
-                        discounts through coin flips. Health could also be spent as a substitute for currency when
-                        players could not afford an item.</p>
+                            <p>The Shop System allowed players to purchase items, while the Bartering System determined
+                                discounts through coin flips. Health could also be spent as a substitute for currency
+                                when
+                                players could not afford an item.</p>
 
-                    <p><strong>Goal:</strong> Test player agency (Q2) while evaluating the complexity and suitability of
-                        additional mechanics (Q3).</p>
+                            <p><strong>Goal:</strong> Test player agency (Q2) while evaluating the complexity and
+                                suitability of
+                                additional mechanics (Q3).</p>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Playtesting &amp; Changes</h3>
+                            <h3>Playtesting &amp; Changes</h3>
 
-                    <p>After a live playtest session, the following conclusions were drawn:</p>
+                            <p>After a live playtest session, the following conclusions were drawn:</p>
 
-                    <ul>
-                        <li>Players enjoyed the Movement System but became frustrated by frequent backward movement,
-                            which slowed overall progression.</li>
-                        <li>The Combat System was readable and engaging, but draws felt unrewarding and unsatisfying.
-                        </li>
-                        <li>The Interaction System created interesting variety, but many events were too rare or
-                            disruptive, causing pacing issues.</li>
-                        <li>The Shop / Bartering System functioned mechanically, but players often failed to understand
-                            that health could be used as currency, leading to missed opportunities for interaction.</li>
-                    </ul>
+                            <ul>
+                                <li>Players enjoyed the Movement System but became frustrated by frequent backward
+                                    movement,
+                                    which slowed overall progression.</li>
+                                <li>The Combat System was readable and engaging, but draws felt unrewarding and
+                                    unsatisfying.
+                                </li>
+                                <li>The Interaction System created interesting variety, but many events were too rare or
+                                    disruptive, causing pacing issues.</li>
+                                <li>The Shop / Bartering System functioned mechanically, but players often failed to
+                                    understand
+                                    that health could be used as currency, leading to missed opportunities for
+                                    interaction.</li>
+                            </ul>
 
-                    <p>Although the game was not the most entertaining version to playtest, the session was an overall
-                        success. It proved highly informative, answering my original questions, revealing promising
-                        directions for further development, and helping establish clear design boundaries.</p>
+                            <p>Although the game was not the most entertaining version to playtest, the session was an
+                                overall
+                                success. It proved highly informative, answering my original questions, revealing
+                                promising
+                                directions for further development, and helping establish clear design boundaries.</p>
 
-                    <p>Based on this feedback, I made the following changes:</p>
+                            <p>Based on this feedback, I made the following changes:</p>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Modification 1: Communication</h3>
+                            <h3>Modification 1: Communication</h3>
 
-                    <p>The Shop and Bartering Systems remained largely unchanged throughout later iterations, as the
-                        issue was not mechanical but communicative.</p>
+                            <p>The Shop and Bartering Systems remained largely unchanged throughout later iterations, as
+                                the
+                                issue was not mechanical but communicative.</p>
 
-                    <p>To address this, health and currency were merged into a single shared resource called
-                        <strong>Prosperity</strong>, creating a more intuitive relationship between health and spending, communicated intention clearer, and reinforced the game's theme.</p>
+                            <p>To address this, health and currency were merged into a single shared resource called
+                                <strong>Prosperity</strong>, creating a more intuitive relationship between health and
+                                spending, communicated intention clearer, and reinforced the game's theme.
+                            </p>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Modification 2: Interaction Redistribution</h3>
+                            <h3>Modification 2: Interaction Redistribution</h3>
 
-                    <p>Interactions were redistributed into fixed phases and board-based triggers to improve clarity and
-                        pacing. Combat was moved into its own dedicated phase each turn, while shops and detours became
-                        board tile effects.</p>
+                            <p>Interactions were redistributed into fixed phases and board-based triggers to improve
+                                clarity and
+                                pacing. Combat was moved into its own dedicated phase each turn, while shops and detours
+                                became
+                                board tile effects.</p>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Modification 3: Simplified Movement, Checkpoints, and Tolls</h3>
+                            <h3>Modification 3: Simplified Movement, Checkpoints, and Tolls</h3>
 
-                    <p>Movement was simplified. Instead of moving backward for every second tail flipped, players now
-                        move forward only according to the number of heads flipped, removing the negative feedback
-                        associated with per-turn backward movement.</p>
+                            <p>Movement was simplified. Instead of moving backward for every second tail flipped,
+                                players now
+                                move forward only according to the number of heads flipped, removing the negative
+                                feedback
+                                associated with per-turn backward movement.</p>
 
-                    <p>Combined with the redistribution of detours, this significantly improved pacing through the
-                        introduction of <strong>Checkpoints</strong>, <strong>Tolls</strong>, and alternate pathways.
-                    </p>
+                            <p>Combined with the redistribution of detours, this significantly improved pacing through
+                                the
+                                introduction of <strong>Checkpoints</strong>, <strong>Tolls</strong>, and alternate
+                                pathways.
+                            </p>
 
-                    <p>These additions preserved the game's push-and-pull dynamics while reframing them as positive
-                        feedback loops. Upon reaching a Toll, players could either pay to unlock it or choose not to.
-                    </p>
+                            <p>These additions preserved the game's push-and-pull dynamics while reframing them as
+                                positive
+                                feedback loops. Upon reaching a Toll, players could either pay to unlock it or choose
+                                not to.
+                            </p>
 
-                    <p>If they chose not to unlock it, they would travel back a short distance, allowing them to gather
-                        additional resources or take alternate routes. If they paid to unlock it instead, the Toll
-                        became their new Checkpoint, safeguarding their progress.</p>
+                            <p>If they chose not to unlock it, they would travel back a short distance, allowing them to
+                                gather
+                                additional resources or take alternate routes. If they paid to unlock it instead, the
+                                Toll
+                                became their new Checkpoint, safeguarding their progress.</p>
 
-                    <p>This also helped balance progression naturally. Players who accumulated more currency could
-                        unlock Checkpoints earlier, but only the first player to unlock each Checkpoint was required to
-                        pay the Toll.</p>
+                            <p>This also helped balance progression naturally. Players who accumulated more currency
+                                could
+                                unlock Checkpoints earlier, but only the first player to unlock each Checkpoint was
+                                required to
+                                pay the Toll.</p>
 
-                    <hr>
+                            <hr>
 
-                    <h3>Modification 4: Combat</h3>
+                            <h3>Modification 4: Combat</h3>
 
-                    <p>The Combat System proved more difficult to iterate on. I wanted it to address the playtest
-                        feedback while also fitting more naturally within the game's overall theme.</p>
+                            <p>The Combat System proved more difficult to iterate on. I wanted it to address the
+                                playtest
+                                feedback while also fitting more naturally within the game's overall theme.</p>
 
-                    <p>Eventually, I settled on simplifying the system by removing draws entirely and reframing combat
-                        as an <strong>Income Phase</strong>.</p>
+                            <p>Eventually, I settled on simplifying the system by removing draws entirely and reframing
+                                combat
+                                as an <strong>Income Phase</strong>.</p>
 
-                    <p>The revised mechanic was as follows:</p>
+                            <p>The revised mechanic was as follows:</p>
 
-                    <ul>
-                        <li><strong>Flip 2 coins:</strong> Gain <strong>+1 Prosperity</strong> for each head flipped. If
-                            both coins land tails, lose <strong>1 Prosperity</strong>.</li>
-                    </ul>
+                            <ul>
+                                <li><strong>Flip 2 coins:</strong> Gain <strong>+1 Prosperity</strong> for each head
+                                    flipped. If
+                                    both coins land tails, lose <strong>1 Prosperity</strong>.</li>
+                            </ul>
 
-                    <p>This iteration aligned much more closely with the game's theme while significantly simplifying
-                        gameplay and making the rules more accessible.</p>
+                            <p>This iteration aligned much more closely with the game's theme while significantly
+                                simplifying
+                                gameplay and making the rules more accessible.</p>
 
-                    <hr>
+                            <hr>
 
-                    <h2>Conclusion</h3>
+                            <h2>Conclusion</h3>
 
-                        <p>After a few playthoughts of the game, this would be the result I would hand in for this
-                            challenge.</p>
+                                <p>After a few playthoughts of the game, this would be the result I would hand in for
+                                    this
+                                    challenge.</p>
 
-                        <p>Thanks for reading, If you'd like to play the game, or just read the rulebook, you can find it <a href="https://www.dropbox.com/scl/fi/t6f05mj9oubgikxwv5ipg/Dylan-Imrei-AdVenture-Capital.pdf?rlkey=o9kfkaph9f0w1duwf5zq1c61e&st=c593a5ck&dl=0"></i>here</a>.</p>
+                                <p>Thanks for reading, If you'd like to play the game, or just read the rulebook, you
+                                    can find it <a
+                                        href="https://www.dropbox.com/scl/fi/t6f05mj9oubgikxwv5ipg/Dylan-Imrei-AdVenture-Capital.pdf?rlkey=o9kfkaph9f0w1duwf5zq1c61e&st=c593a5ck&dl=0"></i>here</a>.
+                                </p>
 
 
-                        <a class="btn" href="/content/blog.html"></i>Back To Blog</a>
-
+                        </div>
+                    </div>
                 </div>
             </div>
     </article>

@@ -425,24 +425,6 @@ html {
 	padding-bottom: 12em;
 }
 
-.page-blog {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.page-blog #blog {
-	flex: 1 0 auto;
-}
-
-.page-blog .blog-footer-spacer {
-	padding-bottom: 0;
-}
-
-.page-blog .footer {
-	margin-top: auto;
-}
-
 .section-content {
 	margin-left: auto;
 	margin-right: auto;
@@ -1018,7 +1000,6 @@ nav.menu button.active {
 .blog-card {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
 }
 
 .blog-hero .card {
@@ -1033,8 +1014,12 @@ nav.menu button.active {
 }
 
 .blog-card p {
-	flex: 1;
-	line-height: 1.5;
+	font-weight: normal;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .blog-hero .btn,
@@ -1067,28 +1052,31 @@ nav.menu button.active {
 }
 
 .blog-list {
-	display: flex;
-	flex-direction: column;
+	display: block;
+	column-count: 3;
+	column-width: 32rem;
 	gap: var(--space-gap);
 	margin: 0 auto;
-	max-width: 760px;
+	max-width: none;
+	width: 100%;
+	columns: 3;
 }
 
 .blog-card {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
 	min-height: 0;
 	overflow: hidden;
-	padding: var(--space-card);
+	padding: 0;
+	height: 32rem;
 }
 
 .blog-card-content {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: calc(var(--space-card) / 2);
 	min-width: 0;
-	padding: 0;
+	padding: var(--space-card);
 }
 
 .blog-card .blog-image {
@@ -1097,8 +1085,9 @@ nav.menu button.active {
 	border-radius: var(--radius-image);
 	box-shadow: none;
 	height: auto;
-	min-height: 100%;
+	min-height: 40%;
 	width: 100%;
+	border-radius: 0;
 }
 .blog-image {
 	aspect-ratio: 16 / 9;
@@ -1115,8 +1104,24 @@ nav.menu button.active {
 	min-height: 0;
 }
 
-.blog-post {
-	max-width: 860px;
+.blog-post .grid-right {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+.blog-post .grid-left {
+	align-self: stretch;
+}
+
+.blog-sidebar {
+	align-self: start;
+	position: sticky;
+	top: calc(4.5em + var(--space-card));
+	gap: var(--space-card);
+	display: grid;
+}
+
+.blog-sidebar .article-top-back {
+	margin-bottom: 0;
 }
 
 .blog-post-content h1 {
@@ -1165,12 +1170,6 @@ nav.menu button.active {
 .blog-post-content .btn {
 	align-self: flex-start;
 	margin-top: 1.5rem;
-}
-
-
-.blog-post .card,
-.blog-post .blog-image {
-	margin-bottom: 24px;
 }
 
 .blog-post p,
@@ -1557,4 +1556,60 @@ hr {
 
 .non-mobile-hide {
 	display: none;
+}
+
+.blog-card-link {
+    display: block;
+    text-decoration: auto;
+    color: var(--text-secondary);
+	border-radius: var(--radius-card);
+}
+
+.blog-card-link:hover {
+    display: block;
+    text-decoration: auto;
+    color: var(--text-secondary);
+	box-shadow: var(--box-shadow), var(--box-shadow-hover);
+}
+
+.blog-card-link .blog-card {
+    cursor: pointer;
+}
+
+.toc {
+    border-left: 2px solid var(--bg-overlay);
+    padding-left: 1em;
+}
+
+.toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc > ul > li {
+    margin-bottom: 6px;
+}
+
+.toc ul ul {
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+.toc a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.toc a.active {
+    color: var(--text-accent);
+}
+
+.blog-post h2[id],
+.blog-post h3[id] {
+    scroll-margin-top: 8em;
 }

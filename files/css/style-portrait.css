@@ -106,23 +106,9 @@
 		flex-direction: column;
 		gap: 0.35em;
 	}
-	.blog-card {
-		display: flex;
-		flex-direction: column;
-		padding: var(--space-card);
-	}
 
-	.blog-card-content {
-		padding: 0;
-		width: 100%;
-	}
-
-	.blog-card .blog-image {
-		aspect-ratio: 16 / 9;
-		border-radius: var(--radius-image);
-		box-shadow: none;
-		height: auto;
-		min-height: 0;
+	.blog-sidebar {
+		position: static;
 		width: 100%;
 	}
 
@@ -144,7 +130,6 @@
 		align-self: stretch;
 	}
 
-
 	.callout {
 		padding: 14px 14px 14px 42px;
 	}
@@ -153,7 +138,6 @@
 		left: 15px;
 		top: 17px;
 	}
-
 
 	.blog-post-content .btn {
 		align-self: stretch;
